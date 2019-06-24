@@ -3,12 +3,14 @@ import { RouterModule } from '@angular/router';
 import { HeaderAdminComponent } from './shared/header-admin/header-admin.component';
 import { SidebarAdminComponent } from './shared/sidebar-admin/sidebar-admin.component';
 import { BreadcrumbAdminComponent } from './shared/breadcrumb-admin/breadcrumb-admin.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     HeaderAdminComponent,
     SidebarAdminComponent,
-    BreadcrumbAdminComponent
+    BreadcrumbAdminComponent,
+    DashboardComponent
   ],
   imports: [
     // CommonModule
@@ -17,7 +19,8 @@ import { BreadcrumbAdminComponent } from './shared/breadcrumb-admin/breadcrumb-a
   exports: [
     HeaderAdminComponent,
     SidebarAdminComponent,
-    BreadcrumbAdminComponent
+    BreadcrumbAdminComponent,
+    DashboardComponent
   ]
 })
 export class SharedAdminModule {}
