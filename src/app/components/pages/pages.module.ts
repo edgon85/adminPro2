@@ -5,6 +5,7 @@ import { SharedModule } from '../shared/shared.module';
 import { PAGES_ROUTES } from './pages.routes';
 import { PagesComponent } from './pages.component';
 import { AdminComponent } from '../admin/admin/admin.component';
+import { SharedAdminModule } from '../admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { AdminComponent } from '../admin/admin/admin.component';
   ],
   imports: [
     SharedModule,
+    SharedAdminModule,
     PAGES_ROUTES
   ],
   exports: [
