@@ -3,6 +3,7 @@ import { PagesComponent } from './pages.component';
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from '../admin/admin/admin.component';
 import { DashboardComponent } from '../admin/dashboard/dashboard.component';
+import { LoginGardGuard } from '../../services/gards/login-gard.guard';
 
 
 
@@ -18,7 +19,7 @@ const pagesRoutes: Routes = [
     },
     {
         path: 'admin', component: AdminComponent,
-    //     canActivate: [LoginGardGuard],
+         canActivate: [LoginGardGuard],
          children : [
              { path: 'dashboard', component: DashboardComponent},
     //         { path: 'producto/:categoria', component: ProductComponent},
