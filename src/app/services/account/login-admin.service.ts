@@ -1,17 +1,28 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
+import { AngularFireAuth } from "@angular/fire/auth";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class LoginAdminService {
+  //estaLogueado = true;
 
-  estaLogueado = true;
+  constructor(private angularFireAuth: AngularFireAuth) {}
 
-  constructor() { }
-
+  public loginWithEmail(email: string, password: string) {
+    return this.angularFireAuth.auth.signInWithEmailAndPassword(
+      email,
+      password
+    );
+  }
 
   public getStatus() {
-    console.log(this.estaLogueado);
-    return this.estaLogueado ;
-   }
+    return this.angularFireAuth.authState;
+    // console.log(this.estaLogueado);
+    // return this.estaLogueado ;
+  }
+
+  public logout() {
+    return this.angularFireAuth.auth.signOut();
+  }
 }
