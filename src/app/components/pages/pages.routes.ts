@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { AdminComponent } from '../admin/admin/admin.component';
 import { DashboardComponent } from '../admin/dashboard/dashboard.component';
 import { LoginGardGuard } from '../../services/gards/login-gard.guard';
+import { ProductComponent } from '../admin/pages/product/product.component';
 
 
 
@@ -22,7 +23,7 @@ const pagesRoutes: Routes = [
          canActivate: [LoginGardGuard],
          children : [
              { path: 'dashboard', component: DashboardComponent},
-    //         { path: 'producto/:categoria', component: ProductComponent},
+             { path: 'producto/:categoria', component: ProductComponent},
              { path: '', redirectTo: '/admin/dashboard', pathMatch: 'full'}
          ]
     }

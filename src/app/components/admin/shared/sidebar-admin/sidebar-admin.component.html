@@ -9,28 +9,37 @@
       <ul id="sidebarnav">
         <li class="user-profile">
           <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><img
-              src="assets/admin/images/users/profile.png" alt="user" /><span class="hide-menu">Steave Jobs </span></a>
+              src="assets/admin/images/users/profile.png" alt="user" /><span class="hide-menu">Administrador
+            </span></a>
           <ul aria-expanded="false" class="collapse">
-            <li><a href="javascript:void()">My Profile </a></li>
-            <li><a href="javascript:void()">My Balance</a></li>
-            <li><a href="javascript:void()">Inbox</a></li>
-            <li><a href="javascript:void()">Account Setting</a></li>
-            <li><a href="javascript:void()">Logout</a></li>
+            <li><a href="javascript:void()">Mi perfil </a></li>
+            <li><a href="javascript:void()">Configuración de mi cuenta</a></li>
+            <li><a href="javascript:void()">Cerrar sesión</a></li>
           </ul>
         </li>
         <li class="nav-devider"></li>
-        <li class="nav-small-cap">PERSONAL</li>
-        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i
-              class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard <span
-                class="label label-rouded label-themecolor pull-right">4</span></span></a>
+        <li class="nav-small-cap">ADMINISTRACIÓN</li>
+        <li>
+          <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-gauge"></i>
+            <span class="hide-menu">Dashboard </span>
+          </a>
           <ul aria-expanded="false" class="collapse">
-            <li><a [routerLink]="['./dashboard']" >Dashboard </a></li>
-            <li><a href="index2.html">Analytical</a></li>
-            <li><a href="index3.html">Demographical</a></li>
-            <li><a href="index4.html">Modern</a></li>
+            <li><a [routerLink]="['./dashboard']">Inicio </a></li>
           </ul>
         </li>
-        
+        <li class="">
+          <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i
+              class="mdi mdi-bullseye"></i><span class="hide-menu">Productos</span></a>
+          <ul aria-expanded="false" class="collapse" style="height: 0px;">
+            <li><a [routerLink]="['./producto', 'alfombras']" routerLinkActive="active" >Alfombras </a></li>
+            <li><a [routerLink]="['./producto', 'alfombras-atrapa-mugre']" routerLinkActive="active">Alfombras atrapa mugre</a></li>
+            <li><a [routerLink]="['./producto', 'cortinas']" routerLinkActive="active">Cortinas</a></li>
+            <li><a [routerLink]="['./producto', 'grama-sintetica']" routerLinkActive="active">Grama sintetica</a></li>
+            <li><a [routerLink]="['./producto', 'linoleo']" routerLinkActive="active">Linóleo</a></li>
+            <li><a [routerLink]="['./producto', 'papel-tapiz']" routerLinkActive="active">Papel tapiz</a></li>
+            <li><a [routerLink]="['./producto', 'piso-laminado']" routerLinkActive="active">Piso laminado</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
     <!-- End Sidebar navigation -->
