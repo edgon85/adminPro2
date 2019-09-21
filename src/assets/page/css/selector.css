@@ -1,0 +1,43 @@
+.col1 .fondo {
+  height: 500px;
+  width: 600px;
+  position: sticky;
+  top: 100px;
+  padding-left: 40px;
+}
+
+.col1 .caja-fondo {
+  height: 500px;
+  width: 600px;
+  border-radius: 8px;
+  background-image: url("/static/img/casa/fondo_2.png");
+  background-size: 465px 110px;
+  background-repeat: no-repeat;
+  background-position: center 360px;
+}
+
+.col1 .caja-fondo img {
+  height: 500px;
+  width: 600px;
+  border-radius: 8px;
+}
+
+.btnud {
+  color: black;
+}
+
+@media screen and (max-width: 320px), (max-width: 360px), (max-width: 414px), (max-width: 480px), (max-width: 640px), (max-width: 667px) {
+  .col1 {
+    display: none;
+  }
+}
+
+@media screen and  (max-width: 840px), (max-width: 1024px){
+    .col1 {
+        display: none;
+      }
+}
+
+@media screen and  (max-width: 940px){
+  
+}
