@@ -1,0 +1,433 @@
+<nav class="menu" id="menu">
+    <div class="contenedor contenedor-botones-menu">
+        <button id="btn-menu-barras" class="btn-menu-barras"><i class="fas fa-bars"></i></button>
+        <button id="btn-menu-cerrar" class="btn-menu-cerrar"><i class="fas fa-times"></i></button>
+    </div>
+
+    <div class="contenedor contenedor-enlaces-nav">
+        <!-- <div class="btn-departamentos">
+            <p>Todos los <span>Departamentos</span></p>
+            <i class="fas fa-caret-down"></i>
+        </div> -->
+        <div class="logo">
+            <a [routerLink]="['/inicio']">
+                <img src="assets/page/img/baner/logo.png" alt="casa e imagen">
+            </a>
+        </div>
+
+        <div class="enlaces">
+            <a [routerLink]="['/inicio']" routerLinkActive="active">INICIO</a>
+            <a id="btn-departamentos" href="#">PRODUCTOS</a>
+            <a href="#">CATALOGO</a>
+            <a href="#">NOSOTROS</a>
+            <a href="#">CONTACTO</a>
+            <a href="#">PROYECTOS</a>
+        </div>
+    </div>
+
+    <div class="contenedor contenedor-grid">
+        <div class="grid" id="grid">
+            <div class="categorias">
+                <button class="btn-regresar"><i class="fas fa-arrow-left"></i> Regresar</button>
+                <h3 class="subtitulo">Categorias</h3>
+
+                <a href="#" data-categoria="alfombras">Alfombras<i class="fas fa-angle-right"></i></a>
+                <a href="#" data-categoria="grama-sintetica">Grama Sintética<i class="fas fa-angle-right"></i></a>
+                <a href="#" data-categoria="papel-tapiz">Papel Tapiz<i class="fas fa-angle-right"></i></a>
+                <a href="#" data-categoria="piso-laminado">Piso Laminado<i class="fas fa-angle-right"></i></a>
+                <a href="#" data-categoria="cortinas">Cortinas<i class="fas fa-angle-right"></i></a>
+                <a href="#" data-categoria="piso-linoleo">Piso Linóleo<i class="fas fa-angle-right"></i></a>
+                <a href="#" data-categoria="alfombras-atrapamugre">Alfombras Atrapamugre<i
+                        class="fas fa-angle-right"></i></a>
+
+            </div>
+
+            <div class="contenedor-subcategorias">
+                <div class="subcategoria activo" data-categoria="alfombras">
+                    <div class="enlaces-subcategoria">
+                        <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+                        <h3 class="subtitulo">Alfombras</h3>
+                        <a href="#">Alto trafico</a>
+                        <a href="#">Hoteleras</a>
+                        <a href="#">Pelo alto</a>
+                        <a href="#">Salsa</a>
+                        <a href="#">Solo</a>
+                        <a href="#">De Diseño</a>
+                        <a href="#">African Queen</a>
+                    </div>
+                    <div class="banner-subcategoria">
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-banner-1.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="galeria-subcategoria">
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-galeria-1.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-galeria-2.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-galeria-3.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-galeria-4.png" alt="">
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="subcategoria " data-categoria="grama-sintetica">
+                    <div class="enlaces-subcategoria">
+                        <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+                        <h3 class="subtitulo">Grama Sintética</h3>
+                        <a href="#">Follaje</a>
+                        <a href="#">Bolas decorativas</a>
+                        <a href="#">Jardineras</a>
+                    </div>
+                    <div class="banner-subcategoria">
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-banner-1.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="galeria-subcategoria">
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-galeria-1.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-galeria-2.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-galeria-3.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-galeria-4.png" alt="">
+                        </a>
+                    </div>
+
+                </div>
+                <div class="subcategoria " data-categoria="papel-tapiz">
+                    <div class="enlaces-subcategoria">
+                        <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+                        <h3 class="subtitulo">Papel Tapiz</h3>
+                        <a href="#">Factory 2014</a>
+                        <a href="#">Kids club</a>
+                        <a href="#">Walton 2014</a>
+                        <a href="#">Walton dimensión 3D</a>
+                    </div>
+                    <div class="banner-subcategoria">
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-banner-1.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="galeria-subcategoria">
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-galeria-1.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-galeria-2.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-galeria-3.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-galeria-4.png" alt="">
+                        </a>
+                    </div>
+
+                </div>
+                <div class="subcategoria " data-categoria="piso-laminado">
+                    <div class="enlaces-subcategoria">
+                        <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+                        <h3 class="subtitulo">Piso Laminado</h3>
+                        <a href="#">Piso AC3 7mm</a>
+                        <a href="#">Piso AC4 8.3mm</a>
+                        <a href="#">Piso AC5 12mm</a>
+                    </div>
+                    <div class="banner-subcategoria">
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-banner-1.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="galeria-subcategoria">
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-galeria-1.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-galeria-2.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-galeria-3.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-galeria-4.png" alt="">
+                        </a>
+                    </div>
+
+                </div>
+                <div class="subcategoria " data-categoria="cortinas">
+                    <div class="enlaces-subcategoria">
+                        <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+                        <h3 class="subtitulo">Cortinas</h3>
+                        <a href="#">Iglesias</a>
+                        <a href="#">Recidenciales</a>
+                    </div>
+                    <div class="banner-subcategoria">
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-banner-1.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="galeria-subcategoria">
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-galeria-1.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-galeria-2.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-galeria-3.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-galeria-4.png" alt="">
+                        </a>
+                    </div>
+
+                </div>
+                <div class="subcategoria " data-categoria="piso-linoleo">
+                    <div class="enlaces-subcategoria">
+                        <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+                        <h3 class="subtitulo">Linóleo</h3>
+                        <a href="#">Piso linóleo</a>
+                    </div>
+                    <div class="banner-subcategoria">
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-banner-1.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="galeria-subcategoria">
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-galeria-1.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-galeria-2.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-galeria-3.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-galeria-4.png" alt="">
+                        </a>
+                    </div>
+
+                </div>
+                <div class="subcategoria " data-categoria="alfombras-atrapamugre">
+                    <div class="enlaces-subcategoria">
+                        <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+                        <h3 class="subtitulo">Atrapamugre</h3>
+                        <a href="#">Alfombras Atrapamugre</a>
+                    </div>
+                    <div class="banner-subcategoria">
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-banner-1.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="galeria-subcategoria">
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-galeria-1.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-galeria-2.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-galeria-3.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/img/pruebas/nav/tecnologia-galeria-4.png" alt="">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<!-- <nav class="navbar navbar-main navbar-expand-md navbar-default nav-V2" role="navigation">
+    <div class="container">
+      <!- - Brand and toggle get grouped for better mobile display - ->
+      <a class="navbar-brand" href="#">
+        <img src="assets/page/img/baner/logo.png" alt="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-controls="navbar-ex1-collapse"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fa fa-bars"></span>
+      </button>
+
+      <!- - Collect the nav links, forms, and other content for toggling - ->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav ml-auto">
+          <li class="nav-item dropdown  active">  
+            <a class="nav-link" href="#">Inicio</a>
+          </li>
+
+          <li class="nav-item dropdown megaDropMenu active">
+            <a href="javascript:void(0)" class="nav-link dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300"
+              data-close-others="true" aria-expanded="false">Productos 
+            </a>
+            <ul class="dropdown-menu row">
+              <li class="col-md-3 col-12">
+                <ul class="list-unstyled">
+                  <li> Alfombras</li>
+                    <li class="active">
+                      <a href="#">Galería De alfombras</a>
+                    </li>
+                    <li>
+                      <a href="#">Alto Trafico</a>
+                    </li>
+                  <li>
+                    <a href="#">Hoteleras</a>
+                  </li>
+                  <li>
+                    <a href="#">Pelo Alto</a>
+                  </li>
+                  <li>
+                    <a href="#">Salsa</a>
+                  </li>
+                  <li>
+                    <a href="#">Solo</a>
+                  </li>
+                  <li>
+                    <a href="#">De Diseño</a>
+                  </li>
+                  <li>
+                    <a href="#">African Queen</a>
+                  </li>
+                  <li class="listHeading">Alfombras Atrapamugre</li>
+                  <li>
+                    <a href="#">Galería de Alfombras atrapamugre</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="col-md-3 col-12">
+                <ul class="list-unstyled">
+                  <li>Grama Sintética</li>
+                  <li class="active">
+                      <a href="#">Galería de grama sintética</a>
+                    </li>
+                  <li>
+                      <a href="#">Follaje</a>
+                    </li>
+                  <li>
+                    <a href="#">Bolas decorativas</a>
+                  </li>
+                  <li>
+                    <a href="#">Jardineras</a>
+                  </li>
+                  <li class="listHeading">Papel tapiz</li>
+                  <li>
+                    <a href="#">Galería de papel tapiz</a>
+                  </li>
+                  <li>
+                    <a href="#">Factory 2014</a>
+                  </li>
+                  <li>
+                    <a href="#">Kids Club</a>
+                  </li>
+                  <li>
+                    <a href="#">Wallton 2014</a>
+                  </li>
+                  <li>
+                    <a href="#">Wallton dimensión 3D</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="col-md-3 col-12">
+                <ul class="list-unstyled">
+                  <li>Piso Laminado</li>
+                  <li class="active">
+                      <a href="#">Galería piso laminado</a>
+                  </li>
+                  <li>
+                    <a href="#">Piso AC3 7mm </a>
+                  </li>
+                  <li>
+                    <a href="#">Piso AC4 8.3mm</a>
+                  </li>
+                  <li>
+                    <a href="#">Piso AC5 12mm</a>
+                  </li>
+                  <li class="listHeading">Cortinas</li>
+                  <li>
+                    <a href="#">Galería de Cortinas</a>
+                  </li>
+                  <li>
+                    <a href="#">Iglesias</a>
+                  </li>
+                  <li>
+                    <a href="#">Residenciales</a>
+                  </li>
+                  <li class="listHeading">Piso Linóleo</li>
+                  <li>
+                    <a href="#">Galería de Piso Linóleo</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="col-md-3 col-12">
+                <a href="#" class="menu-photo">
+                  <img class="img-fluid" src="#" alt="menu-img">
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown  active ">  
+              <a class="nav-link" href="#">Catalogo</a>
+            </li>
+          <li class="nav-item dropdown">
+            <a href="javascript:void(0)" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Nosotros</a>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li class="active">
+                <a href="#">Quienes Somos</a>
+              </li>
+              <li class="active">
+                <a href="#">Contacto</a>
+              </li>
+              <li class="active">
+                  <a href="#">Proyectos</a>
+                </li>
+            </ul>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a href="javascript:void(0)" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mi Cuenta</a>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li>
+                <a href="#">Perfil</a>
+              </li>
+              <li>
+                <a href="#">Carrito</a>
+              </li>
+            
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+      <!- - /.navbar-collapse - ->
+
+      <div class="cart-dropdown active">
+     
+            <a class="nav-link shop-cart" href="#">
+                <i class="fa fa-shopping-cart"></i>
+                <span class="badge text-white navbar-cart-count">4</span>
+              </a>
+      </div>
+    </div>
+  </nav> -->
