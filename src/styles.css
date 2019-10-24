@@ -4,3 +4,7 @@
     border: none;
     outline: none;
 }
+
+.pointer {
+  cursor: pointer;
+}

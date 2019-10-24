@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginAdminService } from '../../../../services/account/login-admin.service';
+import { Usuario } from '../../../../models/usuario.model';
+import { SidebarService } from '../../../../services/sidebar/sidebar.service';
 
 @Component({
   selector: 'app-sidebar-admin',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarAdminComponent implements OnInit {
 
-  constructor() { }
+  usuario: Usuario;
+
+  constructor(
+    public _loginService: LoginAdminService,
+    public _sidebarService: SidebarService
+    ) {
+  }
 
   ngOnInit() {
+    this.usuario = this._loginService.usuario;
   }
 
 }

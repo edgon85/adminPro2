@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginAdminService } from '../../../../services/account/login-admin.service';
+import { Usuario } from '../../../../models/usuario.model';
 
 @Component({
   selector: 'app-header-admin',
@@ -9,16 +10,19 @@ import { LoginAdminService } from '../../../../services/account/login-admin.serv
 })
 export class HeaderAdminComponent implements OnInit {
 
+  usuario: Usuario;
+
   constructor(
-    private _authService: LoginAdminService,
+    private _loginService: LoginAdminService,
     private router: Router,
   ) { }
 
   ngOnInit() {
+    this.usuario = this._loginService.usuario;
   }
 
   serrarSesion() {
-    this._authService.logout()
+    this._loginService.logout()
     .then(
       (resp) => {
         console.log('Sesion crerrada!' , resp);

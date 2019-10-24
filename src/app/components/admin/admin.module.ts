@@ -8,6 +8,7 @@ import { ProductComponent } from './pages/product/product.component';
 import { CommonModule } from '@angular/common';
 import { KeysPipe } from 'src/app/pipes/keys.pipe';
 import { FormsModule } from '@angular/forms';
+import { AvatarPipe } from '../../pipes/avatar.pipe';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FormsModule } from '@angular/forms';
     DashboardComponent,
     ProductComponent,
     KeysPipe,
+    AvatarPipe
   ],
   imports: [
     CommonModule,

@@ -9,17 +9,27 @@
       <ul id="sidebarnav">
         <li class="user-profile">
           <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><img
-              src="assets/admin/images/users/profile.png" alt="user" /><span class="hide-menu">Administrador
+              [src]="usuario.img | avatar" alt="user" /><span class="hide-menu">{{ usuario.nombre }}
             </span></a>
           <ul aria-expanded="false" class="collapse">
             <li><a href="javascript:void()">Mi perfil </a></li>
             <li><a href="javascript:void()">Configuración de mi cuenta</a></li>
-            <li><a href="javascript:void()">Cerrar sesión</a></li>
+            <li><a (click)="_loginService.logout()" class="pointer">Cerrar sesión</a></li>
           </ul>
         </li>
         <li class="nav-devider"></li>
         <li class="nav-small-cap">ADMINISTRACIÓN</li>
-        <li>
+        <li *ngFor="let menu of _sidebarService.menu"> 
+          <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
+            <i [class]="menu.icono"></i>
+            <span class="hide-menu">{{ menu.titulo }}<span class="label label-rouded label-themecolor pull-right">{{ menu.submenu.length }}</span></span></a>
+              <ul aria-expanded="false" class="collapse">
+                  <li *ngFor="let submenu of menu.submenu">
+                      <a [routerLink]="[ submenu.url ]" routerLinkActive="active">{{  submenu.titulo }}</a>
+                  </li>
+              </ul>
+        </li>
+        <!-- <li>
           <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-gauge"></i>
             <span class="hide-menu">Dashboard </span>
           </a>
@@ -39,7 +49,7 @@
             <li><a [routerLink]="['./producto', 'papel-tapiz']" routerLinkActive="active">Papel tapiz</a></li>
             <li><a [routerLink]="['./producto', 'piso-laminado']" routerLinkActive="active">Piso laminado</a></li>
           </ul>
-        </li>
+        </li> -->
       </ul>
     </nav>
     <!-- End Sidebar navigation -->
