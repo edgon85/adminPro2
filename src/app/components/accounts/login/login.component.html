@@ -6,17 +6,29 @@
   <div class="login-box card">
     <div class="card-body">
       
-      <form class="form-horizontal form-material" id="loginform" action="index.html" #forma="ngForm" (ngSubmit)="ingresar( forma )">
+      <form ngNativeValidate class="form-horizontal form-material" #forma="ngForm" (ngSubmit)="ingresar( forma )">
         <a href="javascript:void(0)" class="text-center db"><img src="assets/admin/images/logo-icon.png"
             alt="Home" /><br /><img src="assets/admin/images/logo-text.png" alt="Home" /></a>
         <div class="form-group m-t-40">
           <div class="col-xs-12">
-            <input [(ngModel)]="email" name="email" class="form-control" type="text" required="" placeholder="Correo">
+            <input [ngModel]="email" name="email" class="form-control" type="email" required placeholder="Correo">
           </div>
         </div>
         <div class="form-group">
           <div class="col-xs-12">
-            <input [(ngModel)]="password" name="password" class="form-control" type="password" required="" placeholder="Contraseña">
+            <input ngModel name="password" class="form-control" type="password" required placeholder="Contraseña">
+        
+          </div>
+        </div>
+        <div class="row animate fadeIn" *ngIf="_loginAdminService.cargando">
+          <div class="col-12">
+            <div class="text-center">
+              <!-- <strong>Cargando</strong> -->
+              <!-- <br> -->
+              <i class="fa fa-refresh fa-spin fa-2x"></i>
+              <br>
+              <!-- <span>Espere for favor</span> -->
+            </div>
           </div>
         </div>
         <div class="form-group row">
@@ -34,19 +46,6 @@
             <button class="btn btn-info btn-lg btn-block text-uppercase btn-rounded" type="submit">Iniciar sesión</button>
           </div>
         </div>
-        <!-- <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">
-            <div class="social"><a href="javascript:void(0)" class="btn  btn-facebook" data-toggle="tooltip"
-                title="Login with Facebook"> <i aria-hidden="true" class="fa fa-facebook"></i> </a> <a
-                href="javascript:void(0)" class="btn btn-googleplus" data-toggle="tooltip" title="Login with Google"> <i
-                  aria-hidden="true" class="fa fa-google-plus"></i> </a> </div>
-          </div>
-        </div> -->
-        <!-- <div class="form-group m-b-0">
-          <div class="col-sm-12 text-center">
-            Don't have an account? <a href="pages-register2.html" class="text-primary m-l-5"><b>Sign Up</b></a>
-          </div>
-        </div> -->
       </form>
       
       <form class="form-horizontal" id="recoverform" action="index.html">
