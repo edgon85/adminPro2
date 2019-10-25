@@ -1,1 +1,89 @@
-<p>alfombras works!</p>
+<!-- ==================================== -->
+<!-- Buscador -->
+<!-- ==================================== -->
+<div class="row animate fadeIn">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <input #input  (keyup)="buscarAlfombra( input.value )" type="text" class="form-control" placeholder="Buscar usuario">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ==================================== -->
+  <!-- Fin Buscador -->
+  <!-- ==================================== -->
+
+  <!-- ==================================== -->
+<!-- Loading -->
+<!-- ==================================== -->
+<!-- <div class="row animate fadeIn" *ngIf="cargando"> -->
+<div class="row animate fadeIn">
+    <div class="col-12">
+      <div class="alert-warning text-center">
+        <strong>Cargando</strong>
+        <br>
+        <i class="fa fa-refresh fa-spin fa-2x"></i>
+        <br>
+        <span>Espere por favor</span>
+      </div>
+    </div>
+  </div>
+  <!-- ==================================== -->
+  <!-- Fin Loading -->
+  <!-- ==================================== -->
+
+  <!-- ==================================== -->
+<!-- Tabla usuarios-->
+<!-- ==================================== -->
+<div class="row animate fadeIn" *ngIf="!cargando">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+        <div class="text-right">
+            <button routerLink="/admin/producto/nuevo" type="button" class="btn waves-effect waves-light btn-rounded btn-primary">
+                <i class="fa fa-plus"></i> 
+                Crear Alfombra
+            </button>
+        </div>
+          <h3 class="card-title">Total de alfombras ( <small>{{ totalProductos }}</small> )</h3>
+          <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Categoría</th>
+                    <th>Sub categoría</th>
+                    <th>Acción</th>
+                    <!-- <th>Acción</th> -->
+                </tr>
+            </thead>
+            <tbody >
+              <tr *ngFor="let producto of productos">
+                  <td>
+                      <!-- <img class="w100 img-rounded " src="assets/img/products/no-img.jpg"> -->
+                      <img [src]="producto.image.portada" class="w100 img-rounded " >
+                  </td>
+                  <td >{{ producto.title }}</td>
+                  <td>{{ producto.category }}</td>
+                  <td>{{ producto.sub_category }}</td>
+                  <td>
+                    <button [routerLink]="['/producto', producto.id ]" class="btn btn-primary mr-1"><i class="fa fa-edit"></i></button>
+
+                    <button (click)="borrarUsuario( producto.id )" class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
+                  </td>
+                  
+              </tr>
+            </tbody>
+          </table>
+  
+          <button (click)="cambiarDesde(-5)" class="btn btn-secondary mr-1">Anteriores</button>
+          <button (click)="cambiarDesde(5)" class="btn btn-secondary">Siguentes</button>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ==================================== -->
+  <!-- Fin  Tabla usuarios-->
+  <!-- ==================================== -->

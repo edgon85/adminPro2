@@ -8,3 +8,10 @@
 .pointer {
   cursor: pointer;
 }
+
+.w150 {
+  width: 150px;
+}
+.w100 {
+  width: 50px;
+}
