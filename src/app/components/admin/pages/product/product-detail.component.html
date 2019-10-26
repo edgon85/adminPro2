@@ -1,0 +1,79 @@
+<!-- <button routerLink="../../alfombras" class="btn btn-danger" >Back</button> -->
+
+<div class="row">
+    <div class="col-12 col-md-6">
+        <div class="card card-body">
+            <h3 class="box-title m-b-0">Crear {{ urlParam }}</h3>
+            <div class="row">
+                <div class="col-sm-12 col-xs-12">
+                    <form #f="ngForm" ngNativeValidate (ngSubmit)="crearProducto( f )">
+                        <br>
+                        <div class="form-group">
+                            <label>Nombre del {{ urlParam }}</label>
+                            <input [(ngModel)]="producto.title" name="title" type="text" class="form-control"
+                                placeholder="Nombre del {{ urlParam }}" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Categoria:</label>
+                            <select [(ngModel)]="producto.category" name="category"
+                                (change)="onSelectCategory($event.target.value)" class="form-control input-lg" required>
+                                <option value="">Seleccione una categoria</option>
+                                <option *ngFor="let cat of categories" [value]=cat.id>{{cat.name}}</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Sub categoria:</label>
+                            <select *ngIf="subCategory" [(ngModel)]="producto.sub_category" name="sub_category"
+                                (change)="onSelectSubCategory($event.target.value)" class="form-control input-lg"
+                                required>
+                                <option value="">Seleccione subcategoria</option>
+                                <option *ngFor="let subcat of subCategory" [value]="subcat.name">
+                                    {{subcat.name}}</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Descripción</label>
+                            <textarea [(ngModel)]="producto.description" name="description" class="form-control"
+                                rows="6" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">
+                            <i class="fa fa-save"></i>
+                            Guardar</button>
+                        <a *ngIf="producto.slug" [routerLink]="['../../', producto.category]"
+                            class="btn btn-danger waves-effect waves-light">Cancelar</a>
+                        <a *ngIf="!producto.slug" routerLink="../../"
+                            class="btn btn-inverse waves-effect waves-light">Cancelar</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-6" *ngIf="producto.slug">
+        <div class="row">
+            <div class="col-12 ">
+                <div class="card card-body">
+                    <h4 class="box-title m-b-0">Fotografía</h4>
+
+                    <!-- <img (click)="cambiarFoto()" [src]="medico.img | imagen:'medico'" class="img-circle img-fluid pointer"> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <div class="card card-body">
+
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card card-body">
+                
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

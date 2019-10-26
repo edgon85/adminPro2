@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { AvatarPipe } from '../../pipes/avatar.pipe';
 import { AlfombrasComponent } from './pages/alfombras/alfombras.component';
 import { AtrapamugreComponent } from './pages/atrapamugre/atrapamugre.component';
+import { ProductDetailComponent } from './pages/product/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AtrapamugreComponent } from './pages/atrapamugre/atrapamugre.component'
     KeysPipe,
     AvatarPipe,
     AlfombrasComponent,
-    AtrapamugreComponent
+    AtrapamugreComponent,
+    ProductDetailComponent
   ],
   imports: [
     CommonModule,

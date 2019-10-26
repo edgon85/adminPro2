@@ -7,6 +7,7 @@ import { LoginGardGuard } from '../../services/gards/login-gard.guard';
 import { ProductComponent } from '../admin/pages/product/product.component';
 import { AlfombrasComponent } from '../admin/pages/alfombras/alfombras.component';
 import { AtrapamugreComponent } from '../admin/pages/atrapamugre/atrapamugre.component';
+import { ProductDetailComponent } from '../admin/pages/product/product-detail.component';
 
 
 
@@ -27,10 +28,11 @@ const pagesRoutes: Routes = [
             { path: 'dashboard', component: DashboardComponent, data: {'title': 'Dashboard'}},
             //  router de productos
             {
-                path: 'producto', component: ProductComponent,
+                path: 'productos', component: ProductComponent,
                 children: [
+                    { path: 'prod/:id', component: ProductDetailComponent, data: {'title': 'Producto'}},
                     { path: 'alfombras', component: AlfombrasComponent, data: {'title': 'Alfombras'}},
-                    { path: 'alfombra-atrapa-mugre', component: AtrapamugreComponent, data: {'title': 'Alfombras atrapamugre'}}
+                    { path: 'alfombra-atrapamugre', component: AtrapamugreComponent, data: {'title': 'Alfombras atrapamugre'}}
                 ]
             },
             { path: '', redirectTo: '/admin/dashboard', pathMatch: 'full'}

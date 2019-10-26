@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product.service';
 import { ProductoModel } from '../../../../models/producto.model';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-alfombras',
@@ -11,12 +12,18 @@ export class AlfombrasComponent implements OnInit {
 
   productos: ProductoModel[] = [];
   totalProductos: number = 0;
+  cargando: boolean = false;
 
-  constructor( private _productService: ProductService) {
-    this.obtenerAlfombras();
+  constructor(
+    private _productService: ProductService,
+    private router: Router,
+    private route: ActivatedRoute) {
+
   }
 
   ngOnInit() {
+    this.cargando = true;
+    this.obtenerAlfombras();
   }
 
   buscarAlfombra() {}
@@ -26,9 +33,14 @@ export class AlfombrasComponent implements OnInit {
       (resp) => {
         this.productos = resp;
         this.totalProductos = this.productos.length;
-        console.log(this.productos);
+        this.cargando = false;
       }
     );
+  }
+
+
+  nuevoProducto() {
+    this.router.navigate(['../prod', 'alfombra'], {relativeTo: this.route});
   }
 
   borrarUsuario( id: string ) {

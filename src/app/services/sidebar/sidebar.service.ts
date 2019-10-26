@@ -21,16 +21,16 @@ export class SidebarService {
       titulo: 'Productos',
       icono: 'mdi mdi-folder-lock-open',
       submenu: [
-        { titulo: 'Alfombras', url: './producto/alfombras' },
+        { titulo: 'Alfombras', url: './productos/alfombras' },
         {
           titulo: 'Alfombras atrapa mugre',
-          url: './producto/alfombra-atrapa-mugre'
+          url: './productos/alfombra-atrapamugre'
         },
-        { titulo: 'Cortinas', url: './producto/cortinas' },
-        { titulo: 'Grama sintetica', url: './producto/grama-sintetica' },
-        { titulo: 'Linóleo', url: './producto/grama-sintetica' },
-        { titulo: 'Papel tapiz', url: './producto/papel-tapiz' },
-        { titulo: 'Piso laminado', url: './producto/piso-laminado' }
+        { titulo: 'Cortinas', url: './productos/cortinas' },
+        { titulo: 'Grama sintetica', url: './productos/grama-sintetica' },
+        { titulo: 'Linóleo', url: './productos/grama-sintetica' },
+        { titulo: 'Papel tapiz', url: './productos/papel-tapiz' },
+        { titulo: 'Piso laminado', url: './productos/piso-laminado' }
       ]
     }
   ];
