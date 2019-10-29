@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ProductoModel } from '../../../../models/producto.model';
 import { NgForm } from '@angular/forms';
 import { ProductService } from '../../services/product.service';
+import { UploadModalService } from '../../../../services/modal/upload-modal.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -31,8 +32,28 @@ export class ProductDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private _productService: ProductService,
+    private _modalUploadService: UploadModalService,
     private router: Router
-  ) {}
+  ) {
+    this._modalUploadService.notificacion.subscribe(
+      (resp: any) => {
+
+        if ( resp.portada ) {
+          this.producto.image.portada = resp.portada;
+        } else if (resp.img1) {
+          this.producto.image.img1 = resp.img1;
+        } else if (resp.img2) {
+          this.producto.image.img2 = resp.img2;
+        } else if (resp.img3) {
+          this.producto.image.img3 = resp.img3;
+        } else if (resp.img4) {
+          this.producto.image.img4 = resp.img4;
+        } else if (resp.img5) {
+          this.producto.image.img5 = resp.img5;
+        }
+      }
+    );
+  }
 
   ngOnInit() {
     this.urlParam = this.route.snapshot.paramMap.get('id');
@@ -76,7 +97,14 @@ export class ProductDetailComponent implements OnInit {
 
 
 
-
+  cambiarPortada( imgData: string, oldurl: string) {
+    this._modalUploadService.mostrarModal(
+      this.producto.category,
+      this.producto.slug,
+      imgData,
+      oldurl
+      );
+  }
 
 
 

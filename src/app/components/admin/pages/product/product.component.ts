@@ -76,12 +76,7 @@ export class ProductComponent implements OnInit {
 //   guardarProducto(forma) {
 //     this.timestamp = Date.now();
 //     this.slug =
-//       this.producto.title
-//         .toLowerCase()
-//         .split(' ')
-//         .join('-') +
-//       '-' +
-//       this.timestamp.toString();
+//     this.producto.title.toLowerCase().split(' ').join('-') + '-' + this.timestamp.toString();
 //     this.producto.slug = this.slug;
 //     this.producto.timestamp = this.timestamp.toString();
 

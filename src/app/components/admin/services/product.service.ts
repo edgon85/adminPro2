@@ -53,7 +53,19 @@ export class ProductService {
 }
 
 
+  // ====================================================
+  // Crea un producto
+  // ====================================================
+  public updateImage( id: string, imageIdJSON: any, imagePathJson: string ) {
 
+    let imageData: object = {};
+    imageData[imageIdJSON] = imagePathJson;
+
+    // let _data = { imageIdJSON: imagePathJson };
+    let url = this.urlProduct + `/productos/${id}/image.json`;
+
+    return this.http.patch(url, imageData);
+  }
 
 
 

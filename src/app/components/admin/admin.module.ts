@@ -12,6 +12,7 @@ import { AvatarPipe } from '../../pipes/avatar.pipe';
 import { AlfombrasComponent } from './pages/alfombras/alfombras.component';
 import { AtrapamugreComponent } from './pages/atrapamugre/atrapamugre.component';
 import { ProductDetailComponent } from './pages/product/product-detail.component';
+import { ModalUploadComponent } from './reutilizables/modal-upload/modal-upload.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ProductDetailComponent } from './pages/product/product-detail.component
     AvatarPipe,
     AlfombrasComponent,
     AtrapamugreComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    ModalUploadComponent
   ],
   imports: [
     CommonModule,
