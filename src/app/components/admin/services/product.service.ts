@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map, delay } from 'rxjs/operators';
+import { map, delay, catchError } from 'rxjs/operators';
 import { ProductoModel } from '../../../models/producto.model';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { Router } from '@angular/router';
+import { AngularFireStorage } from '@angular/fire/storage';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,8 @@ export class ProductService {
   constructor(
     private http: HttpClient,
     private afDB: AngularFireDatabase,
-    private router: Router
+    private router: Router,
+    private storage: AngularFireStorage
     ) {}
 
   // ====================================================
@@ -42,19 +44,31 @@ export class ProductService {
   // ====================================================
   // Crea un producto
   // ====================================================
-  // public createProduct(product: ProductoModel, slug: string) {
-  //   let url = this.urlProduct + `/productos/${slug}.json`;
-
-  //   return this.http.post(url, product);
-  // }
   public createProduct( product: ProductoModel, key: string) {
-  // return this.afDB.database.ref('product/' + key).set( product );
-  return this.afDB.object('/productos/' + key).set(product);
-}
-
+    // return this.afDB.database.ref('product/' + key).set( product );
+    return this.afDB.object('/productos/' + key).set(product);
+  }
 
   // ====================================================
-  // Crea un producto
+  // Actualizar un producto
+  // ====================================================
+  public updateProduct(id: string, product: ProductoModel) {
+    let url = this.urlProduct + `/productos/${id}.json`;
+
+    return this.http.patch(url, product);
+  }
+
+  // ====================================================
+  // Eliminar un producto
+  // ====================================================
+  public deleteProduct(id: string) {
+    let url = this.urlProduct + `/productos/${id}.json`;
+
+    return this.http.delete(url);
+  }
+
+  // ====================================================
+  // Actualizar Imagen
   // ====================================================
   public updateImage( id: string, imageIdJSON: any, imagePathJson: string ) {
 
@@ -66,9 +80,6 @@ export class ProductService {
 
     return this.http.patch(url, imageData);
   }
-
-
-
 
   // ====================================================
   // Conviert los datos d firebase a un arreglo para que
@@ -83,39 +94,19 @@ export class ProductService {
       productos.push(producto);
     });
 
-    // if ( productosObj === null ) { return []; }
+    if ( productosObj === null ) { return []; }
     return productos;
   }
+
+  // ================================================= //
+  // Eliminar imagen de storage
+  // ================================================= //
+  deleteImage(downloadUrl: string) {
+    if ( downloadUrl === '' ) {
+      return;
+    } else {
+      return this.storage.storage.refFromURL(downloadUrl).delete();
+    }
+
+  }
 }
-
-// public getProductsAdmin() {
-//   return this.afDB.list('/productos');
-// }
-
-// public getProductAdmin( slug: string ) {
-//   return this.afDB.object('/productos/' + slug);
-// }
-
-// public createProduct( product: Product, key: string) {
-//   // return this.afDB.database.ref('product/' + key).set( product );
-//   return this.afDB.object('/productos/' + key).set(product);
-// }
-
-// public updateProduct( product: Product, key: string ) {
-//   return this.afDB.object('/productos/' + key).update( product);
-// }
-
-// public deleteProduct( keyId: string) {
-//   return this.afDB.object('/productos/' + keyId).remove();
-// }
-
-// public getProduct( slug ) {
-//   let url = `${this.urlProduct}/${ slug }.json`;
-//   return this.http.get( url ).pipe(
-//     map( (resp) => {
-//       // console.log('url: ', url);
-//       // console.log( resp );
-//       return resp;
-//     })
-//   );
-// }

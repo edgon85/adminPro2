@@ -14,6 +14,25 @@
 
                     <input (change)="seleccionImage($event.target.files[0])" type="file" #inputFile />
                 </div>
+
+                <!-- ==================================== -->
+                <!-- Loading -->
+                <!-- ==================================== -->
+                <div class="row animate fadeIn" *ngIf="cargando">
+                    <div class="col-12">
+                        <div class="alert-warning text-center">
+                        <strong>Guardando</strong>
+                        <br>
+                        <i class="fa fa-refresh fa-spin fa-2x"></i>
+                        <br>
+                        <span>Espere por favor</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- ==================================== -->
+                <!-- Fin Loading -->
+                <!-- ==================================== -->
+
                 <div class="modal-footer">
                     <button (click)="cerrarModal()" type="button" class="btn btn-secondary">Cerrar</button>
                     <button (click)="subirImagen()" [disabled]="!imagenTemp" type="button" class="btn btn-primary">Guardar</button>

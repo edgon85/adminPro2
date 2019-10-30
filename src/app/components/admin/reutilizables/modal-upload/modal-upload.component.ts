@@ -14,6 +14,8 @@ export class ModalUploadComponent implements OnInit {
   imagenSubir: File;
   imagenTemp: string | ArrayBuffer;
 
+  cargando: boolean = false;
+
   @ViewChild('inputFile', { static: false }) inputFile: any;
 
   constructor(
@@ -56,11 +58,12 @@ export class ModalUploadComponent implements OnInit {
   // Actualizar imagne
   // ================================================= //
   subirImagen() {
+    this.cargando = true;
     const imgName = this._modalUploadService.id + '-' + Date.now();
 
     const file = this.imagenSubir;
     // const filePath = 'images/productos/' + this.slug;
-    const filePath = `images/productos/${this._modalUploadService.tipo}/${imgName}`;
+    const filePath = `images/productos/${this._modalUploadService.tipo}/${this._modalUploadService.id}/${imgName}`;
     const fileRef = this.storage.ref(filePath);
     const task = this.storage.upload(filePath, file);
 
@@ -78,6 +81,7 @@ export class ModalUploadComponent implements OnInit {
               .subscribe((data: any) => {
                 this._modalUploadService.notificacion.emit(data);
 
+                this.cargando = false;
                 if ( !this._modalUploadService.oldImageUrl ) {
                   return;
                 }
@@ -112,9 +116,10 @@ export class ModalUploadComponent implements OnInit {
   }
 
   // ================================================= //
-  // Limpia el nombre del input file con un @ViewChild
+  // Eliminar imagen
   // ================================================= //
   eliminarImagen(downloadUrl: string) {
-    return this.storage.storage.refFromURL(downloadUrl).delete();
+    return this._productService.deleteImage(downloadUrl);
+    // return this.storage.storage.refFromURL(downloadUrl).delete();
   }
 }

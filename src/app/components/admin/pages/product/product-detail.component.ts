@@ -4,6 +4,7 @@ import { ProductoModel } from '../../../../models/producto.model';
 import { NgForm } from '@angular/forms';
 import { ProductService } from '../../services/product.service';
 import { UploadModalService } from '../../../../services/modal/upload-modal.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-product-detail',
@@ -27,7 +28,8 @@ export class ProductDetailComponent implements OnInit {
   selectedCategory = '';
   selectedSubCategory = '';
   subCategory: any[] = [];
-  // cities: any[] = [];
+
+  tituloPag: string = '';
 
   constructor(
     private route: ActivatedRoute,
@@ -35,83 +37,123 @@ export class ProductDetailComponent implements OnInit {
     private _modalUploadService: UploadModalService,
     private router: Router
   ) {
-    this._modalUploadService.notificacion.subscribe(
-      (resp: any) => {
-
-        if ( resp.portada ) {
-          this.producto.image.portada = resp.portada;
-        } else if (resp.img1) {
-          this.producto.image.img1 = resp.img1;
-        } else if (resp.img2) {
-          this.producto.image.img2 = resp.img2;
-        } else if (resp.img3) {
-          this.producto.image.img3 = resp.img3;
-        } else if (resp.img4) {
-          this.producto.image.img4 = resp.img4;
-        } else if (resp.img5) {
-          this.producto.image.img5 = resp.img5;
-        }
+    this._modalUploadService.notificacion.subscribe((resp: any) => {
+      if (resp.portada) {
+        this.producto.image.portada = resp.portada;
+      } else if (resp.img1) {
+        this.producto.image.img1 = resp.img1;
+      } else if (resp.img2) {
+        this.producto.image.img2 = resp.img2;
+      } else if (resp.img3) {
+        this.producto.image.img3 = resp.img3;
+      } else if (resp.img4) {
+        this.producto.image.img4 = resp.img4;
+      } else if (resp.img5) {
+        this.producto.image.img5 = resp.img5;
       }
-    );
+    });
   }
 
   ngOnInit() {
     this.urlParam = this.route.snapshot.paramMap.get('id');
 
-    if ( this.urlParam !== 'alfombra' ) {
+    this.tituloPag = 'Crear ' + this.urlParam;
+
+    if (this.urlParam !== 'alfombra') {
+      this.tituloPag = 'Actualizar ' + this.urlParam;
       this.cargarProducto(this.urlParam);
     }
-
   }
 
-  crearProducto(form: NgForm) {
+  // ===================================================================
+  // Crear o actualizar un producto, depende de su slug
+  // ===================================================================
+  crearActualizarProducto(form: NgForm) {
     this.producto = form.value;
-    this.producto.image = { portada: '' };
-    this.producto.id = '' + Date.now();
-    this.producto.slug = this.crearSlug(form.value.title) + this.producto.id;
 
     if (form.invalid) {
       return;
     }
 
-    // let peticion: Promise<any>;
+    switch (this.urlParam) {
+      case 'alfombra':
+        this.crearProdcuto(form.value.title, this.producto);
+        break;
+      case 'alfombra-atrapamugre':
+        console.log('crear atrapa mugre');
+        break;
+      default:
+        this.actualizarProducto(this.urlParam, this.producto);
+        break;
+    }
+  }
+  // ===================================================================
 
+  // ===================================================================
+  // Crear un nuevo producto
+  // ===================================================================
+  crearProdcuto(nombre: string, producto: ProductoModel) {
+    this.producto.image = {
+      portada: '',
+      img1: '',
+      img2: '',
+      img3: '',
+      img4: '',
+      img5: ''
+    };
+    this.producto.id = '' + Date.now();
+    this.producto.slug = this.crearSlug(nombre) + this.producto.id;
+
+    // console.log(producto);
     this._productService
-      .createProduct(this.producto, this.producto.slug)
+      .createProduct(producto, this.producto.slug)
       .then(resp => {
+        this.urlParam = this.producto.slug;
         this.router.navigate(['/admin/productos/prod', this.producto.slug]);
       });
   }
+  // ===================================================================
 
-
-  cargarProducto(id: string) {
-    this._productService.getProduct(id)
-    .subscribe(
-      (resp: ProductoModel) => {
-        this.urlParam = resp.category;
-        this.producto = resp;
-        this.subCategory = [{'name': resp.sub_category}];
-      }
-    );
+  // ===================================================================
+  // Actualizar un producto por su id o slug
+  // ===================================================================
+  actualizarProducto(id: string, producto: ProductoModel) {
+    this._productService.updateProduct(id, producto).subscribe(() => {
+      Swal.fire({
+        type: 'success',
+        title: 'Actualizado!!!'
+      });
+      this.cargarProducto(id);
+    });
   }
+  // ====================================================================
+
+  // ========================================================================
+  // Cargar un producto por su id o slug
+  // ========================================================================
+  cargarProducto(id: string) {
+    this._productService.getProduct(id).subscribe((resp: ProductoModel) => {
+      // this.urlParam = resp.category;
+      this.producto = resp;
+      this.subCategory = [{ name: resp.sub_category }];
+    });
+  }
+  // ========================================================================
 
 
-
-  cambiarPortada( imgData: string, oldurl: string) {
+  // =================================================
+  // Cambiar portada o cualquier imagen
+  // =================================================
+  cambiarPortada(imgData: string, oldUrl: string) {
     this._modalUploadService.mostrarModal(
       this.producto.category,
       this.producto.slug,
       imgData,
-      oldurl
-      );
+      oldUrl
+    );
   }
-
-
-
-
-
-
-
+  // =================================================
+  // =================================================
 
   // --------------- Codigo para la categoria y sub categoria -----------
   onSelectCategory(category_id: string) {
