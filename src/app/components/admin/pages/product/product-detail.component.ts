@@ -57,12 +57,16 @@ export class ProductDetailComponent implements OnInit {
   ngOnInit() {
     this.urlParam = this.route.snapshot.paramMap.get('id');
 
-    this.tituloPag = 'Crear ' + this.urlParam;
+    this.tituloPag = 'Crear producto nuevo';
 
-    if (this.urlParam !== 'alfombra') {
-      this.tituloPag = 'Actualizar ' + this.urlParam;
+    if (this.urlParam !== 'nuevo') {
       this.cargarProducto(this.urlParam);
+      // this.tituloPag = 'Actualizar ' + this.producto.title;
     }
+    // if (this.urlParam !== 'atrapamugre') {
+    //   this.tituloPag = 'Actualizar ' + this.urlParam;
+    //   this.cargarProducto(this.urlParam);
+    // }
   }
 
   // ===================================================================
@@ -76,11 +80,8 @@ export class ProductDetailComponent implements OnInit {
     }
 
     switch (this.urlParam) {
-      case 'alfombra':
+      case 'nuevo':
         this.crearProdcuto(form.value.title, this.producto);
-        break;
-      case 'alfombra-atrapamugre':
-        console.log('crear atrapa mugre');
         break;
       default:
         this.actualizarProducto(this.urlParam, this.producto);
@@ -136,6 +137,7 @@ export class ProductDetailComponent implements OnInit {
       // this.urlParam = resp.category;
       this.producto = resp;
       this.subCategory = [{ name: resp.sub_category }];
+      this.tituloPag = 'Actualizar ' + this.producto.title;
     });
   }
   // ========================================================================

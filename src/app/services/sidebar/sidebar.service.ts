@@ -24,7 +24,7 @@ export class SidebarService {
         { titulo: 'Alfombras', url: './productos/alfombras' },
         {
           titulo: 'Alfombras atrapa mugre',
-          url: './productos/alfombra-atrapamugre'
+          url: './productos/atrapamugre'
         },
         { titulo: 'Cortinas', url: './productos/cortinas' },
         { titulo: 'Grama sintetica', url: './productos/grama-sintetica' },

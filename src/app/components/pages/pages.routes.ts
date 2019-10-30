@@ -32,7 +32,7 @@ const pagesRoutes: Routes = [
                 children: [
                     { path: 'prod/:id', component: ProductDetailComponent, data: {'title': 'Producto'}},
                     { path: 'alfombras', component: AlfombrasComponent, data: {'title': 'Alfombras'}},
-                    { path: 'alfombra-atrapamugre', component: AtrapamugreComponent, data: {'title': 'Alfombras atrapamugre'}}
+                    { path: 'atrapamugre', component: AtrapamugreComponent, data: {'title': 'Alfombras atrapamugre'}}
                 ]
             },
             { path: '', redirectTo: '/admin/dashboard', pathMatch: 'full'}

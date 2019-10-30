@@ -25,7 +25,18 @@ export class AlfombrasComponent implements OnInit {
     this.obtenerAlfombras();
   }
 
-  buscarAlfombra() {}
+  // buscarAlfombra(termino: string) {
+  //   if ( termino.length <= 0) {
+  //     this.obtenerAlfombras();
+  //     return;
+  //   }
+
+  //   this._productService.search(termino).subscribe(
+  //     (resp) => {
+  //      console.log(resp);
+  //     }
+  //   );
+  // }
 
   obtenerAlfombras() {
     this._productService.getAllProducts('alfombras').subscribe(resp => {
@@ -36,7 +47,7 @@ export class AlfombrasComponent implements OnInit {
   }
 
   nuevoProducto() {
-    this.router.navigate(['../prod', 'alfombra'], { relativeTo: this.route });
+    this.router.navigate(['../prod', 'nuevo'], { relativeTo: this.route });
   }
 
   // =================================================

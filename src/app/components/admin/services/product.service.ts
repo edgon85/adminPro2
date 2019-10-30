@@ -109,4 +109,15 @@ export class ProductService {
     }
 
   }
+
+
+  search(termino: string) {
+    // https://casa-e-imagen.firebaseio.com/productos.json?orderBy=%22$key%22&startAt=%22dc%22&endAt=%22dc\uf8ff%22&print=pretty
+    let url = this.urlProduct + `/productos.json?orderBy="$key"&startAt="${termino}"&endAt="${termino}\uf8ff"`;
+
+    return this.http.get(url).pipe(
+      map(this.crearArreglo),
+      delay(0)
+    );
+  }
 }
