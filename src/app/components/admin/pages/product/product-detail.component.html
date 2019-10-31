@@ -28,7 +28,7 @@
                                 (change)="onSelectSubCategory($event.target.value)" class="form-control input-lg"
                                 required>
                                 <option value="">Seleccione subcategoria</option>
-                                <option *ngFor="let subcat of subCategory" [value]="subcat.name">
+                                <option *ngFor="let subcat of subCategory" [value]="subcat.value">
                                     {{subcat.name}}</option>
                             </select>
                         </div>
@@ -42,7 +42,7 @@
                         <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">
                             <i class="fa fa-save"></i>
                             Guardar</button>
-                        <a *ngIf="producto.slug" [routerLink]="['../../', producto.category]"
+                        <a *ngIf="producto.slug" [routerLink]="['../../', pathBack]"
                             class="btn btn-danger waves-effect waves-light">Cancelar</a>
                         <a *ngIf="!producto.slug" routerLink="../../"
                             class="btn btn-inverse waves-effect waves-light">Cancelar</a>
