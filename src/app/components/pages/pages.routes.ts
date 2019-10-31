@@ -8,6 +8,11 @@ import { ProductComponent } from '../admin/pages/product/product.component';
 import { AlfombrasComponent } from '../admin/pages/alfombras/alfombras.component';
 import { AtrapamugreComponent } from '../admin/pages/atrapamugre/atrapamugre.component';
 import { ProductDetailComponent } from '../admin/pages/product/product-detail.component';
+import { CortinasComponent } from '../admin/pages/cortinas/cortinas.component';
+import { GramaSinteticaComponent } from '../admin/pages/grama-sintetica/grama-sintetica.component';
+import { LinoleoComponent } from '../admin/pages/linoleo/linoleo.component';
+import { PapelTapizComponent } from '../admin/pages/papel-tapiz/papel-tapiz.component';
+import { PisoLaminadoComponent } from '../admin/pages/piso-laminado/piso-laminado.component';
 
 
 
@@ -32,7 +37,12 @@ const pagesRoutes: Routes = [
                 children: [
                     { path: 'prod/:id', component: ProductDetailComponent, data: {'title': 'Producto'}},
                     { path: 'alfombras', component: AlfombrasComponent, data: {'title': 'Alfombras'}},
-                    { path: 'atrapamugre', component: AtrapamugreComponent, data: {'title': 'Alfombras atrapamugre'}}
+                    { path: 'atrapamugre', component: AtrapamugreComponent, data: {'title': 'Alfombras atrapamugre'}},
+                    { path: 'cortinas', component: CortinasComponent, data: {'title': 'Cortinas'}},
+                    { path: 'grama-sintetica', component: GramaSinteticaComponent, data: {'title': 'Grama sintética'}},
+                    { path: 'linoleo', component: LinoleoComponent, data: {'title': 'linóleo'}},
+                    { path: 'papel-tapiz', component: PapelTapizComponent, data: {'title': 'Papel tapiz'}},
+                    { path: 'piso-laminado', component: PisoLaminadoComponent, data: {'title': 'Piso laminado'}},
                 ]
             },
             { path: '', redirectTo: '/admin/dashboard', pathMatch: 'full'}

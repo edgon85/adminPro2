@@ -28,7 +28,7 @@ export class SidebarService {
         },
         { titulo: 'Cortinas', url: './productos/cortinas' },
         { titulo: 'Grama sintetica', url: './productos/grama-sintetica' },
-        { titulo: 'Linóleo', url: './productos/grama-sintetica' },
+        { titulo: 'Linóleo', url: './productos/linoleo' },
         { titulo: 'Papel tapiz', url: './productos/papel-tapiz' },
         { titulo: 'Piso laminado', url: './productos/piso-laminado' }
       ]

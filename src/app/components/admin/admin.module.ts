@@ -13,6 +13,11 @@ import { AlfombrasComponent } from './pages/alfombras/alfombras.component';
 import { AtrapamugreComponent } from './pages/atrapamugre/atrapamugre.component';
 import { ProductDetailComponent } from './pages/product/product-detail.component';
 import { ModalUploadComponent } from './reutilizables/modal-upload/modal-upload.component';
+import { CortinasComponent } from './pages/cortinas/cortinas.component';
+import { GramaSinteticaComponent } from './pages/grama-sintetica/grama-sintetica.component';
+import { LinoleoComponent } from './pages/linoleo/linoleo.component';
+import { PapelTapizComponent } from './pages/papel-tapiz/papel-tapiz.component';
+import { PisoLaminadoComponent } from './pages/piso-laminado/piso-laminado.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +31,12 @@ import { ModalUploadComponent } from './reutilizables/modal-upload/modal-upload.
     AlfombrasComponent,
     AtrapamugreComponent,
     ProductDetailComponent,
-    ModalUploadComponent
+    ModalUploadComponent,
+    CortinasComponent,
+    GramaSinteticaComponent,
+    LinoleoComponent,
+    PapelTapizComponent,
+    PisoLaminadoComponent
   ],
   imports: [
     CommonModule,
