@@ -4,6 +4,7 @@ import { UploadModalService } from '../../../../services/modal/upload-modal.serv
 import { AngularFireStorage } from '@angular/fire/storage';
 import { finalize } from 'rxjs/operators';
 import { ProductService } from '../../services/product.service';
+import { UsuarioService } from '../../../../services/usuario/usuario.service';
 
 @Component({
   selector: 'app-modal-upload',
@@ -21,6 +22,7 @@ export class ModalUploadComponent implements OnInit {
   constructor(
     public _modalUploadService: UploadModalService,
     private _productService: ProductService,
+    private _usuarioService: UsuarioService,
     private storage: AngularFireStorage
   ) {}
 
@@ -85,7 +87,7 @@ export class ModalUploadComponent implements OnInit {
             // console.log(this._modalUploadService.oldImageUrl);
 
             if (imgTipo === 'usuario') {
-              this._productService
+              this._usuarioService
                 .updateImageUsuario(_id, imgData, resp)
                 .then(() => {
                   this.cargando = false;

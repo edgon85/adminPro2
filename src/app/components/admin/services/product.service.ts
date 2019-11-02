@@ -82,15 +82,15 @@ export class ProductService {
     return this.http.patch(url, imageData);
   }
 
-  public updateImageUsuario(
-    id: string,
-    imageIdJSON: any,
-    imagePathJson: string
-  ) {
-    let imageData: object = {};
-    imageData[imageIdJSON] = imagePathJson;
-    return this.afs.doc(`usuarios/${id}`).update(imageData);
-  }
+  // public updateImageUsuario(
+  //   id: string,
+  //   imageIdJSON: any,
+  //   imagePathJson: string
+  // ) {
+  //   let imageData: object = {};
+  //   imageData[imageIdJSON] = imagePathJson;
+  //   return this.afs.doc(`usuarios/${id}`).update(imageData);
+  // }
 
   // ====================================================
   // Conviert los datos d firebase a un arreglo para que

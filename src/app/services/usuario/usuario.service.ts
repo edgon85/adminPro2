@@ -47,6 +47,28 @@ export class UsuarioService {
   // ================================== //
   // Guardar en storage
   // ================================== //
+  public updateImageUsuario(
+    id: string,
+    imageIdJSON: any,
+    imagePathJson: string
+  ) {
+    let imageData: object = {};
+    imageData[imageIdJSON] = imagePathJson;
+    return this.afs.doc(`usuarios/${id}`).update(imageData)
+    .then(
+      (resp) => {
+        if ( this.usuario.uid === id) {
+          this.usuario.img = imageData.img;
+          this.guardarStorage(id, this.usuario);
+        }
+      }
+    );
+  }
+  // ================================== //
+
+  // ================================== //
+  // Guardar en storage
+  // ================================== //
   guardarStorage(uid: string, usuario: Usuario) {
     localStorage.setItem('uid', uid);
     // JSON.stringify convierte el objeto en un string

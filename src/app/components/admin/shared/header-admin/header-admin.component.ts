@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginAdminService } from '../../../../services/account/login-admin.service';
 import { Usuario } from '../../../../models/usuario.model';
+import { UsuarioService } from '../../../../services/usuario/usuario.service';
 
 @Component({
   selector: 'app-header-admin',
@@ -14,11 +15,12 @@ export class HeaderAdminComponent implements OnInit {
 
   constructor(
     private _loginService: LoginAdminService,
+    private _usuarioService: UsuarioService,
     private router: Router,
   ) { }
 
   ngOnInit() {
-    this.usuario = this._loginService.usuario;
+    this.usuario = this._usuarioService.usuario;
   }
 
   serrarSesion() {
