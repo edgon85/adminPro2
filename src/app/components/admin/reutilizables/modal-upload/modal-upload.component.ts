@@ -60,10 +60,16 @@ export class ModalUploadComponent implements OnInit {
   subirImagen() {
     this.cargando = true;
     const imgName = this._modalUploadService.id + '-' + Date.now();
+    let tipoImagen: string;
+
+    if (this._modalUploadService.tipo === 'usuario') {
+      tipoImagen = `usuario/${this._modalUploadService.id}/${imgName}`;
+    } else {
+      tipoImagen = `productos/${this._modalUploadService.tipo}/${this._modalUploadService.id}/${imgName}`;
+    }
 
     const file = this.imagenSubir;
-    // const filePath = 'images/productos/' + this.slug;
-    const filePath = `images/productos/${this._modalUploadService.tipo}/${this._modalUploadService.id}/${imgName}`;
+    const filePath = `images/${tipoImagen}`;
     const fileRef = this.storage.ref(filePath);
     const task = this.storage.upload(filePath, file);
 
@@ -74,19 +80,33 @@ export class ModalUploadComponent implements OnInit {
           fileRef.getDownloadURL().subscribe(resp => {
             let imgData = this._modalUploadService.imgData;
             let _id = this._modalUploadService.id;
+            let imgTipo = this._modalUploadService.tipo;
 
             // console.log(this._modalUploadService.oldImageUrl);
-            this._productService
-              .updateImage(_id, imgData, resp)
-              .subscribe((data: any) => {
-                this._modalUploadService.notificacion.emit(data);
 
-                this.cargando = false;
-                if ( !this._modalUploadService.oldImageUrl ) {
-                  return;
-                }
-                this.eliminarImagen(this._modalUploadService.oldImageUrl);
-              });
+            if (imgTipo === 'usuario') {
+              this._productService
+                .updateImageUsuario(_id, imgData, resp)
+                .then(() => {
+                  this.cargando = false;
+                  if (!this._modalUploadService.oldImageUrl) {
+                    return;
+                  }
+                  this.eliminarImagen(this._modalUploadService.oldImageUrl);
+                });
+            } else {
+              this._productService
+                .updateImageProducto(_id, imgData, resp)
+                .subscribe((data: any) => {
+                  this._modalUploadService.notificacion.emit(data);
+
+                  this.cargando = false;
+                  if (!this._modalUploadService.oldImageUrl) {
+                    return;
+                  }
+                  this.eliminarImagen(this._modalUploadService.oldImageUrl);
+                });
+            }
 
             this.clearForm();
             this.cerrarModal();
@@ -94,7 +114,6 @@ export class ModalUploadComponent implements OnInit {
         })
       )
       .subscribe();
-
   }
 
   // ================================================= //

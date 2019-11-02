@@ -18,6 +18,7 @@ import { GramaSinteticaComponent } from './pages/grama-sintetica/grama-sintetica
 import { LinoleoComponent } from './pages/linoleo/linoleo.component';
 import { PapelTapizComponent } from './pages/papel-tapiz/papel-tapiz.component';
 import { PisoLaminadoComponent } from './pages/piso-laminado/piso-laminado.component';
+import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { PisoLaminadoComponent } from './pages/piso-laminado/piso-laminado.compo
     GramaSinteticaComponent,
     LinoleoComponent,
     PapelTapizComponent,
-    PisoLaminadoComponent
+    PisoLaminadoComponent,
+    UsuariosComponent
   ],
   imports: [
     CommonModule,
@@ -47,7 +49,8 @@ import { PisoLaminadoComponent } from './pages/piso-laminado/piso-laminado.compo
     HeaderAdminComponent,
     SidebarAdminComponent,
     BreadcrumbAdminComponent,
-    DashboardComponent
+    DashboardComponent,
+    ModalUploadComponent
   ]
 })
 export class SharedAdminModule {}

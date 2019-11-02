@@ -3,8 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { map, delay, catchError } from 'rxjs/operators';
 import { ProductoModel } from '../../../models/producto.model';
 import { AngularFireDatabase } from '@angular/fire/database';
-import { Router } from '@angular/router';
 import { AngularFireStorage } from '@angular/fire/storage';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
@@ -16,9 +16,9 @@ export class ProductService {
   constructor(
     private http: HttpClient,
     private afDB: AngularFireDatabase,
-    private router: Router,
+    private afs: AngularFirestore,
     private storage: AngularFireStorage
-    ) {}
+  ) {}
 
   // ====================================================
   // Obtiene todos los productos
@@ -70,15 +70,26 @@ export class ProductService {
   // ====================================================
   // Actualizar Imagen
   // ====================================================
-  public updateImage( id: string, imageIdJSON: any, imagePathJson: string ) {
-
+  public updateImageProducto(
+    id: string,
+    imageIdJSON: any,
+    imagePathJson: string
+  ) {
     let imageData: object = {};
     imageData[imageIdJSON] = imagePathJson;
-
-    // let _data = { imageIdJSON: imagePathJson };
     let url = this.urlProduct + `/productos/${id}/image.json`;
 
     return this.http.patch(url, imageData);
+  }
+
+  public updateImageUsuario(
+    id: string,
+    imageIdJSON: any,
+    imagePathJson: string
+  ) {
+    let imageData: object = {};
+    imageData[imageIdJSON] = imagePathJson;
+    return this.afs.doc(`usuarios/${id}`).update(imageData);
   }
 
   // ====================================================

@@ -13,6 +13,7 @@ import { GramaSinteticaComponent } from '../admin/pages/grama-sintetica/grama-si
 import { LinoleoComponent } from '../admin/pages/linoleo/linoleo.component';
 import { PapelTapizComponent } from '../admin/pages/papel-tapiz/papel-tapiz.component';
 import { PisoLaminadoComponent } from '../admin/pages/piso-laminado/piso-laminado.component';
+import { UsuariosComponent } from '../admin/pages/usuarios/usuarios.component';
 
 
 
@@ -45,6 +46,7 @@ const pagesRoutes: Routes = [
                     { path: 'piso-laminado', component: PisoLaminadoComponent, data: {'title': 'Piso laminado'}},
                 ]
             },
+            {path: 'usuarios', component: UsuariosComponent, data: {'title': 'Usuarios'}},
             { path: '', redirectTo: '/admin/dashboard', pathMatch: 'full'}
          ]
     }
