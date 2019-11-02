@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Observable, throwError } from 'rxjs';
+import { throwError } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Usuario } from '../../models/usuario.model';
-import { LoginAdminService } from '../account/login-admin.service';
 import Swal from 'sweetalert2';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,9 @@ import Swal from 'sweetalert2';
 export class UsuarioService {
   usuario: Usuario;
 
-  constructor(private afs: AngularFirestore) {
+  constructor(
+    private afs: AngularFirestore,
+    private angularFireAuth: AngularFireAuth) {
     this.cargarStorage();
   }
 
@@ -52,7 +54,7 @@ export class UsuarioService {
     imageIdJSON: any,
     imagePathJson: string
   ) {
-    let imageData: object = {};
+    let imageData: any = {}; // es de tipo object
     imageData[imageIdJSON] = imagePathJson;
     return this.afs.doc(`usuarios/${id}`).update(imageData)
     .then(
@@ -65,6 +67,17 @@ export class UsuarioService {
     );
   }
   // ================================== //
+
+  // ================================== //
+  // Eliminar usuario
+  // ================================== //
+  public deleteUser(uid: string) {
+    if (uid === this.usuario.uid) {
+      Swal.fire('ups', 'No se puede eliminar asi mismo ;)');
+    } else {
+      Swal.fire('ups', 'No Disponible');
+    }
+  }
 
   // ================================== //
   // Guardar en storage

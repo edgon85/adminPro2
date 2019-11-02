@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../../../../models/usuario.model';
 import { UsuarioService } from '../../../../services/usuario/usuario.service';
 import { UploadModalService } from '../../../../services/modal/upload-modal.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-usuarios',
@@ -46,7 +47,31 @@ export class UsuariosComponent implements OnInit {
   // ========================================
   // Borrar usuario
   // ========================================
-  borrarUsuario(usuario: Usuario) {}
+  borrarUsuario(usuario: Usuario) {
+    Swal.fire({
+      title: '¿Estás seguro?',
+      text: '¡No podrás revertir esto!',
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      cancelButtonText: 'Cancelar',
+      confirmButtonText: 'Sí, bórralo!'
+    }).then(result => {
+      if (result.value) {
+        // console.log( usuario.uid );
+        this._usuarioService.deleteUser(usuario.uid);
+        // this._productService.deleteProduct(producto.slug).subscribe(() => {
+        //   // tslint:disable-next-line:forin
+        //   for (let i in producto.image) {
+        //     this.eliminarImagen(producto.image[i]);
+        //   }
+        //   this.obtenerAlfombras();
+        //   Swal.fire('Eliminado!', 'Producto ha sido eliminado.', 'success');
+        // });
+      }
+    });
+  }
 
 
 
