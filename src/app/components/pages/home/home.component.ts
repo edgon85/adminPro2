@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  videoUrl = 'https://player.vimeo.com/video/333941974';
+  altText = 'Casa e Imagen';
+
+  constructor(public sanitizer: DomSanitizer) { }
 
   ngOnInit() {
   }

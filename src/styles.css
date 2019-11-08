@@ -1,8 +1,8 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    border: none;
-    outline: none;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  outline: none;
 }
 
 .pointer {
@@ -19,3 +19,57 @@
 .img50 {
   width: 50px;
 }
+
+/* ============================================ */
+/* featuredProducts home component seccion slider*/
+/* ============================================ */
+
+.featuredProducts button.slick-arrow {
+  top: -40px !important;
+}
+
+.featuredProducts button.slick-arrow.slick-prev:before,
+.featuredProducts button.slick-arrow.slick-next:before {
+  font-family: FontAwesome !important;
+  font-size: 11px !important;
+  line-height: 1 !important;
+  opacity: 1 !important;
+  color: #d5d5d5 !important;
+}
+
+.featuredProducts button.slick-arrow.slick-prev {
+  left: auto !important;
+  right: 48px !important;
+}
+
+.featuredProducts button.slick-arrow.slick-prev:before {
+  content: "\f053" !important;
+}
+
+.featuredProducts button.slick-arrow.slick-prev:after {
+  position: absolute !important;
+  content: "" !important;
+  border: 1px solid #c5c5c5 !important;
+  height: 20px !important;
+  right: -7px !important;
+  top: 0px !important;
+}
+
+.featuredProducts button.slick-arrow.slick-prev:hover:before {
+  color: #2c2c2c !important;
+}
+
+.featuredProducts button.slick-arrow.slick-next {
+  left: auto !important;
+  right: 15px !important;
+}
+
+.featuredProducts button.slick-arrow.slick-next:before {
+  content: "\f054" !important;
+}
+
+.featuredProducts button.slick-arrow.slick-next:hover:before {
+  color: #2c2c2c !important;
+}
+
+/* --------------------------------------------------------------- */
