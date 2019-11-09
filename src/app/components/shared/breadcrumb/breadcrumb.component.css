@@ -1,0 +1,54 @@
+.lightSection {
+  background-color: #f0f0f0;
+}
+
+.pageHeader {
+  height: 70px;
+}
+
+.pageHeader .page-title h2 {
+  color: #797979;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 0;
+  line-height: 70px;
+  font-size: 30px;
+}
+
+/* ========================== */
+/* breadcrumbs */
+/* ========================== */
+.pageHeader ol.breadcrumb {
+  background-color: transparent;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.pageHeader ol.breadcrumb li {
+  display: inline-block;
+  font-size: 12px;
+}
+
+.pageHeader ol.breadcrumb li + li::before {
+  color: #ccc;
+  content: "/\00a0";
+  padding: 0 10px;
+}
+
+.pageHeader ol.breadcrumb li a {
+  text-transform: uppercase;
+  color: #969696;
+  transition: all 0.3s ease-in-out;
+  line-height: 70px;
+}
+
+.pageHeader ol.breadcrumb li a:hover {
+  opacity: 0.9;
+}
+
+.pageHeader ol.breadcrumb .active {
+  color: #252525;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 70px;
+}

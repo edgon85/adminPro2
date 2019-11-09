@@ -4,12 +4,14 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 
 @NgModule({
   declarations: [
     PageNotFoundComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    BreadcrumbComponent
   ],
   imports: [
    // CommonModule
@@ -18,7 +20,9 @@ import { FooterComponent } from './footer/footer.component';
   , exports: [
     PageNotFoundComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    BreadcrumbComponent
+
   ]
 })
 export class SharedModule { }
