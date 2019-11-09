@@ -14,6 +14,8 @@ import { LinoleoComponent } from '../admin/pages/linoleo/linoleo.component';
 import { PapelTapizComponent } from '../admin/pages/papel-tapiz/papel-tapiz.component';
 import { PisoLaminadoComponent } from '../admin/pages/piso-laminado/piso-laminado.component';
 import { UsuariosComponent } from '../admin/pages/usuarios/usuarios.component';
+import { AlfombrasPagesComponent } from './productos/alfombras-pages/alfombras-pages.component';
+import { GramaSinteticaPagesComponent } from './productos/grama-sintetica-pages/grama-sintetica-pages.component';
 
 
 
@@ -23,6 +25,8 @@ const pagesRoutes: Routes = [
         path: '', component: PagesComponent,
         children: [
             { path: 'inicio', component: HomeComponent, data: {'title': 'Inicio'} },
+            { path: 'alfombras', component: AlfombrasPagesComponent, data: {'title': 'Alfombras'} },
+            { path: 'grama-sintetica', component: GramaSinteticaPagesComponent, data: {'title': 'Grama sintética'} },
            // { path: 'tablas', component: TablasComponent },
             { path: '', redirectTo: 'inicio', pathMatch: 'full' },
         ]

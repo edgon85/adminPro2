@@ -6,12 +6,16 @@ import { PAGES_ROUTES } from './pages.routes';
 import { PagesComponent } from './pages.component';
 import { AdminComponent } from '../admin/admin/admin.component';
 import { SharedAdminModule } from '../admin/admin.module';
+import { AlfombrasPagesComponent } from './productos/alfombras-pages/alfombras-pages.component';
+import { GramaSinteticaPagesComponent } from './productos/grama-sintetica-pages/grama-sintetica-pages.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     PagesComponent,
-    AdminComponent
+    AdminComponent,
+    AlfombrasPagesComponent,
+    GramaSinteticaPagesComponent
   ],
   imports: [
     SharedModule,
