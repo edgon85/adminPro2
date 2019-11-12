@@ -1,0 +1,127 @@
+.productos {
+  /* background: #f2f2f2; */
+  padding: 30px;
+}
+
+.productos .contenedor {
+  overflow: hidden;
+}
+
+.productos .contenedor .titulo {
+  font-size: 34px;
+  line-height: 34px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #252525;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.productos .contenedor .contenedor-productos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.productos .contenedor .contenedor-productos .producto {
+  width: 30%;
+  margin-bottom: 40px;
+}
+
+.productos .contenedor .contenedor-productos .producto .thumb {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.productos .contenedor .contenedor-productos .producto .thumb img {
+  width: 100%;
+  vertical-align: top;
+  border-radius: 3px;
+}
+
+.productos .contenedor .contenedor-productos .producto .descripcion {
+  text-align: center;
+}
+
+.productos .contenedor .contenedor-productos .producto .descripcion .nombre {
+  font-weight: 500;
+  color: #585858;
+  margin-bottom: 10px;
+}
+
+.productos
+  .contenedor
+  .contenedor-productos
+  .producto
+  .descripcion
+  .nombre:hover {
+  color: #252525;
+}
+
+.container-img {
+  /* background-color: green; */
+  position: relative;
+}
+
+.container-img .contenedor-imagen {
+  width: 100%;
+  position: sticky;
+}
+
+.container-img .contenedor-imagen .thumb {
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.container-img .contenedor-imagen .thumb img {
+  width: 100%;
+  vertical-align: top;
+  border-radius: 3px;
+}
+
+@media screen and (max-width: 800px) {
+  .productos .contenedor .contenedor-productos .producto {
+    width: 46%;
+  }
+}
+
+.col1 .fondo {
+  width: 100%;
+  position: sticky;
+  top: 100px;
+  bottom: 100px;
+}
+
+.col1 .caja-fondo {
+  border-radius: 8px;
+  width: 100%;
+  background-size: 80% 35%;
+  background-repeat: no-repeat;
+  background-position: center 95%;
+}
+
+.col1 .caja-fondo img {
+  width: 100%;
+  vertical-align: top;
+  border-radius: 8px;
+  /* opacity: 0.1; */
+}
+
+@media screen and (max-width: 320px),
+  (max-width: 360px),
+  (max-width: 414px),
+  (max-width: 480px),
+  (max-width: 640px),
+  (max-width: 667px) {
+  .col1 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 840px), (max-width: 1024px) {
+  .col1 {
+    display: none;
+  }
+}

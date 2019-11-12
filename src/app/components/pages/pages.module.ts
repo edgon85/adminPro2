@@ -8,6 +8,8 @@ import { AdminComponent } from '../admin/admin/admin.component';
 import { SharedAdminModule } from '../admin/admin.module';
 import { AlfombrasPagesComponent } from './productos/alfombras-pages/alfombras-pages.component';
 import { GramaSinteticaPagesComponent } from './productos/grama-sintetica-pages/grama-sintetica-pages.component';
+import { AvatarPipe } from '../../pipes/avatar.pipe';
+import { FilterProductPipe } from '../../pipes/filter-product.pipe';
 
 @NgModule({
   declarations: [
@@ -15,15 +17,18 @@ import { GramaSinteticaPagesComponent } from './productos/grama-sintetica-pages/
     PagesComponent,
     AdminComponent,
     AlfombrasPagesComponent,
-    GramaSinteticaPagesComponent
+    GramaSinteticaPagesComponent,
+    FilterProductPipe,
   ],
   imports: [
+    CommonModule,
     SharedModule,
     SharedAdminModule,
     PAGES_ROUTES
   ],
   exports: [
-    PagesComponent
+    PagesComponent,
+    FilterProductPipe,
   ]
 })
 export class PagesModule { }

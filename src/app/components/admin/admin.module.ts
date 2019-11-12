@@ -50,7 +50,8 @@ import { UsuariosComponent } from './pages/usuarios/usuarios.component';
     SidebarAdminComponent,
     BreadcrumbAdminComponent,
     DashboardComponent,
-    ModalUploadComponent
+    ModalUploadComponent,
+    AvatarPipe,
   ]
 })
 export class SharedAdminModule {}

@@ -2,19 +2,110 @@
     <!-- LIGHT SECTION -->
     <app-breadcrumb></app-breadcrumb>
 
+    <div class="container-fluid">
+        <div class="row">
 
-    <p>alfombras-pages works!</p>
-    <p>alfombras-pages works!</p>
-    <p>alfombras-pages works!</p>
-    <p>alfombras-pages works!</p>
-    <p>alfombras-pages works!</p>
-    <p>alfombras-pages works!</p>
-    <p>alfombras-pages works!</p>
-    <p>alfombras-pages works!</p>
-    <p>alfombras-pages works!</p>
-    <p>alfombras-pages works!</p>
-    <p>alfombras-pages works!</p>
-    <p>alfombras-pages works!</p>
-    <p>alfombras-pages works!</p>
-    <p>alfombras-pages works!</p>
+            <div class="col-12 col-md-6 col1 position-relative animated fadeIn">
+                <div class="fondo mb-5 ">
+                    <div [ngStyle]="{'background-image': 'url(' + urlFondo + ')'}" class="caja-fondo">
+                        <img class="img-responsive" src="assets/page/img/casa/principal.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna de productos -->
+            <div class="col-12 col-md-6 productos">
+                <div class="contenedor">
+                    <h3 class="titulo">Alto trafico</h3>
+                    <div class="contenedor-productos">
+                        <div class="producto" *ngFor="let prod of productos | filterProduct:'alto trafico'">
+                            <div class="thumb pointer" (click)="cambiarAlfombra( prod.image.portada )">
+                                <img [src]="prod.image.portada  | avatar" alt="">
+                            </div>
+                            <div class="descripcion">
+                                <a class="nombre" href="#">{{ prod.title }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solo -->
+                <div class="contenedor mt-3">
+                    <h3 class="titulo">Solo</h3>
+                    <div class="contenedor-productos">
+                        <div class="producto" *ngFor="let prod of productos | filterProduct:'solo'">
+                            <div class="thumb pointer" (click)="cambiarAlfombra( prod.image.portada )">
+                                <img [src]="prod.image.portada  | avatar" alt="">
+                            </div>
+                            <div class="descripcion">
+                                <a class="nombre" href="#">{{ prod.title }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Salsa -->
+                <div class="contenedor mt-3">
+                    <h3 class="titulo">Salsa</h3>
+                    <div class="contenedor-productos">
+                        <div class="producto" *ngFor="let prod of productos | filterProduct:'salsa'">
+                            <div class="thumb pointer" (click)="cambiarAlfombra( prod.image.portada )">
+                                <img [src]="prod.image.portada  | avatar" alt="">
+                            </div>
+                            <div class="descripcion">
+                                <a class="nombre" href="#">{{ prod.title }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Salsa -->
+                <div class="contenedor mt-3">
+                    <h3 class="titulo">Hotelera</h3>
+                    <div class="contenedor-productos">
+                        <div class="producto" *ngFor="let prod of productos | filterProduct:'hotelera'">
+                            <div class="thumb pointer" (click)="cambiarAlfombra( prod.image.portada )">
+                                <img [src]="prod.image.portada  | avatar" alt="">
+                            </div>
+                            <div class="descripcion">
+                                <a class="nombre" href="#">{{ prod.title }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pelo alto -->
+                <div class="contenedor mt-3">
+                    <h3 class="titulo">Pelo alto</h3>
+                    <div class="contenedor-productos">
+                        <div class="producto" *ngFor="let prod of productos | filterProduct:'pelo alto'">
+                            <div class="thumb pointer" (click)="cambiarAlfombra( prod.image.portada )">
+                                <img [src]="prod.image.portada  | avatar" alt="">
+                            </div>
+                            <div class="descripcion">
+                                <a class="nombre" href="#">{{ prod.title }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pelo alto -->
+                <div class="contenedor mt-3">
+                    <h3 class="titulo">De diseño</h3>
+                    <div class="contenedor-productos">
+                        <div class="producto" *ngFor="let prod of productos | filterProduct:'de diseño'">
+                            <div class="thumb pointer" (click)="cambiarAlfombra( prod.image.portada )">
+                                <img [src]="prod.image.portada  | avatar" alt="">
+                            </div>
+                            <div class="descripcion">
+                                <a class="nombre" href="#">{{ prod.title }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 </div>
