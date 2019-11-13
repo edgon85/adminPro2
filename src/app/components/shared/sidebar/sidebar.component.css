@@ -1,0 +1,59 @@
+/*=== 8. SIDEBARS ===*/
+ul li {
+  list-style-type: none;
+}
+.sidebar-nav {
+  background: transparent !important;
+  color: #000000 !important;
+}
+
+.sidebar-nav > ul > li.active > a {
+  color: #000000;
+  border-color: #2e7d21;
+}
+
+.sidebar-nav > ul > li.active > a i {
+  color: #555f6d;
+}
+
+.sidebar-nav ul li.nav-small-cap {
+  font-size: 18px;
+}
+
+.sidebar-nav ul li a.active,
+.sidebar-nav ul li a:hover {
+  color: #000000;
+}
+
+.sidebar-nav ul li a.active i,
+.sidebar-nav ul li a:hover i {
+  color: #000000;
+}
+
+.label-themecolor {
+  background: #2e7d21;
+}
+
+.sideBar .panel {
+  border-radius: 0;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.sideBar .panel .panel-heading {
+  background-color: #2e7d21;
+  border-radius: 0;
+  padding: 0 15px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.sideBar .panel .panel-body {
+  border: 3px solid #f0f0f0;
+  border-top: none;
+  padding: 15px;
+}

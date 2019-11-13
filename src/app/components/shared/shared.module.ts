@@ -5,23 +5,26 @@ import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     PageNotFoundComponent,
     NavbarComponent,
     FooterComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    SidebarComponent
   ],
   imports: [
-   // CommonModule
+   CommonModule,
    RouterModule
   ]
   , exports: [
     PageNotFoundComponent,
     NavbarComponent,
     FooterComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    SidebarComponent
 
   ]
 })

@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="sideBar">
+        <div class="panel panel-default">
+            <div class="panel-heading">Categoría de productos</div>
+            <div class="panel-body">
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <!-- <li class="nav-small-cap">Categoría de productos</li> -->
+                        <li *ngFor="let menu of _sidebarService.menuPages">
+                            <a class="has-arrow" href="#" aria-expanded="false">
+                                <i [class]="menu.icono"></i>
+                                <span class="hide-menu">{{ menu.titulo }}<span
+                                        class="label label-rouded label-themecolor pull-right">{{ menu.submenu.length }}</span></span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li *ngFor="let submenu of menu.submenu">
+                                    <a [routerLink]="[ submenu.url ]"
+                                        routerLinkActive="active">{{  submenu.titulo }}</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
