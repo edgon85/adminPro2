@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../../../admin/services/product.service';
+import { ProductoModel } from '../../../../models/producto.model';
 
 @Component({
   selector: 'app-grama-sintetica-pages',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GramaSinteticaPagesComponent implements OnInit {
 
-  constructor() { }
+  productos: ProductoModel[] = [];
+
+  constructor(private _productoService: ProductService) { }
 
   ngOnInit() {
+    this.obtenerProductos();
   }
 
+
+  obtenerProductos() {
+    this._productoService.getAllProducts('grama sintetica').subscribe(
+      (resp: any) => {
+        this.productos = resp;
+        // console.log(this.productos);
+      }
+    );
+  }
 }

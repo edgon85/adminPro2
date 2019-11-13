@@ -1,33 +1,57 @@
-<div class="main">
-    <!-- Breadcrumbs -->
+<!-- <div class="main">
+    <!- - Breadcrumbs -- >
     <app-breadcrumb></app-breadcrumb>
 
-    <!-- contenido -->
+    <! -- contenido -- >
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-4 mt-3">
                 <app-sidebar></app-sidebar>
             </div>
             <div class="col-12 col-md-8 mt-3">
-                <p>Grama sintetica page</p>
-                <p>Grama sintetica page</p>
-                <p>Grama sintetica page</p>
-                <p>Grama sintetica page</p>
-                <p>Grama sintetica page</p>
-                <p>Grama sintetica page</p>
-                <p>Grama sintetica page</p>
-                <p>Grama sintetica page</p>
-                <p>Grama sintetica page</p>
-                <p>Grama sintetica page</p>
-                <p>Grama sintetica page</p>
-                <p>Grama sintetica page</p>
-                <p>Grama sintetica page</p>
-                <p>Grama sintetica page</p>
-                <p>Grama sintetica page</p>
-                <p>Grama sintetica page</p>
-                <p>Grama sintetica page</p>
-                <p>Grama sintetica page</p>
+
+                <! -- Follaje -- >
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2>Follaje</h2>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let prod of productos | filterProduct:'follage'">
+                        <app-card-product [producto]="prod"></app-card-product>
+                    </div>
+                </div>
+
+                <! -- Bolas decorativas -- >
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2>Bolas decorativas</h2>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12"
+                        *ngFor="let prod of productos | filterProduct:'bolas decorativas'">
+                        <app-card-product [producto]="prod"></app-card-product>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
+</div> -->
+
+
+<!-- Follaje -->
+<div class="row">
+    <div class="col-12 text-center">
+        <h2 class="titulo">Follaje</h2>
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let prod of productos | filterProduct:'follaje'">
+        <app-card-product [producto]="prod"></app-card-product>
+    </div>
+</div>
+
+<!-- Bolas decorativas -->
+<div class="row">
+    <div class="col-12 text-center">
+        <h2 class="titulo">Bolas decorativas</h2>
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let prod of productos | filterProduct:'bolas decorativas'">
+        <app-card-product [producto]="prod"></app-card-product>
     </div>
 </div>

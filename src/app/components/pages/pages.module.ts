@@ -10,6 +10,10 @@ import { AlfombrasPagesComponent } from './productos/alfombras-pages/alfombras-p
 import { GramaSinteticaPagesComponent } from './productos/grama-sintetica-pages/grama-sintetica-pages.component';
 import { AvatarPipe } from '../../pipes/avatar.pipe';
 import { FilterProductPipe } from '../../pipes/filter-product.pipe';
+import { CardProductComponent } from './reutilizables/card-product/card-product.component';
+import { ProductoDetalleComponent } from './productos/detalle/producto-detalle/producto-detalle.component';
+import { ProductoPageComponent } from './productos/producto-page/producto-page.component';
+import { ProductoContentComponent } from './productos/producto-content/producto-content.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +23,10 @@ import { FilterProductPipe } from '../../pipes/filter-product.pipe';
     AlfombrasPagesComponent,
     GramaSinteticaPagesComponent,
     FilterProductPipe,
+    CardProductComponent,
+    ProductoDetalleComponent,
+    ProductoPageComponent,
+    ProductoContentComponent,
   ],
   imports: [
     CommonModule,

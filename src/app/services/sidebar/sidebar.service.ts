@@ -42,13 +42,13 @@ export class SidebarService {
       id: 'alfombras',
       submenu: [
         { titulo: 'Galeria de alfombras', url: '/alfombras' },
-        { titulo: 'Alto trafico', url: '/alto-trafico' },
-        { titulo: 'African queen', url: '/african-queen' },
-        { titulo: 'Diseño', url: '/disenio' },
-        { titulo: 'Hotelera', url: '/hotelera' },
-        { titulo: 'Pelo alto', url: '/pelo-alto' },
-        { titulo: 'Salsa', url: '/salsa' },
-        { titulo: 'Solo', url: '/solo' },
+        { titulo: 'Alto trafico', url: '/producto/alfombras/alto-trafico' },
+        { titulo: 'African queen', url: '/producto/alfombras/african-queen' },
+        { titulo: 'De diseño', url: '/producto/alfombras/de-diseño' },
+        { titulo: 'Hotelera', url: '/producto/alfombras/hotelera' },
+        { titulo: 'Pelo alto', url: '/producto/alfombras/pelo-alto' },
+        { titulo: 'Salsa', url: '/producto/alfombras/salsa' },
+        { titulo: 'Solo', url: '/producto/alfombras/solo' },
       ]
     },
     {
@@ -57,10 +57,10 @@ export class SidebarService {
       id: 'gramasintetica',
       submenu: [
         // { titulo: 'Alfombras', url: './productos/alfombras' },
-        { titulo: 'Galería de grama sintética', url: '/grama-sintetica' },
-        { titulo: 'Follaje', url: '/grama-sinteticas' },
-        { titulo: 'Bolas decorativas', url: '/grama-sinteticas' },
-        { titulo: 'Jardineras', url: '/grama-sinteticas' }
+        { titulo: 'Galería de grama sintética', url: '/producto/grama-sintetica/galerilla-grama-sintetica' },
+        { titulo: 'Follaje', url: '/producto/grama-sintetica/follaje' },
+        { titulo: 'Bolas decorativas', url: '/producto/grama-sintetica/bolas-decorativas' },
+        { titulo: 'Jardineras', url: '/producto/grama-sintetica/jardineras' }
       ]
     }
   ];

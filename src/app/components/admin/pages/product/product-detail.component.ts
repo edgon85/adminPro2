@@ -191,7 +191,7 @@ export class ProductDetailComponent implements OnInit {
       { id: 2, sub_category_id: 'piso laminado', name: 'Ac4 83mm', value: 'ac4 83mm'},
       { id: 2, sub_category_id: 'piso laminado', name: 'Ac5 12mm', value: 'ac5 12mm'},
       { id: 3, sub_category_id: 'grama sintetica', name: 'Bolas decorativas', value: 'bolas decorativas' },
-      { id: 3, sub_category_id: 'grama sintetica', name: 'Follage', value: 'follage'},
+      { id: 3, sub_category_id: 'grama sintetica', name: 'Follaje', value: 'follaje'},
       { id: 3, sub_category_id: 'grama sintetica', name: 'Jardineras', value: 'jardineras'},
       // { id: 4, country_id: 'caucho granulado', name: 'caucho granulado' },
       { id: 5, sub_category_id: 'cortinas', name: 'Iglesias', value: 'iglesias'},
