@@ -1,0 +1,70 @@
+<!-- ====================================================================== -->
+<!-- Grama Sintética -->
+<!-- ====================================================================== -->
+<div *ngIf="categoria === 'grama sintetica'">
+    
+    <!-- Follaje -->
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2 class="titulo">Follaje</h2>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let prod of productos | filterProduct:'follaje'">
+            <app-card-product [producto]="prod"></app-card-product>
+        </div>
+    </div>
+
+    <!-- Bolas decorativas -->
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2 class="titulo">Bolas decorativas</h2>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let prod of productos | filterProduct:'bolas decorativas'">
+            <app-card-product [producto]="prod"></app-card-product>
+        </div>
+    </div>
+    <!-- Jardineras -->
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2 class="titulo">Jardineras</h2>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let prod of productos | filterProduct:'jardineras'">
+            <app-card-product [producto]="prod"></app-card-product>
+        </div>
+    </div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- Piso laminado -->
+<!-- ====================================================================== -->
+<div *ngIf="categoria === 'piso laminado'">
+
+    <!-- AC3 7mm -->
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2 class="titulo">AC3 7mm</h2>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let prod of productos | filterProduct:'ac3 7mm'">
+            <app-card-product [producto]="prod"></app-card-product>
+        </div>
+    </div>
+
+    <!-- AC4 8.3mm -->
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2 class="titulo">AC4 8.3mm</h2>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let prod of productos | filterProduct:'ac4 83mm'">
+            <app-card-product [producto]="prod"></app-card-product>
+        </div>
+    </div>
+
+    <!-- AC5 12mm -->
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2 class="titulo">AC5 12mm</h2>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let prod of productos | filterProduct:'ac5 12mm'">
+            <app-card-product [producto]="prod"></app-card-product>
+        </div>
+    </div>
+</div>

@@ -41,7 +41,7 @@ export class SidebarService {
       icono: 'fa fa-caret-right',
       id: 'alfombras',
       submenu: [
-        { titulo: 'Galeria de alfombras', url: '/alfombras' },
+        { titulo: 'Galería de alfombras', url: '/alfombras' },
         { titulo: 'Alto trafico', url: '/producto/alfombras/alto-trafico' },
         { titulo: 'African queen', url: '/producto/alfombras/african-queen' },
         { titulo: 'De diseño', url: '/producto/alfombras/de-diseño' },
@@ -57,11 +57,23 @@ export class SidebarService {
       id: 'gramasintetica',
       submenu: [
         // { titulo: 'Alfombras', url: './productos/alfombras' },
-        { titulo: 'Galería de grama sintética', url: '/producto/grama-sintetica/galerilla-grama-sintetica' },
+        { titulo: 'Galería de grama sintética', url: '/producto/grama-sintetica/galeria-grama-sintetica' },
         { titulo: 'Follaje', url: '/producto/grama-sintetica/follaje' },
         { titulo: 'Bolas decorativas', url: '/producto/grama-sintetica/bolas-decorativas' },
         { titulo: 'Jardineras', url: '/producto/grama-sintetica/jardineras' }
       ]
-    }
+    },
+    {
+      titulo: 'Piso laminado',
+      icono: 'fa fa-caret-right',
+      id: 'pisolaminado',
+      submenu: [
+        // { titulo: 'Alfombras', url: './productos/alfombras' },
+        { titulo: 'Galería de piso laminado', url: '/producto/piso-laminado/galeria-piso-laminado' },
+        { titulo: 'AC3 7mm', url: '/producto/piso-laminado/ac3-7mm' },
+        { titulo: 'AC4 8.3mm', url: '/producto/piso-laminado/ac4-83mm' },
+        { titulo: 'AC5 12mm', url: '/producto/piso-laminado/ac5-12mm' },
+      ]
+    },
   ];
 }

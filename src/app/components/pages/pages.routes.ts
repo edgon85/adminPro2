@@ -15,11 +15,10 @@ import { PapelTapizComponent } from '../admin/pages/papel-tapiz/papel-tapiz.comp
 import { PisoLaminadoComponent } from '../admin/pages/piso-laminado/piso-laminado.component';
 import { UsuariosComponent } from '../admin/pages/usuarios/usuarios.component';
 import { AlfombrasPagesComponent } from './productos/alfombras-pages/alfombras-pages.component';
-import { GramaSinteticaPagesComponent } from './productos/grama-sintetica-pages/grama-sintetica-pages.component';
-import { FollajeComponent } from './productos/grama-sintetica-pages/follaje/follaje.component';
 import { ProductoPageComponent } from './productos/producto-page/producto-page.component';
 import { ProductoDetalleComponent } from './productos/detalle/producto-detalle/producto-detalle.component';
 import { ProductoContentComponent } from './productos/producto-content/producto-content.component';
+import { GaleriaComponent } from './productos/galeria/galeria.component';
 
 
 
@@ -42,10 +41,15 @@ const pagesRoutes: Routes = [
                     { path: 'salsa', component: ProductoContentComponent, data: {'title': 'Salsa'} },
                     { path: 'solo', component: ProductoContentComponent, data: {'title': 'Solo'} },
                     // grama sintetica
-                    { path: 'galerilla-grama-sintetica', component: GramaSinteticaPagesComponent, data: {'title': 'Grama sintética'} },
+                    { path: 'galeria-grama-sintetica', component: GaleriaComponent, data: {'title': 'Grama sintética'} },
                     { path: 'follaje', component: ProductoContentComponent, data: {'title': 'follaje'} },
                     { path: 'bolas-decorativas', component: ProductoContentComponent, data: {'title': 'Bolas decorativas'} },
                     { path: 'jardineras', component: ProductoContentComponent, data: {'title': 'Jardineras'} },
+                    // grama piso laminado
+                    { path: 'galeria-piso-laminado', component: GaleriaComponent, data: {'title': 'Piso laminado'} },
+                    { path: 'ac3-7mm', component: ProductoContentComponent, data: {'title': 'AC3 7mm'} },
+                    { path: 'ac4-83mm', component: ProductoContentComponent, data: {'title': 'AC4 8.3mm'} },
+                    { path: 'ac5-12mm', component: ProductoContentComponent, data: {'title': 'AC5 12mm'} },
                     { path: '**', pathMatch: 'full', redirectTo: 'galerilla' },
                 ],
                 data: {'title': 'Sub Categoria'}
