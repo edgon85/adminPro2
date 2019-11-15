@@ -74,6 +74,9 @@ export class ProductoContentComponent implements OnInit {
       case 'ac5 12mm':
         this.titulo = 'AC5 12mm';
         break;
+      case 'linoleo':
+        this.titulo = 'Piso linóleo';
+        break;
       default:
         this.titulo = this.subCategoria;
     }

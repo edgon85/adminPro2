@@ -75,5 +75,31 @@ export class SidebarService {
         { titulo: 'AC5 12mm', url: '/producto/piso-laminado/ac5-12mm' },
       ]
     },
+    {
+      titulo: 'Piso linóleo',
+      icono: 'fa fa-caret-right',
+      id: 'pisolinoleo',
+      submenu: [
+        { titulo: 'Linóleo', url: '/producto/linoleo/linoleo' },
+      ]
+    },
+    {
+      titulo: 'Cortinas',
+      icono: 'fa fa-caret-right',
+      id: 'cortinas',
+      submenu: [
+        { titulo: 'Galería de cortinas', url: '/producto/cortinas/galeria-cortinas' },
+        { titulo: 'Iglesias', url: '/producto/cortinas/iglesias' },
+        { titulo: 'Residenciales', url: '/producto/cortinas/residenciales' },
+      ]
+    },
+    {
+      titulo: 'Alfombras atrapamugre',
+      icono: 'fa fa-caret-right',
+      id: 'atrapamugre',
+      submenu: [
+        { titulo: 'Atrapamugre', url: '/producto/atrapamugre/atrapamugre' },
+      ]
+    },
   ];
 }

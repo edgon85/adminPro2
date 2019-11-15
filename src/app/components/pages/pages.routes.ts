@@ -17,8 +17,7 @@ import { UsuariosComponent } from '../admin/pages/usuarios/usuarios.component';
 import { AlfombrasPagesComponent } from './productos/alfombras-pages/alfombras-pages.component';
 import { ProductoPageComponent } from './productos/producto-page/producto-page.component';
 import { ProductoDetalleComponent } from './productos/detalle/producto-detalle/producto-detalle.component';
-import { ProductoContentComponent } from './productos/producto-content/producto-content.component';
-import { GaleriaComponent } from './productos/galeria/galeria.component';
+import { PRODUCTOS_ROUTES } from './productos/productos.routes';
 
 
 
@@ -31,27 +30,7 @@ const pagesRoutes: Routes = [
             { path: 'alfombras', component: AlfombrasPagesComponent, data: {'title': 'Alfombras'} },
             { path: 'producto/:id',
                 component: ProductoPageComponent,
-                children: [
-                    // alfombras
-                    { path: 'alto-trafico', component: ProductoContentComponent, data: {'title': 'Alto trafico'} },
-                    { path: 'african-queen', component: ProductoContentComponent, data: {'title': 'African queen'} },
-                    { path: 'de-diseño', component: ProductoContentComponent, data: {'title': 'Diseño'} },
-                    { path: 'hotelera', component: ProductoContentComponent, data: {'title': 'Hotelera'} },
-                    { path: 'pelo-alto', component: ProductoContentComponent, data: {'title': 'Pelo alto'} },
-                    { path: 'salsa', component: ProductoContentComponent, data: {'title': 'Salsa'} },
-                    { path: 'solo', component: ProductoContentComponent, data: {'title': 'Solo'} },
-                    // grama sintetica
-                    { path: 'galeria-grama-sintetica', component: GaleriaComponent, data: {'title': 'Grama sintética'} },
-                    { path: 'follaje', component: ProductoContentComponent, data: {'title': 'follaje'} },
-                    { path: 'bolas-decorativas', component: ProductoContentComponent, data: {'title': 'Bolas decorativas'} },
-                    { path: 'jardineras', component: ProductoContentComponent, data: {'title': 'Jardineras'} },
-                    // grama piso laminado
-                    { path: 'galeria-piso-laminado', component: GaleriaComponent, data: {'title': 'Piso laminado'} },
-                    { path: 'ac3-7mm', component: ProductoContentComponent, data: {'title': 'AC3 7mm'} },
-                    { path: 'ac4-83mm', component: ProductoContentComponent, data: {'title': 'AC4 8.3mm'} },
-                    { path: 'ac5-12mm', component: ProductoContentComponent, data: {'title': 'AC5 12mm'} },
-                    { path: '**', pathMatch: 'full', redirectTo: 'galerilla' },
-                ],
+                children: PRODUCTOS_ROUTES,
                 data: {'title': 'Sub Categoria'}
             },
             { path: 'product/:cat/:subcat/:prodId', component: ProductoDetalleComponent, data: {'title': 'Detalle'} },

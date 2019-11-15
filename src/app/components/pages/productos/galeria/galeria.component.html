@@ -68,3 +68,30 @@
         </div>
     </div>
 </div>
+<!-- ====================================================================== -->
+
+<!-- ====================================================================== -->
+<!-- Cortinas -->
+<!-- ====================================================================== -->
+<div *ngIf="categoria === 'cortinas'">
+
+    <!-- Residenciales -->
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2 class="titulo">Residenciales</h2>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let prod of productos | filterProduct:'residenciales'">
+            <app-card-product [producto]="prod"></app-card-product>
+        </div>
+    </div>
+
+    <!-- Iglesias -->
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2 class="titulo">Iglesias</h2>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let prod of productos | filterProduct:'iglesias'">
+            <app-card-product [producto]="prod"></app-card-product>
+        </div>
+    </div>
+</div>
