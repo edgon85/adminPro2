@@ -26,19 +26,7 @@ export class SidebarComponent implements OnInit {
       map((evento: ActivationEnd) => evento.snapshot.routeConfig)
       ).subscribe(
         (resp) => {
-          // console.log(resp.path);
           this.urlPath = resp.path;
-          // for (const i of this._sidebarService.menuPages) {
-          //   for (const j of i.submenu) {
-          //     let url = j.url.slice(1);
-          //     if ( resp.path !== url ) {
-          //       this.expandir = '';
-          //     } else {
-          //       console.log('Sip...');
-          //       this.expandir = 'show';
-          //     }
-          //   }
-          // }
         }
       );
     }
