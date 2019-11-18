@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ProductoModel } from '../../../../models/producto.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card-product',
@@ -10,15 +11,18 @@ export class CardProductComponent implements OnInit {
 
   @Input() producto: ProductoModel;
   @Input() key: any;
-  @Input() index: string;
+  // @Input() index: string;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
   dataProducto( producto: ProductoModel ) {
-    console.log(producto);
+    const categoria = producto.category.split(' ').join('-');
+    const subCategoria = producto.sub_category.split(' ').join('-');
+
+    this.router.navigate(['/product', categoria, subCategoria, producto.slug]);
   }
 
 }
