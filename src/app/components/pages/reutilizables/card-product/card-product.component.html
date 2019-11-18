@@ -4,7 +4,7 @@
             <img class="img-fluid" [src]="producto.image.portada" alt="" />
         </div>
         <div class="lower-content">
-            <h3><a href="#">{{ producto.title }}</a></h3>
+            <h3><a class="pointer" (click)="dataProducto( producto )">{{ producto.title }}</a></h3>
         </div>
     </div>
 </div>
