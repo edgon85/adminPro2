@@ -19,6 +19,7 @@ import { ProductoPageComponent } from './productos/producto-page/producto-page.c
 import { ProductoDetalleComponent } from './productos/detalle/producto-detalle/producto-detalle.component';
 import { PRODUCTOS_ROUTES } from './productos/productos.routes';
 import { NosotrosComponent } from './nosotros/nosotros.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 
 
@@ -36,6 +37,7 @@ const pagesRoutes: Routes = [
             },
             { path: 'product/:cat/:subcat/:prodId', component: ProductoDetalleComponent, data: {'title': 'Detalle'} },
             { path: 'nosotros', component: NosotrosComponent, data: {'title': 'Quienes somos'} },
+            { path: 'contacto', component: ContactoComponent, data: {'title': 'Contáctanos'} },
             { path: '', redirectTo: 'inicio', pathMatch: 'full' },
         ]
     },

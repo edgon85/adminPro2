@@ -8,4 +8,4 @@ const APP_ROUTERS: Routes = [
     { path: '**', component: PageNotFoundComponent },
 ];
 
-export const APP_ROUTING = RouterModule.forRoot(APP_ROUTERS, { useHash: true });
+export const APP_ROUTING = RouterModule.forRoot(APP_ROUTERS, { useHash: true, scrollPositionRestoration: 'enabled' });

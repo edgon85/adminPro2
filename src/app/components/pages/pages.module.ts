@@ -14,6 +14,8 @@ import { ProductoPageComponent } from './productos/producto-page/producto-page.c
 import { ProductoContentComponent } from './productos/producto-content/producto-content.component';
 import { GaleriaComponent } from './productos/galeria/galeria.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
+import { ContactoComponent } from './contacto/contacto.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,9 +30,11 @@ import { NosotrosComponent } from './nosotros/nosotros.component';
     ProductoContentComponent,
     GaleriaComponent,
     NosotrosComponent,
+    ContactoComponent,
   ],
   imports: [
     CommonModule,
+    FormsModule,
     SharedModule,
     SharedAdminModule,
     PAGES_ROUTES
