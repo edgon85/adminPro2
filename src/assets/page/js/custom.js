@@ -167,43 +167,43 @@ function init_plugin_slick() {
       ]
     });
 
-    // 	$('.partnersLogoSlider').slick({
-    // 		autoplay: true,
-    // 		autoplaySpeed: 2000,
-    // 		dots: false,
-    // 		arrows: false,
-    // 		slidesToShow: 5,
-    // 		slidesToScroll: 3,
-    // 		infinite: true,
-    // 		responsive: [
-    // 			{
-    // 				breakpoint: 1200,
-    // 				settings: {
-    // 					slidesToShow: 4
-    // 				}
-    // 			},
-    // 			{
-    // 				breakpoint: 992,
-    // 				settings: {
-    // 					slidesToShow: 3
-    // 				}
-    // 			},
-    // 			{
-    // 				breakpoint: 768,
-    // 				settings: {
-    // 					slidesToShow: 3,
-    // 					slidesToScroll: 3
-    // 				}
-    // 			},
-    // 			{
-    // 				breakpoint: 670,
-    // 				settings: {
-    // 					slidesToShow: 2,
-    // 					slidesToScroll: 2
-    // 				}
-    // 			}
-    // 		]
-    // 	});
+    	$('.partnersLogoSlider').slick({
+    		autoplay: true,
+    		autoplaySpeed: 2000,
+    		dots: false,
+    		arrows: false,
+    		slidesToShow: 5,
+    		slidesToScroll: 3,
+    		infinite: true,
+    		responsive: [
+    			{
+    				breakpoint: 1200,
+    				settings: {
+    					slidesToShow: 4
+    				}
+    			},
+    			{
+    				breakpoint: 992,
+    				settings: {
+    					slidesToShow: 3
+    				}
+    			},
+    			{
+    				breakpoint: 768,
+    				settings: {
+    					slidesToShow: 3,
+    					slidesToScroll: 3
+    				}
+    			},
+    			{
+    				breakpoint: 670,
+    				settings: {
+    					slidesToShow: 2,
+    					slidesToScroll: 2
+    				}
+    			}
+    		]
+    	});
 
     // 	$('.featuredCollectionSlider').slick({
     // 		slidesToShow: 2,

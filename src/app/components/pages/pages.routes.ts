@@ -18,6 +18,7 @@ import { AlfombrasPagesComponent } from './productos/alfombras-pages/alfombras-p
 import { ProductoPageComponent } from './productos/producto-page/producto-page.component';
 import { ProductoDetalleComponent } from './productos/detalle/producto-detalle/producto-detalle.component';
 import { PRODUCTOS_ROUTES } from './productos/productos.routes';
+import { NosotrosComponent } from './nosotros/nosotros.component';
 
 
 
@@ -34,6 +35,7 @@ const pagesRoutes: Routes = [
                 data: {'title': 'Sub Categoria'}
             },
             { path: 'product/:cat/:subcat/:prodId', component: ProductoDetalleComponent, data: {'title': 'Detalle'} },
+            { path: 'nosotros', component: NosotrosComponent, data: {'title': 'Quienes somos'} },
             { path: '', redirectTo: 'inicio', pathMatch: 'full' },
         ]
     },

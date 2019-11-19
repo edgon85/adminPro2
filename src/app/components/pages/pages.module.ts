@@ -13,6 +13,7 @@ import { ProductoDetalleComponent } from './productos/detalle/producto-detalle/p
 import { ProductoPageComponent } from './productos/producto-page/producto-page.component';
 import { ProductoContentComponent } from './productos/producto-content/producto-content.component';
 import { GaleriaComponent } from './productos/galeria/galeria.component';
+import { NosotrosComponent } from './nosotros/nosotros.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { GaleriaComponent } from './productos/galeria/galeria.component';
     ProductoPageComponent,
     ProductoContentComponent,
     GaleriaComponent,
+    NosotrosComponent,
   ],
   imports: [
     CommonModule,
