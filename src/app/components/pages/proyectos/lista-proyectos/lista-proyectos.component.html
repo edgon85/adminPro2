@@ -1,0 +1,100 @@
+<div class="main">
+    <section class="pageHeaderImage">
+        <div class="container">
+            <div class="tableBlock">
+                <div class="row tableInner">
+                    <div class="col-sm-12">
+                        <div class="page-title">
+                            <h2>Nuestos proyectos</h2>
+                            <ol class="breadcrumb">
+                                <li>
+                                    <a href="index.html">Inicio</a>
+                                </li>
+                                <li class="active">proyectos</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<section class="trabajos">
+    <div class="contenedor">
+        <div class="contenedor-trabajos">
+            <div class="trabajo" *ngFor="let proyecto of proyectos">
+                <div class="thumb" (click)="getProyecto(proyecto.slug)">
+                    <img [src]="proyecto.images.portada | avatar" alt="casa e imagen">
+                </div>
+                <div class="descripcion">
+                    <p class="nombre" (click)="getProyecto(proyecto.slug)">{{ proyecto.title }}</p>
+                    <!-- <p class="categoria">{{ proyecto.title }}</p> -->
+                </div>
+            </div>
+            <!-- <div class="trabajo">
+                <div class="thumb">
+                    <img src="assets/admin/images/big/img2.jpg" alt="Lorem Ipsum">
+                </div>
+                <div class="descripcion">
+                    <p class="nombre">Lorem Ipsum</p>
+                    <p class="categoria">HTML - CSS - PHP</p>
+                </div>
+            </div>
+            <div class="trabajo">
+                <div class="thumb">
+                    <img src="assets/admin/images/gallery/chair.jpg" alt="Lorem Ipsum">
+                </div>
+                <div class="descripcion">
+                    <p class="nombre">Lorem Ipsum</p>
+                    <p class="categoria">HTML - CSS - PHP</p>
+                </div>
+            </div>
+            <div class="trabajo">
+                <div class="thumb">
+                    <img src="assets/admin/images/big/img4.jpg" alt="Lorem Ipsum">
+                </div>
+                <div class="descripcion">
+                    <p class="nombre">Lorem Ipsum</p>
+                    <p class="categoria">HTML - CSS - PHP</p>
+                </div>
+            </div>
+            <div class="trabajo">
+                <div class="thumb">
+                    <img src="assets/admin/images/big/img5.jpg" alt="Lorem Ipsum">
+                </div>
+                <div class="descripcion">
+                    <p class="nombre">Lorem Ipsum</p>
+                    <p class="categoria">HTML - CSS - PHP</p>
+                </div>
+            </div>
+            <div class="trabajo">
+                <div class="thumb">
+                    <img src="assets/admin/images/big/img6.jpg" alt="Lorem Ipsum">
+                </div>
+                <div class="descripcion">
+                    <p class="nombre">Lorem Ipsum</p>
+                    <p class="categoria">HTML - CSS - PHP</p>
+                </div>
+            </div>
+            <div class="trabajo">
+                <div class="thumb">
+                    <img src="assets/admin/images/big/img1.jpg" alt="Lorem Ipsum">
+                </div>
+                <div class="descripcion">
+                    <p class="nombre">Lorem Ipsum</p>
+                    <p class="categoria">HTML - CSS - PHP</p>
+                </div>
+            </div>
+            <div class="trabajo">
+                <div class="thumb">
+                    <img src="assets/admin/images/big/img2.jpg" alt="Lorem Ipsum">
+                </div>
+                <div class="descripcion">
+                    <p class="nombre">Lorem Ipsum</p>
+                    <p class="categoria">HTML - CSS - PHP</p>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</section>

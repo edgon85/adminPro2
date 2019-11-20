@@ -20,6 +20,8 @@ import { ProductoDetalleComponent } from './productos/detalle/producto-detalle/p
 import { PRODUCTOS_ROUTES } from './productos/productos.routes';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { ListaProyectosComponent } from './proyectos/lista-proyectos/lista-proyectos.component';
+import { ProyectoDetalleComponent } from './proyectos/proyecto-detalle/proyecto-detalle.component';
 
 
 
@@ -38,6 +40,8 @@ const pagesRoutes: Routes = [
             { path: 'product/:cat/:subcat/:prodId', component: ProductoDetalleComponent, data: {'title': 'Detalle'} },
             { path: 'nosotros', component: NosotrosComponent, data: {'title': 'Quienes somos'} },
             { path: 'contacto', component: ContactoComponent, data: {'title': 'Contáctanos'} },
+            { path: 'proyectos', component: ListaProyectosComponent, data: {'title': 'Nuestos proyectos'} },
+            { path: 'proyectos/:id', component: ProyectoDetalleComponent, data: {'title': 'Proyecto detalle'} },
             { path: '', redirectTo: 'inicio', pathMatch: 'full' },
         ]
     },

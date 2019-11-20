@@ -16,6 +16,8 @@ import { GaleriaComponent } from './productos/galeria/galeria.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { FormsModule } from '@angular/forms';
+import { ListaProyectosComponent } from './proyectos/lista-proyectos/lista-proyectos.component';
+import { ProyectoDetalleComponent } from './proyectos/proyecto-detalle/proyecto-detalle.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { FormsModule } from '@angular/forms';
     GaleriaComponent,
     NosotrosComponent,
     ContactoComponent,
+    ListaProyectosComponent,
+    ProyectoDetalleComponent,
   ],
   imports: [
     CommonModule,

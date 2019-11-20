@@ -1,0 +1,130 @@
+/*=== 7.3 CART PAGE HEADER ===*/
+
+.pageHeaderImage {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: auto;
+  height: 200px;
+  /* background-image: url(../img/products/page-header-image.jpg); */
+  background-image: url(../../../../../assets/page/img/products/page-header-image3.jpg);
+}
+
+.pageHeaderImage .tableBlock {
+  display: table;
+  height: 200px;
+  width: 100%;
+}
+
+.pageHeaderImage .tableBlock .tableInner {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center !important;
+  height: 73px;
+}
+
+.pageHeaderImage .tableBlock .tableInner .page-title h2 {
+  color: #fffefe;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  line-height: 1;
+  font-size: 30px;
+}
+
+.pageHeaderImage .tableBlock .tableInner .page-title .breadcrumb {
+  background-color: transparent;
+  margin-bottom: 0;
+  padding: 0;
+  display: block !important;
+}
+
+.pageHeaderImage .tableBlock .tableInner .page-title .breadcrumb li {
+  text-transform: uppercase;
+  color: #e6e6e6;
+  display: inline-block;
+  padding: 0 10px;
+  position: relative;
+}
+
+.pageHeaderImage .tableBlock .tableInner .page-title .breadcrumb li a {
+  color: inherit;
+}
+
+.pageHeaderImage
+  .tableBlock
+  .tableInner
+  .page-title
+  .breadcrumb
+  li:first-child:after {
+  content: "/";
+  position: absolute;
+  top: 0;
+  right: -4px;
+}
+
+/* Trabajos */
+
+.trabajos {
+    margin-top: 50px;
+}
+
+.trabajos .contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: auto;
+    overflow: visible;
+}
+
+.trabajos .contenedor-trabajos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.trabajos .contenedor-trabajos .trabajo {
+  width: 30%;
+  margin-bottom: 40px;
+}
+
+.trabajos .contenedor-trabajos .trabajo .thumb {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 10px;
+  display: block;
+  overflow: hidden;
+}
+
+.trabajos .contenedor-trabajos .trabajo .thumb img {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.trabajos .contenedor-trabajos .trabajo .thumb img:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+}
+
+.trabajos .contenedor-trabajos .trabajo .descripcion {
+  text-align: center;
+}
+
+.trabajos .contenedor-trabajos .trabajo .descripcion .nombre {
+  font-weight: 700;
+  color: #636363;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+.trabajos .contenedor-trabajos .trabajo .descripcion .nombre:hover {
+    color: #000000;
+    cursor: pointer;
+}
+
+.trabajos .contenedor-trabajos .trabajo .descripcion .categoria {
+  font-size: 14px;
+  color: #636363;
+}
