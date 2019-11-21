@@ -52,6 +52,7 @@ import { UsuariosComponent } from './pages/usuarios/usuarios.component';
     DashboardComponent,
     ModalUploadComponent,
     AvatarPipe,
+    KeysPipe
   ]
 })
 export class SharedAdminModule {}

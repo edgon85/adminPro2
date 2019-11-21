@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-import { ProductService } from '../../components/admin/services/product.service';
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +22,13 @@ export class ProyectoService {
     return this.http.get(url).pipe(
       map(this.crearArreglo)
     );
+  }
+
+
+  public getProject(slug: string) {
+    let url = this.urlProduct + `/proyectos/${slug}.json`;
+
+    return this.http.get(url);
   }
 
 

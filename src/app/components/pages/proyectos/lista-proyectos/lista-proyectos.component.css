@@ -66,14 +66,14 @@
 /* Trabajos */
 
 .trabajos {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .trabajos .contenedor {
-	width: 90%;
-	max-width: 1000px;
-	margin: auto;
-    overflow: visible;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: visible;
 }
 
 .trabajos .contenedor-trabajos {
@@ -97,11 +97,11 @@
 }
 
 .trabajos .contenedor-trabajos .trabajo .thumb img {
-    width: 100%;
-    height: 100%;
-    vertical-align: top;
-    border-radius: 3px;
-    transition: all 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
 }
 
 .trabajos .contenedor-trabajos .trabajo .thumb img:hover {
@@ -120,11 +120,162 @@
   text-transform: capitalize;
 }
 .trabajos .contenedor-trabajos .trabajo .descripcion .nombre:hover {
-    color: #000000;
-    cursor: pointer;
+  color: #000000;
+  cursor: pointer;
 }
 
 .trabajos .contenedor-trabajos .trabajo .descripcion .categoria {
   font-size: 14px;
   color: #636363;
+}
+
+/* proyecto detalle  */
+
+.gallery {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 90px 0;
+  background: #f5f5f8;
+}
+
+.gallery .featuredProducts .slide {
+
+  height: auto;
+  display: block;
+
+}
+
+.gallery .featuredProducts .slide .productImage {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.gallery .featuredProducts .slide .productImage img {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+
+/* .gallery .featuredProducts .slide:hover .productImage img {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+} */
+
+
+.gallery .featuredProducts .slide .productImage .productMasking {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(71, 186, 193, 0.9);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.gallery .featuredProducts .slide:hover .productMasking {
+  opacity: 1;
+}
+
+.gallery .featuredProducts .slide:hover .productMasking ul {
+  -webkit-animation: move-bottom 0.3s linear;
+  animation: move-bottom 0.3s linear;
+}
+
+.gallery .featuredProducts .slide .productImage .productMasking:hover {
+  opacity: 1;
+}
+
+.gallery .featuredProducts .slide .productImage .productMasking ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.gallery.featuredProducts .slide .productImage .productMasking ul {
+  width: 168px;
+  height: 56px;
+  background: #fff;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.gallery .featuredProducts .slide .productImage .productMasking ul li {
+  position: relative;
+  width: 33.333%;
+}
+
+.gallery .featuredProducts .slide .productImage .productMasking ul li a {
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  border: none;
+  border-radius: 0px;
+  background-color: transparent;
+  font-size: 14px;
+  color: #252525;
+  transition: all 0.3s ease-in-out;
+}
+
+.gallery .productGallery {
+  margin-bottom: 0px;
+}
+
+.gallery .productGallery .slide {
+  margin-bottom: 0px;
+}
+
+.gallery .productGallery .slide .productImage {
+  margin-bottom: 0px;
+}
+
+.gallery .productGallery .slide .productMasking a {
+  color: #fff;
+  font-size: 16px;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #fff;
+  display: inline-block;
+  text-align: center;
+  line-height: 46px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.gallery .productGallery button.slick-arrow {
+  top: 50%;
+}
+
+.gallery .productGallery button.slick-arrow.slick-prev {
+  left: -25px;
+  right: auto;
+}
+
+.gallery .productGallery button.slick-arrow.slick-prev:after {
+  display: none;
+}
+
+.gallery .productGallery button.slick-arrow.slick-next {
+  right: -25px;
+}
+
+.gallery .productGallery button.slick-arrow.slick-prev:before,
+.gallery .productGallery button.slick-arrow.slick-next:before {
+  font-size: 16px;
 }
