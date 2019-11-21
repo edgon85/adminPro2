@@ -1,4 +1,6 @@
-# Admin Pro 2
+# Casa e Imagen
 
-Proyecto de pagina web con administración
+Librerias
  
+# Lightbox para galeria de imagenes
+ https://www.npmjs.com/package/ngx-lightbox

@@ -19,6 +19,8 @@ import { FormsModule } from '@angular/forms';
 import { ListaProyectosComponent } from './proyectos/lista-proyectos/lista-proyectos.component';
 import { ProyectoDetalleComponent } from './proyectos/proyecto-detalle/proyecto-detalle.component';
 
+import { LightboxModule } from 'ngx-lightbox';
+
 @NgModule({
   declarations: [
     HomeComponent,
@@ -41,7 +43,8 @@ import { ProyectoDetalleComponent } from './proyectos/proyecto-detalle/proyecto-
     FormsModule,
     SharedModule,
     SharedAdminModule,
-    PAGES_ROUTES
+    PAGES_ROUTES,
+    LightboxModule
   ],
   exports: [
     PagesComponent,
