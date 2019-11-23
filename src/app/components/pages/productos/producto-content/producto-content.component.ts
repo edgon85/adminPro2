@@ -17,6 +17,10 @@ export class ProductoContentComponent implements OnInit {
   subCategoria: string = '';
   titulo: string;
 
+
+  video = '350398325';
+  videoComplementos = '?autoplay=1&loop=1?title=1&amp;byline=0&amp;portrait=0&amp;color=ffffff';
+
   constructor(
     private _productoService: ProductService,
     private router: ActivatedRoute,

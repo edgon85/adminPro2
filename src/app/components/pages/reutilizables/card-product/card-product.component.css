@@ -50,12 +50,16 @@
   
   .shop-item .inner-box {
     position: relative;
+
   }
   
   .shop-item .inner-box .image {
     position: relative;
     height: 250px;
     text-align: center;
+    display: block;
+    overflow: hidden;
+    border-radius: 5px;
   }
   
   .shop-item .inner-box .image img {

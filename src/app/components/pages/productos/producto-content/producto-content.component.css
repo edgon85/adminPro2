@@ -1,8 +1,41 @@
 .titulo {
-    text-transform: capitalize;
-    font-size: 28px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    font-weight: 600;
-    color: #000;
+  text-transform: capitalize;
+  font-size: 28px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #000;
+}
+
+/* ============================================ */
+/* Video */
+/* ============================================ */
+.video {
+  height: 400px !important;
+  width: 100% !important;
+  /* height: 100% !important; */
+}
+
+.video iframe {
+  width: 100% !important;
+  height: 100% !important;
+}
+/* ============================================ */
+
+@media screen and (max-width: 768px), (max-width: 823px) {
+  .video {
+    height: 250px !important;
+  }
+}
+
+@media screen and (max-width: 480px), (max-width: 640px), (max-width: 667px) {
+  .video {
+    height: 200px !important;
+  }
+}
+
+@media screen and (max-width: 320px), (max-width: 360px), (max-width: 414px) {
+  .video {
+    height: 150px !important;
+  }
 }

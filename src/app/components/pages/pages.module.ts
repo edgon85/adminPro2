@@ -20,6 +20,7 @@ import { ListaProyectosComponent } from './proyectos/lista-proyectos/lista-proye
 import { ProyectoDetalleComponent } from './proyectos/proyecto-detalle/proyecto-detalle.component';
 
 import { LightboxModule } from 'ngx-lightbox';
+import { DomseguroPipe } from '../../pipes/domseguro.pipe';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { LightboxModule } from 'ngx-lightbox';
     ContactoComponent,
     ListaProyectosComponent,
     ProyectoDetalleComponent,
+    DomseguroPipe,
   ],
   imports: [
     CommonModule,
