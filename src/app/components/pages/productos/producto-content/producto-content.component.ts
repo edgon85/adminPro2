@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { filter, map } from 'rxjs/operators';
-import { ActivationEnd, Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../../admin/services/product.service';
 import { ProductoModel } from '../../../../models/producto.model';
 import { GetRutasService } from '../../../../services/rutas/get-rutas.service';
+
+declare var $: any;
 
 @Component({
   selector: 'app-producto-content',
@@ -17,14 +18,17 @@ export class ProductoContentComponent implements OnInit {
   subCategoria: string = '';
   titulo: string;
 
+  prodSelec: any;
 
   video = '350398325';
-  videoComplementos = '?autoplay=1&loop=1?title=1&amp;byline=0&amp;portrait=0&amp;color=ffffff';
+  videoComplementos =
+    '?autoplay=1&loop=1?title=1&amp;byline=0&amp;portrait=0&amp;color=ffffff';
 
   constructor(
     private _productoService: ProductService,
     private router: ActivatedRoute,
-    private _getRutas: GetRutasService
+    private _getRutas: GetRutasService,
+    private route: Router
   ) {
     this.obtenerParametrosUrl();
 
@@ -84,5 +88,32 @@ export class ProductoContentComponent implements OnInit {
       default:
         this.titulo = this.subCategoria;
     }
+  }
+
+
+  // ========================================================== //
+  // Mostar producto en modal //
+  // ========================================================== //
+  dataProducto(producto: ProductoModel) {
+    this.prodSelec = producto;
+    $('.quick-view').modal(); // abre el modal
+  }
+
+  // ========================================================== //
+  // cierra modal y lleva a detalle del producto //
+  // ========================================================== //
+  verCategoria() {
+    const categoria = this.prodSelec.category.split(' ').join('-');
+    const subCategoria = this.prodSelec.sub_category.split(' ').join('-');
+
+    $('body').removeClass('modal-open');
+    $('.modal-backdrop').remove();
+    $('.quick-view').modal('dispose');
+    this.route.navigate([
+      '/product',
+      categoria,
+      subCategoria,
+      this.prodSelec.slug
+    ]);
   }
 }

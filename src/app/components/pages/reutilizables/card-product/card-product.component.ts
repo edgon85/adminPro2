@@ -19,10 +19,13 @@ export class CardProductComponent implements OnInit {
   }
 
   dataProducto( producto: ProductoModel ) {
-    const categoria = producto.category.split(' ').join('-');
-    const subCategoria = producto.sub_category.split(' ').join('-');
+    // const categoria = producto.category.split(' ').join('-');
+    // const subCategoria = producto.sub_category.split(' ').join('-');
+    // this.router.navigate(['/product', categoria, subCategoria, producto.slug]);
 
-    this.router.navigate(['/product', categoria, subCategoria, producto.slug]);
+    // console.log(producto);
+    // this.prodSelec = producto;
+    // $('.quick-view').modal();
   }
 
 }

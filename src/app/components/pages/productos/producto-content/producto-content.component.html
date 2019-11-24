@@ -29,7 +29,33 @@
     <!-- Productos -->
     <!-- ======================================================== -->
     <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let prod of productos | filterProduct: subCategoria">
-        <app-card-product [producto]="prod"></app-card-product>
+        <app-card-product [producto]="prod" (click)="dataProducto(prod)"></app-card-product>
     </div>
     <!-- ======================================================== -->
+</div>
+
+
+<!-- PORDUCT QUICK VIEW MODAL -->
+<div class="modal fade quick-view mt-5" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content" *ngIf="prodSelec">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <div class="media flex-wrap">
+                    <div class="media-left px-0">
+                        <img class="media-object" [src]="prodSelec.image.portada" alt="">
+                    </div>
+                    <div class="media-body">
+                        <h2>{{ prodSelec.title }}</h2>
+                        <!-- <h3>$149</h3> -->
+                        <p>{{ prodSelec.description }}</p>
+                        <div class="btn-area">
+                            <button (click)="verCategoria()" class="btn btn-primary btn-block">Ver <i
+                                    class="fa fa-angle-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
