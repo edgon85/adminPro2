@@ -12,6 +12,8 @@ export class BreadcrumbComponent implements OnInit {
 
   titulo: string;
 
+  nosotrosContacto: boolean;
+
   constructor( private router: Router, private title: Title ) {
     this.getDataRoute().subscribe(
       (resp) => {
@@ -22,6 +24,7 @@ export class BreadcrumbComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.quitarProducto();
   }
 
   // ===== Obtener la informacion del router en especicamente la data la data ===== //
@@ -32,6 +35,22 @@ export class BreadcrumbComponent implements OnInit {
       filter((evento: ActivationEnd) => evento.snapshot.firstChild === null),
       map((evento: ActivationEnd) => evento.snapshot.data)
     );
+  }
+
+    // =====================================
+  // Quita li del template
+  // =====================================
+  quitarProducto() {
+    switch (this.titulo) {
+      case 'Quienes somos':
+        this.nosotrosContacto = false;
+        break;
+      case 'Contáctanos':
+        this.nosotrosContacto = false;
+        break;
+      default:
+        this.nosotrosContacto = true;
+    }
   }
 
 }

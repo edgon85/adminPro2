@@ -16,6 +16,8 @@ export class GaleriaComponent implements OnInit {
 
   prodSelec: any;
 
+  cargando: boolean = false;
+
   constructor(
     private _productoService: ProductService,
     private router: ActivatedRoute,
@@ -25,6 +27,7 @@ export class GaleriaComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.cargando = true;
     this.obtenerProductos();
   }
 
@@ -36,6 +39,7 @@ export class GaleriaComponent implements OnInit {
       .getAllProducts(this.categoria)
       .subscribe((resp: any) => {
         this.productos = resp;
+        this.cargando = false;
         // console.log(this.productos);
       });
   }

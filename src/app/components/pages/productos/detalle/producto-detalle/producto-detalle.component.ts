@@ -14,6 +14,8 @@ export class ProductoDetalleComponent implements OnInit {
   catUrl: string;
   subCatUrl: string;
 
+  cargando: boolean = false;
+
   constructor(
     private _productoService: ProductService,
     private activatedRouter: ActivatedRoute
@@ -25,7 +27,9 @@ export class ProductoDetalleComponent implements OnInit {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.cargando = true;
+  }
 
   // ========================================================== //
   // Obtener productos //
@@ -33,6 +37,7 @@ export class ProductoDetalleComponent implements OnInit {
   obtenerProductos(prodId: string) {
     this._productoService.getProduct(prodId).subscribe((resp: any) => {
       this.producto = resp;
+      this.cargando = false;
     });
   }
 }

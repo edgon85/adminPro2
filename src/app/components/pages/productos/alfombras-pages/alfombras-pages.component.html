@@ -17,13 +17,16 @@
             <div class="col-12 col-md-6 productos">
                 <div class="contenedor">
                     <h3 class="titulo">Alto trafico</h3>
+                    <app-loading *ngIf="cargando"></app-loading>
+
                     <div class="contenedor-productos">
                         <div class="producto" *ngFor="let prod of productos | filterProduct:'alto trafico'">
                             <div class="thumb pointer" (click)="cambiarAlfombra( prod.image.portada )">
                                 <img [src]="prod.image.portada  | avatar" alt="">
                             </div>
                             <div class="descripcion">
-                                <a class="nombre" routerLink="/product/alfombras/alto-trafico/{{ prod.slug }}">{{ prod.title }}</a>
+                                <a class="nombre"
+                                    routerLink="/product/alfombras/alto-trafico/{{ prod.slug }}">{{ prod.title }}</a>
                             </div>
                         </div>
                     </div>
@@ -32,13 +35,15 @@
                 <!-- Solo -->
                 <div class="contenedor mt-3">
                     <h3 class="titulo">Solo</h3>
+                    <app-loading *ngIf="cargando"></app-loading>
                     <div class="contenedor-productos">
                         <div class="producto" *ngFor="let prod of productos | filterProduct:'solo'">
                             <div class="thumb pointer" (click)="cambiarAlfombra( prod.image.portada )">
                                 <img [src]="prod.image.portada  | avatar" alt="">
                             </div>
                             <div class="descripcion">
-                                <a class="nombre" routerLink="/product/alfombras/solo/{{ prod.slug }}">{{ prod.title }}</a>
+                                <a class="nombre"
+                                    routerLink="/product/alfombras/solo/{{ prod.slug }}">{{ prod.title }}</a>
                             </div>
                         </div>
                     </div>
@@ -47,13 +52,15 @@
                 <!-- Salsa -->
                 <div class="contenedor mt-3">
                     <h3 class="titulo">Salsa</h3>
+                    <app-loading *ngIf="cargando"></app-loading>
                     <div class="contenedor-productos">
                         <div class="producto" *ngFor="let prod of productos | filterProduct:'salsa'">
                             <div class="thumb pointer" (click)="cambiarAlfombra( prod.image.portada )">
                                 <img [src]="prod.image.portada  | avatar" alt="">
                             </div>
                             <div class="descripcion">
-                                <a class="nombre" routerLink="/product/alfombras/salsa/{{ prod.slug }}">{{ prod.title }}</a>
+                                <a class="nombre"
+                                    routerLink="/product/alfombras/salsa/{{ prod.slug }}">{{ prod.title }}</a>
                             </div>
                         </div>
                     </div>
@@ -62,13 +69,15 @@
                 <!-- Salsa -->
                 <div class="contenedor mt-3">
                     <h3 class="titulo">Hotelera</h3>
+                    <app-loading *ngIf="cargando"></app-loading>
                     <div class="contenedor-productos">
                         <div class="producto" *ngFor="let prod of productos | filterProduct:'hotelera'">
                             <div class="thumb pointer" (click)="cambiarAlfombra( prod.image.portada )">
                                 <img [src]="prod.image.portada  | avatar" alt="">
                             </div>
                             <div class="descripcion">
-                                <a class="nombre" routerLink="/product/alfombras/hotelera/{{ prod.slug }}">{{ prod.title }}</a>
+                                <a class="nombre"
+                                    routerLink="/product/alfombras/hotelera/{{ prod.slug }}">{{ prod.title }}</a>
                             </div>
                         </div>
                     </div>
@@ -77,13 +86,15 @@
                 <!-- Pelo alto -->
                 <div class="contenedor mt-3">
                     <h3 class="titulo">Pelo alto</h3>
+                    <app-loading *ngIf="cargando"></app-loading>
                     <div class="contenedor-productos">
                         <div class="producto" *ngFor="let prod of productos | filterProduct:'pelo alto'">
                             <div class="thumb pointer" (click)="cambiarAlfombra( prod.image.portada )">
                                 <img [src]="prod.image.portada  | avatar" alt="">
                             </div>
                             <div class="descripcion">
-                                <a class="nombre" routerLink="/product/alfombras/pelo-alto/{{ prod.slug }}">{{ prod.title }}</a>
+                                <a class="nombre"
+                                    routerLink="/product/alfombras/pelo-alto/{{ prod.slug }}">{{ prod.title }}</a>
                             </div>
                         </div>
                     </div>
@@ -92,13 +103,15 @@
                 <!-- Pelo alto -->
                 <div class="contenedor mt-3">
                     <h3 class="titulo">De diseño</h3>
+                    <app-loading *ngIf="cargando"></app-loading>
                     <div class="contenedor-productos">
                         <div class="producto" *ngFor="let prod of productos | filterProduct:'de diseño'">
                             <div class="thumb pointer" (click)="cambiarAlfombra( prod.image.portada )">
                                 <img [src]="prod.image.portada  | avatar" alt="">
                             </div>
                             <div class="descripcion">
-                                <a class="nombre" routerLink="/product/alfombras/de-diseño/{{ prod.slug }}">{{ prod.title }}</a>
+                                <a class="nombre"
+                                    routerLink="/product/alfombras/de-diseño/{{ prod.slug }}">{{ prod.title }}</a>
                             </div>
                         </div>
                     </div>

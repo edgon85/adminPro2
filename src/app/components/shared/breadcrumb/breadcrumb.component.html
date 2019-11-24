@@ -12,8 +12,8 @@
                     <li>
                         <a routerLink="/inicio">Inicio</a>
                     </li>
-                    <li>
-                        <a href="#">Producto</a>
+                    <li *ngIf="nosotrosContacto">
+                        <a routerLink="./">Producto</a>
                     </li>
                     <li class="active">{{ titulo }}</li>
                 </ol>

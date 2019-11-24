@@ -21,6 +21,7 @@ import { ProyectoDetalleComponent } from './proyectos/proyecto-detalle/proyecto-
 
 import { LightboxModule } from 'ngx-lightbox';
 import { DomseguroPipe } from '../../pipes/domseguro.pipe';
+import { LoadingComponent } from './reutilizables/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { DomseguroPipe } from '../../pipes/domseguro.pipe';
     ListaProyectosComponent,
     ProyectoDetalleComponent,
     DomseguroPipe,
+    LoadingComponent,
   ],
   imports: [
     CommonModule,
@@ -51,6 +53,7 @@ import { DomseguroPipe } from '../../pipes/domseguro.pipe';
   exports: [
     PagesComponent,
     FilterProductPipe,
+    LoadingComponent
   ]
 })
 export class PagesModule { }

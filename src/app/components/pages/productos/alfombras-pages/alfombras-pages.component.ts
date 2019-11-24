@@ -8,27 +8,26 @@ import { ProductoModel } from '../../../../models/producto.model';
   styleUrls: ['./alfombras-pages.component.css']
 })
 export class AlfombrasPagesComponent implements OnInit {
-
   productos: ProductoModel[] = [];
 
   urlFondo: string = 'assets/page/img/casa/fondo_2.png';
 
-  constructor( private _alfombraService: ProductService) { }
+  cargando: boolean = false;
+
+  constructor(private _alfombraService: ProductService) {}
 
   ngOnInit() {
+    this.cargando = true;
     this.obtenerProductos();
   }
 
-
   obtenerProductos() {
-    this._alfombraService.getAllProducts('alfombras').subscribe(
-      (resp: any) => {
-        this.productos = resp;
-        // console.log(this.productos);
-      }
-    );
+    this._alfombraService.getAllProducts('alfombras').subscribe((resp: any) => {
+      this.productos = resp;
+      this.cargando = false;
+      // console.log(this.productos);
+    });
   }
-
 
   cambiarAlfombra(imagen: string) {
     if (imagen === '') {

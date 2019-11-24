@@ -5,6 +5,11 @@
 <section class="mainContent clearfix mt-5">
     <div class="container">
         <div class="row singleProduct">
+
+            <div class="col-12">
+                <app-loading *ngIf="cargando"></app-loading>
+            </div>
+
             <div class="col-md-12" *ngIf="producto">
                 <div class="media flex-wrap">
                     <div class="media-left productSlider">

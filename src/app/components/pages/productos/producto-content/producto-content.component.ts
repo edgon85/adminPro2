@@ -20,6 +20,8 @@ export class ProductoContentComponent implements OnInit {
 
   prodSelec: any;
 
+  cargando: boolean = false;
+
   video = '350398325';
   videoComplementos =
     '?autoplay=1&loop=1?title=1&amp;byline=0&amp;portrait=0&amp;color=ffffff';
@@ -36,6 +38,7 @@ export class ProductoContentComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.cargando = true;
     this.modificarTitulo();
     this.obtenerProductos(this.categoria);
   }
@@ -47,6 +50,7 @@ export class ProductoContentComponent implements OnInit {
     this._productoService.getAllProducts(categoria).subscribe((resp: any) => {
       this.productos = resp;
       // console.log(this.productos);
+      this.cargando = false;
     });
   }
 
