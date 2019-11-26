@@ -38,3 +38,22 @@ Login register and recover password Page
   position: absolute;
   height: 100%;
 }
+
+/*-- ============================================================== 
+ Phone and below ipad(767px) 
+ ============================================================== */
+@media (max-width: 767px) {
+  .login-register {
+    position: relative;
+    overflow: hidden;
+  }
+  .login-box {
+    width: 90%;
+  }
+  .login-sidebar {
+    padding: 20% 0;
+  }
+  .login-sidebar .login-box {
+    position: relative;
+  }
+}

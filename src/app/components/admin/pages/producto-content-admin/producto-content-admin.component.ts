@@ -6,11 +6,11 @@ import Swal from 'sweetalert2';
 import { GetRutasService } from 'src/app/services/rutas/get-rutas.service';
 
 @Component({
-  selector: 'app-alfombras',
-  templateUrl: './alfombras.component.html',
-  styleUrls: ['./alfombras.component.css']
+  selector: 'app-producto-content-admin',
+  templateUrl: './producto-content-admin.component.html',
+  styleUrls: ['./producto-content-admin.component.css']
 })
-export class AlfombrasComponent implements OnInit {
+export class ProductoContentAdminComponent implements OnInit {
   productos: ProductoModel[] = [];
   totalProductos: number = 0;
   cargando: boolean = false;

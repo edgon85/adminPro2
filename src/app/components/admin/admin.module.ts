@@ -19,6 +19,7 @@ import { LinoleoComponent } from './pages/linoleo/linoleo.component';
 import { PapelTapizComponent } from './pages/papel-tapiz/papel-tapiz.component';
 import { PisoLaminadoComponent } from './pages/piso-laminado/piso-laminado.component';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
+import { ProductoContentAdminComponent } from './pages/producto-content-admin/producto-content-admin.component';
 
 @NgModule({
   declarations: [
@@ -29,22 +30,19 @@ import { UsuariosComponent } from './pages/usuarios/usuarios.component';
     ProductComponent,
     KeysPipe,
     AvatarPipe,
-    AlfombrasComponent,
-    AtrapamugreComponent,
+    // AlfombrasComponent,
+    // AtrapamugreComponent,
     ProductDetailComponent,
     ModalUploadComponent,
-    CortinasComponent,
-    GramaSinteticaComponent,
-    LinoleoComponent,
-    PapelTapizComponent,
-    PisoLaminadoComponent,
-    UsuariosComponent
+    // CortinasComponent,
+    // GramaSinteticaComponent,
+    // LinoleoComponent,
+    // PapelTapizComponent,
+    // PisoLaminadoComponent,
+    UsuariosComponent,
+    ProductoContentAdminComponent
   ],
-  imports: [
-    CommonModule,
-    RouterModule,
-    FormsModule
-  ],
+  imports: [CommonModule, RouterModule, FormsModule],
   exports: [
     HeaderAdminComponent,
     SidebarAdminComponent,
