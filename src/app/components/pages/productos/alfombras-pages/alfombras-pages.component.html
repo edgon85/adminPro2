@@ -8,7 +8,8 @@
             <div class="col-12 col-md-6 col1 position-relative animated fadeIn">
                 <div class="fondo mb-5 ">
                     <div [ngStyle]="{'background-image': 'url(' + urlFondo + ')'}" class="caja-fondo">
-                        <img class="img-responsive" src="assets/page/img/casa/principal.png" alt="">
+                        <img class="img-responsive" src="assets/page/img/casa/principal.png" alt=""
+                            title="Seleccione una imagen para ver en sala">
                     </div>
                 </div>
             </div>
@@ -22,11 +23,14 @@
                     <div class="contenedor-productos">
                         <div class="producto" *ngFor="let prod of productos | filterProduct:'alto trafico'">
                             <div class="thumb pointer" (click)="cambiarAlfombra( prod.image.portada )">
-                                <img [src]="prod.image.portada  | avatar" alt="">
+                                <img [src]="prod.image.portada  | avatar" alt="Casa e Imagen">
+                                <span>click para ver en sala</span>
                             </div>
                             <div class="descripcion">
-                                <a class="nombre"
-                                    routerLink="/product/alfombras/alto-trafico/{{ prod.slug }}">{{ prod.title }}</a>
+                                <a class="nombre" routerLink="/product/alfombras/alto-trafico/{{ prod.slug }}">
+                                    {{ prod.title }}
+                                    <span class="tooltip-box">ver descripción</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -39,11 +43,13 @@
                     <div class="contenedor-productos">
                         <div class="producto" *ngFor="let prod of productos | filterProduct:'solo'">
                             <div class="thumb pointer" (click)="cambiarAlfombra( prod.image.portada )">
-                                <img [src]="prod.image.portada  | avatar" alt="">
+                                <img [src]="prod.image.portada  | avatar" alt="Casa e Imagen">
+                                <span>click para ver en sala</span>
                             </div>
                             <div class="descripcion">
-                                <a class="nombre"
-                                    routerLink="/product/alfombras/solo/{{ prod.slug }}">{{ prod.title }}</a>
+                                <a class="nombre" routerLink="/product/alfombras/solo/{{ prod.slug }}">{{ prod.title }}
+                                    <span class="tooltip-box">ver descripción</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -56,11 +62,13 @@
                     <div class="contenedor-productos">
                         <div class="producto" *ngFor="let prod of productos | filterProduct:'salsa'">
                             <div class="thumb pointer" (click)="cambiarAlfombra( prod.image.portada )">
-                                <img [src]="prod.image.portada  | avatar" alt="">
+                                <img [src]="prod.image.portada  | avatar" alt="Casa e Imagen">
+                                <span>click para ver en sala</span>
                             </div>
                             <div class="descripcion">
-                                <a class="nombre"
-                                    routerLink="/product/alfombras/salsa/{{ prod.slug }}">{{ prod.title }}</a>
+                                <a class="nombre" routerLink="/product/alfombras/salsa/{{ prod.slug }}">{{ prod.title }}
+                                    <span class="tooltip-box">ver descripción</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -73,11 +81,14 @@
                     <div class="contenedor-productos">
                         <div class="producto" *ngFor="let prod of productos | filterProduct:'hotelera'">
                             <div class="thumb pointer" (click)="cambiarAlfombra( prod.image.portada )">
-                                <img [src]="prod.image.portada  | avatar" alt="">
+                                <img [src]="prod.image.portada  | avatar" alt="Casa e Imagen">
+                                <span>click para ver en sala</span>
                             </div>
                             <div class="descripcion">
                                 <a class="nombre"
-                                    routerLink="/product/alfombras/hotelera/{{ prod.slug }}">{{ prod.title }}</a>
+                                    routerLink="/product/alfombras/hotelera/{{ prod.slug }}">{{ prod.title }}
+                                    <span class="tooltip-box">ver descripción</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -90,11 +101,14 @@
                     <div class="contenedor-productos">
                         <div class="producto" *ngFor="let prod of productos | filterProduct:'pelo alto'">
                             <div class="thumb pointer" (click)="cambiarAlfombra( prod.image.portada )">
-                                <img [src]="prod.image.portada  | avatar" alt="">
+                                <img [src]="prod.image.portada  | avatar" alt="Casa e Imagen">
+                                <span>click para ver en sala</span>
                             </div>
                             <div class="descripcion">
                                 <a class="nombre"
-                                    routerLink="/product/alfombras/pelo-alto/{{ prod.slug }}">{{ prod.title }}</a>
+                                    routerLink="/product/alfombras/pelo-alto/{{ prod.slug }}">{{ prod.title }}
+                                    <span class="tooltip-box">ver descripción</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -107,11 +121,14 @@
                     <div class="contenedor-productos">
                         <div class="producto" *ngFor="let prod of productos | filterProduct:'de diseño'">
                             <div class="thumb pointer" (click)="cambiarAlfombra( prod.image.portada )">
-                                <img [src]="prod.image.portada  | avatar" alt="">
+                                <img [src]="prod.image.portada  | avatar" alt="Casa e Imagen">
+                                <span>click para ver en sala</span>
                             </div>
                             <div class="descripcion">
                                 <a class="nombre"
-                                    routerLink="/product/alfombras/de-diseño/{{ prod.slug }}">{{ prod.title }}</a>
+                                    routerLink="/product/alfombras/de-diseño/{{ prod.slug }}">{{ prod.title }}
+                                    <span class="tooltip-box">ver descripción</span>
+                                </a>
                             </div>
                         </div>
                     </div>

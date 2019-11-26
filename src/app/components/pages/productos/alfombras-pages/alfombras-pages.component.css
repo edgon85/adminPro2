@@ -32,12 +32,37 @@
 .productos .contenedor .contenedor-productos .producto .thumb {
   width: 100%;
   margin-bottom: 10px;
+  display: inline-block;
+  position: relative;
+}
+.productos .contenedor .contenedor-productos .producto .thumb:hover {
+  z-index: 10;
 }
 
 .productos .contenedor .contenedor-productos .producto .thumb img {
   width: 100%;
   vertical-align: top;
   border-radius: 3px;
+  z-index: 10;
+}
+
+.productos .contenedor .contenedor-productos .producto .thumb span {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(208, 247, 163, 0.3);
+  color: #fff;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.productos .contenedor .contenedor-productos .producto .thumb:hover span {
+  display: block;
 }
 
 .productos .contenedor .contenedor-productos .producto .descripcion {
@@ -48,7 +73,61 @@
   font-weight: 500;
   color: #585858;
   margin-bottom: 10px;
+  position: relative;
 }
+
+/* ========================================================================== */
+/* tooltip */
+/* ========================================================================== */
+.productos
+  .contenedor
+  .contenedor-productos
+  .producto
+  .descripcion
+  .nombre
+  .tooltip-box {
+  display: none;
+  position: absolute;
+  background: rgba(208, 247, 163, 0.5);
+  color: #fff;
+  line-height: 20px;
+  z-index: 500;
+  text-align: center;
+  /* color: #fff; */
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  left: 0;
+  /* right: 0; */
+  bottom: 31px;
+}
+.productos
+  .contenedor
+  .contenedor-productos
+  .producto
+  .descripcion
+  .nombre:hover
+  .tooltip-box {
+  display: inline-block;
+}
+.productos
+  .contenedor
+  .contenedor-productos
+  .producto
+  .descripcion
+  .nombre
+  .tooltip-box::after {
+  content: '';
+  display: block;
+  border-top: 7px solid rgb(73, 73, 73);
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  position: absolute;
+  bottom: -7px;
+  left: calc(50% - 7px);
+}
+
+/* ========================================================================== */
 
 .productos
   .contenedor
