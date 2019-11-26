@@ -56,36 +56,35 @@
 }
 
 .logo {
-    width: 200px;
+  width: 200px;
 }
 
 .logo img {
-    vertical-align: top;
-    width: 100%;
+  vertical-align: top;
+  width: 100%;
 }
 
 .copyRight {
-   background-color: black;
-   color: #ffffff; 
+  background-color: black;
+  color: #ffffff;
 }
 
-.copyRight .paragraph{
+.copyRight .paragraph {
   margin-top: 10px;
   margin-bottom: 0px;
 }
 
-.copyRight .paragraph span{
+.copyRight .paragraph span {
   font-size: 10px;
 }
 
-
 @media screen and (max-width: 320px), (max-width: 360px), (max-width: 414px) {
-    .footer-page .footer-link {
-        text-align: center;
-        margin-bottom: 16px;
-      }
+  .footer-page .footer-link {
+    text-align: center;
+    margin-bottom: 16px;
+  }
 
-    .caja-logo{
-        margin-left: 20%;
-    }
+  .caja-logo {
+    padding-left: 20%;
+  }
 }

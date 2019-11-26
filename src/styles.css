@@ -69,6 +69,12 @@ h5 {
   margin-top: 90px;
 }
 
+@media screen and (max-width: 800px) {
+  .main {
+    margin-top: 60px;
+  }
+}
+
 /* ============================================ */
 /* featuredProducts home component seccion slider*/
 /* ============================================ */
@@ -92,12 +98,12 @@ h5 {
 }
 
 .featuredProducts button.slick-arrow.slick-prev:before {
-  content: "\f053" !important;
+  content: '\f053' !important;
 }
 
 .featuredProducts button.slick-arrow.slick-prev:after {
   position: absolute !important;
-  content: "" !important;
+  content: '' !important;
   border: 1px solid #c5c5c5 !important;
   height: 20px !important;
   right: -7px !important;
@@ -114,7 +120,7 @@ h5 {
 }
 
 .featuredProducts button.slick-arrow.slick-next:before {
-  content: "\f054" !important;
+  content: '\f054' !important;
 }
 
 .featuredProducts button.slick-arrow.slick-next:hover:before {
@@ -122,7 +128,6 @@ h5 {
 }
 
 /* --------------------------------------------------------------- */
-
 
 /*=== 6.2 PORDUCT QUICK VIEW MODAL ===*/
 @media (max-width: 479px) {
