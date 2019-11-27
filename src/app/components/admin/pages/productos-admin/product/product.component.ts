@@ -1,12 +1,11 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ProductService } from '../../services/product.service';
+import { ProductService } from '../../../services/product.service';
 import { Product } from 'src/app/interfaces/product';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { NgForm } from '@angular/forms';
 import { finalize } from 'rxjs/operators';
 // import swal from 'sweetalert';
-
 
 @Component({
   selector: 'app-product',

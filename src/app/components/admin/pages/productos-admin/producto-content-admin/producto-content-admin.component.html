@@ -45,7 +45,7 @@
                     <button (click)="nuevoProducto()" type="button"
                         class="btn waves-effect waves-light btn-rounded btn-primary">
                         <i class="fa fa-plus"></i>
-                        Crear Alfombra
+                        Crear {{ subCategoria }}
                     </button>
                 </div>
                 <h3 class="card-title">Total de alfombras ( <small>{{ totalProductos }}</small> )</h3>
@@ -64,7 +64,8 @@
                         <tbody>
                             <tr *ngFor="let producto of productos">
                                 <td>
-                                    <img [src]="producto.image.portada | avatar" class="w100 img-rounded ">
+                                    <img [src]="producto.image.portada | avatar"
+                                        class="w100 h50 img-fluid img-rounded ">
                                 </td>
                                 <td>{{ producto.title }}</td>
                                 <td>{{ producto.category }}</td>

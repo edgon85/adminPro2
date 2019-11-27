@@ -4,8 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { AdminComponent } from '../admin/admin/admin.component';
 import { DashboardComponent } from '../admin/dashboard/dashboard.component';
 import { LoginGardGuard } from '../../services/gards/login-gard.guard';
-import { ProductComponent } from '../admin/pages/product/product.component';
-import { ProductDetailComponent } from '../admin/pages/product/product-detail.component';
+import { ProductComponent } from '../admin/pages/productos-admin/product/product.component';
 import { UsuariosComponent } from '../admin/pages/usuarios/usuarios.component';
 import { AlfombrasPagesComponent } from './productos/alfombras-pages/alfombras-pages.component';
 import { ProductoPageComponent } from './productos/producto-page/producto-page.component';
@@ -15,7 +14,7 @@ import { NosotrosComponent } from './nosotros/nosotros.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ListaProyectosComponent } from './proyectos/lista-proyectos/lista-proyectos.component';
 import { ProyectoDetalleComponent } from './proyectos/proyecto-detalle/proyecto-detalle.component';
-import { ProductoContentAdminComponent } from '../admin/pages/producto-content-admin/producto-content-admin.component';
+import { PRODUCTOS_ADMIN_ROUTES } from '../admin/pages/productos-admin/productos-admin-routes';
 
 const pagesRoutes: Routes = [
   {
@@ -72,52 +71,11 @@ const pagesRoutes: Routes = [
         component: DashboardComponent,
         data: { title: 'Dashboard' }
       },
-      //  router de productos
+      //  router de productos en admin
       {
         path: 'productos',
         component: ProductComponent,
-        children: [
-          {
-            path: 'prod/:id',
-            component: ProductDetailComponent,
-            data: { title: 'Producto' }
-          },
-          {
-            path: 'alfombras',
-            component: ProductoContentAdminComponent,
-            data: { title: 'Alfombras' }
-          },
-          {
-            path: 'atrapamugre',
-            component: ProductoContentAdminComponent,
-            data: { title: 'Alfombras atrapamugre' }
-          },
-          {
-            path: 'cortinas',
-            component: ProductoContentAdminComponent,
-            data: { title: 'Cortinas' }
-          },
-          {
-            path: 'grama-sintetica',
-            component: ProductoContentAdminComponent,
-            data: { title: 'Grama sintética' }
-          },
-          {
-            path: 'linoleo',
-            component: ProductoContentAdminComponent,
-            data: { title: 'linóleo' }
-          },
-          {
-            path: 'papel-tapiz',
-            component: ProductoContentAdminComponent,
-            data: { title: 'Papel tapiz' }
-          },
-          {
-            path: 'piso-laminado',
-            component: ProductoContentAdminComponent,
-            data: { title: 'Piso laminado' }
-          }
-        ]
+        children: PRODUCTOS_ADMIN_ROUTES
       },
       {
         path: 'usuarios',

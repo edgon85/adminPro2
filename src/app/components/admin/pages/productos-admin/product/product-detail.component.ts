@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ProductoModel } from '../../../../models/producto.model';
+import { ProductoModel } from '../../../../../models/producto.model';
 import { NgForm } from '@angular/forms';
-import { ProductService } from '../../services/product.service';
-import { UploadModalService } from '../../../../services/modal/upload-modal.service';
+import { ProductService } from '../../../services/product.service';
+import { UploadModalService } from '../../../../../services/modal/upload-modal.service';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -14,12 +14,12 @@ import Swal from 'sweetalert2';
 export class ProductDetailComponent implements OnInit {
   urlParam: string;
   categories = [
-    { id: 'alfombras', name: 'Alfombras'},
+    { id: 'alfombras', name: 'Alfombras' },
     { id: 'atrapamugre', name: 'Atrapamugre' },
     { id: 'cortinas', name: 'Cortinas' },
-    { id: 'grama sintetica', name: 'Grama sintetica'},
+    { id: 'grama sintetica', name: 'Grama sintetica' },
     { id: 'linoleo', name: 'Linóleo' },
-    { id: 'piso laminado', name: 'Piso laminado'},
+    { id: 'piso laminado', name: 'Piso laminado' }
     // { id: 'caucho granulado', name: 'caucho granulado' },
   ];
 
@@ -147,7 +147,6 @@ export class ProductDetailComponent implements OnInit {
   }
   // ========================================================================
 
-
   // =================================================
   // Cambiar portada o cualquier imagen
   // =================================================
@@ -180,29 +179,124 @@ export class ProductDetailComponent implements OnInit {
 
   getSubCategory() {
     return [
-      { id: 1, sub_category_id: 'alfombras', name: 'Alto trafico', value: 'alto trafico'},
-      { id: 1, sub_category_id: 'alfombras', name: 'African queen', value: 'african queen'},
-      { id: 1, sub_category_id: 'alfombras', name: 'De diseño', value: 'de diseño'},
-      { id: 1, sub_category_id: 'alfombras', name: 'Hotelera', value: 'hotelera'},
-      { id: 1, sub_category_id: 'alfombras', name: 'Pelo alto', value: 'pelo alto'},
-      { id: 1, sub_category_id: 'alfombras', name: 'Salsa', value: 'salsa'},
-      { id: 1, sub_category_id: 'alfombras', name: 'Solo', value: 'solo'},
-      { id: 2, sub_category_id: 'piso laminado', name: 'Ac3 7mm', value: 'ac3 7mm'},
-      { id: 2, sub_category_id: 'piso laminado', name: 'Ac4 83mm', value: 'ac4 83mm'},
-      { id: 2, sub_category_id: 'piso laminado', name: 'Ac5 12mm', value: 'ac5 12mm'},
-      { id: 3, sub_category_id: 'grama sintetica', name: 'Bolas decorativas', value: 'bolas decorativas' },
-      { id: 3, sub_category_id: 'grama sintetica', name: 'Follaje', value: 'follaje'},
-      { id: 3, sub_category_id: 'grama sintetica', name: 'Jardineras', value: 'jardineras'},
+      {
+        id: 1,
+        sub_category_id: 'alfombras',
+        name: 'Alto trafico',
+        value: 'alto trafico'
+      },
+      {
+        id: 1,
+        sub_category_id: 'alfombras',
+        name: 'African queen',
+        value: 'african queen'
+      },
+      {
+        id: 1,
+        sub_category_id: 'alfombras',
+        name: 'De diseño',
+        value: 'de diseño'
+      },
+      {
+        id: 1,
+        sub_category_id: 'alfombras',
+        name: 'Hotelera',
+        value: 'hotelera'
+      },
+      {
+        id: 1,
+        sub_category_id: 'alfombras',
+        name: 'Pelo alto',
+        value: 'pelo alto'
+      },
+      { id: 1, sub_category_id: 'alfombras', name: 'Salsa', value: 'salsa' },
+      { id: 1, sub_category_id: 'alfombras', name: 'Solo', value: 'solo' },
+      {
+        id: 2,
+        sub_category_id: 'piso laminado',
+        name: 'Ac3 7mm',
+        value: 'ac3 7mm'
+      },
+      {
+        id: 2,
+        sub_category_id: 'piso laminado',
+        name: 'Ac4 83mm',
+        value: 'ac4 83mm'
+      },
+      {
+        id: 2,
+        sub_category_id: 'piso laminado',
+        name: 'Ac5 12mm',
+        value: 'ac5 12mm'
+      },
+      {
+        id: 3,
+        sub_category_id: 'grama sintetica',
+        name: 'Bolas decorativas',
+        value: 'bolas decorativas'
+      },
+      {
+        id: 3,
+        sub_category_id: 'grama sintetica',
+        name: 'Follaje',
+        value: 'follaje'
+      },
+      {
+        id: 3,
+        sub_category_id: 'grama sintetica',
+        name: 'Jardineras',
+        value: 'jardineras'
+      },
       // { id: 4, country_id: 'caucho granulado', name: 'caucho granulado' },
-      { id: 5, sub_category_id: 'cortinas', name: 'Iglesias', value: 'iglesias'},
-      { id: 5, sub_category_id: 'cortinas', name: 'Infantiles', value: 'infantiles'},
-      { id: 5, sub_category_id: 'cortinas', name: 'Residenciales', value: 'residenciales'},
-      { id: 6, sub_category_id: 'linoleo', name: 'Linóleo', value: 'linoleo'},
-      { id: 7, sub_category_id: 'atrapamugre', name: 'Atrapamugre', value: 'atrapamugre'},
-      { id: 8, sub_category_id: 'papel tapiz', name: 'Factory 2014', value: 'factory 2014'},
-      { id: 8, sub_category_id: 'papel tapiz', name: 'Kids club', value: 'kids club'},
-      { id: 8, sub_category_id: 'papel tapiz', name: 'Walton 2014', value: 'walton 2014'},
-      { id: 8, sub_category_id: 'papel tapiz', name: 'Wallton dimension 3d', value: 'wallton dimension 3d'},
+      {
+        id: 5,
+        sub_category_id: 'cortinas',
+        name: 'Iglesias',
+        value: 'iglesias'
+      },
+      {
+        id: 5,
+        sub_category_id: 'cortinas',
+        name: 'Infantiles',
+        value: 'infantiles'
+      },
+      {
+        id: 5,
+        sub_category_id: 'cortinas',
+        name: 'Residenciales',
+        value: 'residenciales'
+      },
+      { id: 6, sub_category_id: 'linoleo', name: 'Linóleo', value: 'linoleo' },
+      {
+        id: 7,
+        sub_category_id: 'atrapamugre',
+        name: 'Atrapamugre',
+        value: 'atrapamugre'
+      },
+      {
+        id: 8,
+        sub_category_id: 'papel tapiz',
+        name: 'Factory 2014',
+        value: 'factory 2014'
+      },
+      {
+        id: 8,
+        sub_category_id: 'papel tapiz',
+        name: 'Kids club',
+        value: 'kids club'
+      },
+      {
+        id: 8,
+        sub_category_id: 'papel tapiz',
+        name: 'Walton 2014',
+        value: 'walton 2014'
+      },
+      {
+        id: 8,
+        sub_category_id: 'papel tapiz',
+        name: 'Wallton dimension 3d',
+        value: 'wallton dimension 3d'
+      }
     ];
   }
 
