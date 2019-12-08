@@ -8,6 +8,7 @@ import { ProductoContentComponent } from './producto-content/producto-content.co
 import { SharedModule } from '../../shared/shared.module';
 import { ReutilizablesModule } from '../reutilizables/reutilizables.module';
 import { CardProductComponent } from '../reutilizables/card-product/card-product.component';
+import { PipesModule } from '../../../pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CardProductComponent } from '../reutilizables/card-product/card-product
     CommonModule,
     ProductosRoutingModule,
     SharedModule,
-    ReutilizablesModule
+    ReutilizablesModule,
+    PipesModule
   ]
 })
 export class ProductosModule {}

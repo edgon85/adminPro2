@@ -17,7 +17,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AdminComponent } from './components/admin/admin/admin.component';
 import { SharedModule } from './components/shared/shared.module';
-import { SharedAdminModule } from './components/admin/admin.module';
+import { AdminModule } from './components/admin/admin.module';
 import { PagesComponent } from './components/pages/pages.component';
 
 @NgModule({
@@ -33,7 +33,7 @@ import { PagesComponent } from './components/pages/pages.component';
     AngularFireDatabaseModule,
     AngularFireStorageModule,
     AngularFirestoreModule,
-    SharedAdminModule,
+    AdminModule,
     SharedModule
   ],
   providers: [],

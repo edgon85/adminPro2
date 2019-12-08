@@ -5,8 +5,9 @@ import { ProyectosRoutingModule } from './proyectos-routing.module';
 import { ListaProyectosComponent } from './lista-proyectos/lista-proyectos.component';
 import { ProyectoDetalleComponent } from './proyecto-detalle/proyecto-detalle.component';
 import { SharedModule } from '../../shared/shared.module';
-import { SharedAdminModule } from '../../admin/admin.module';
 import { LightboxModule } from 'ngx-lightbox';
+import { ReutilizablesModule } from '../reutilizables/reutilizables.module';
+import { PipesModule } from '../../../pipes/pipes.module';
 
 @NgModule({
   declarations: [ListaProyectosComponent, ProyectoDetalleComponent],
@@ -14,8 +15,9 @@ import { LightboxModule } from 'ngx-lightbox';
     CommonModule,
     ProyectosRoutingModule,
     SharedModule,
-    SharedAdminModule,
-    LightboxModule
+    LightboxModule,
+    // ReutilizablesModule
+    PipesModule
   ]
 })
 export class ProyectosModule {}

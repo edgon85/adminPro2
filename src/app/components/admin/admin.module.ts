@@ -13,6 +13,8 @@ import { ProductDetailComponent } from './pages/productos-admin/product/product-
 import { ModalUploadComponent } from './reutilizables/modal-upload/modal-upload.component';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { ProductoContentAdminComponent } from './pages/productos-admin/producto-content-admin/producto-content-admin.component';
+import { ReutilizablesModule } from '../pages/reutilizables/reutilizables.module';
+import { PipesModule } from '../../pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -21,22 +23,22 @@ import { ProductoContentAdminComponent } from './pages/productos-admin/producto-
     BreadcrumbAdminComponent,
     DashboardComponent,
     ProductComponent,
-    KeysPipe,
-    AvatarPipe,
+    // KeysPipe,
+    // AvatarPipe,
     ProductDetailComponent,
     ModalUploadComponent,
     UsuariosComponent,
     ProductoContentAdminComponent
   ],
-  imports: [CommonModule, RouterModule, FormsModule],
+  imports: [CommonModule, RouterModule, FormsModule, PipesModule],
   exports: [
     HeaderAdminComponent,
     SidebarAdminComponent,
     BreadcrumbAdminComponent,
     DashboardComponent,
-    ModalUploadComponent,
-    AvatarPipe,
-    KeysPipe
+    ModalUploadComponent
+    // AvatarPipe,
+    // KeysPipe
   ]
 })
-export class SharedAdminModule {}
+export class AdminModule {}
