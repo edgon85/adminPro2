@@ -15,17 +15,18 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AdminComponent } from './components/admin/admin/admin.component';
 import { SharedModule } from './components/shared/shared.module';
-import { AdminModule } from './components/admin/admin.module';
 import { PagesComponent } from './components/pages/pages.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, AdminComponent, PagesComponent],
+  declarations: [
+    AppComponent,
+    // LoginComponent,
+    PagesComponent
+  ],
   imports: [
     AppRoutingModule,
     BrowserModule,
-    // PagesModule,
     FormsModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
@@ -33,8 +34,7 @@ import { PagesComponent } from './components/pages/pages.component';
     AngularFireDatabaseModule,
     AngularFireStorageModule,
     AngularFirestoreModule,
-    AdminModule,
-    SharedModule
+    SharedModule // esta por el page not found
   ],
   providers: [],
   bootstrap: [AppComponent]
