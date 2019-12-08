@@ -5,9 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 
-import { APP_ROUTING } from './app.routes';
+import { AppRoutingModule } from './app.routes';
 
-import { PagesModule } from './components/pages/pages.module';
 import { LoginComponent } from './components/accounts/login/login.component';
 
 import { AngularFireModule } from '@angular/fire';
@@ -16,26 +15,28 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-
+import { AdminComponent } from './components/admin/admin/admin.component';
+import { SharedModule } from './components/shared/shared.module';
+import { SharedAdminModule } from './components/admin/admin.module';
+import { PagesComponent } from './components/pages/pages.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-  ],
+  declarations: [AppComponent, LoginComponent, AdminComponent, PagesComponent],
   imports: [
-    APP_ROUTING,
+    AppRoutingModule,
     BrowserModule,
-    PagesModule,
+    // PagesModule,
     FormsModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     AngularFireStorageModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    SharedAdminModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
