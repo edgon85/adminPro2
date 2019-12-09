@@ -9,7 +9,7 @@ import { PagesComponent } from './components/pages/pages.component';
 import { PAGES_ROUTES } from './components/pages/pages.routes';
 import { LoginGardGuard } from './services/gards/login-gard.guard';
 
-const Routes: Routes = [
+const routes: Routes = [
   {
     path: 'login',
     loadChildren: () =>
@@ -30,7 +30,7 @@ const Routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forRoot(Routes, {
+    RouterModule.forRoot(routes, {
       preloadingStrategy: PreloadAllModules,
       useHash: true,
       scrollPositionRestoration: 'top'
