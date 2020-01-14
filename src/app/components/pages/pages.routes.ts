@@ -6,7 +6,7 @@ export const PAGES_ROUTES: Routes = [
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
   },
   {
-    path: 'alfombras',
+    path: 'alfombras-galeria',
     loadChildren: () =>
       import('./productos/alfombras-pages/alfombras.module').then(
         m => m.AlfombrasModule

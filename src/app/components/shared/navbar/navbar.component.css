@@ -105,10 +105,21 @@ a {
   padding: 7px;
   border-radius: 3px;
   font-size: 14px;
+  margin-right: 2px;
 }
 
 .menu .contenedor-enlaces-nav .enlaces a:hover {
   border: 1px solid rgba(175, 174, 174, 0.4);
+}
+
+.menu .contenedor-enlaces-nav .enlaces a.active {
+  color: #ffffff;
+  background: #005758 !important;
+}
+
+.btnActive {
+  color: #ffffff !important;
+  background: #005758 !important;
 }
 
 /* ------------------------- */

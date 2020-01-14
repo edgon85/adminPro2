@@ -17,31 +17,35 @@
 
         <div class="enlaces">
             <a id="btn-inicio" routerLink="/inicio" routerLinkActive="active">INICIO</a>
-            <a id="btn-departamentos" href="#">PRODUCTOS</a>
+            <a id="btn-departamentos" href="#" class="" #divProd>PRODUCTOS</a>
             <!-- <a href="#">CATALOGO</a> -->
             <a id="btn-nosotros" routerLink="/nosotros" routerLinkActive="active">NOSOTROS</a>
             <a id="btn-contacto" routerLink="/contacto" routerLinkActive="active">CONTACTO</a>
-            <a id="btn-proyectos" routerLink="/proyectos">PROYECTOS</a>
+            <a id="btn-proyectos" routerLink="/proyectos" routerLinkActive="active">PROYECTOS</a>
         </div>
     </div>
 
     <div class="contenedor contenedor-grid">
-        <div class="grid" id="grid">
+        <div class="grid" id="grid" #myDiv>
             <div class="categorias">
                 <button class="btn-regresar"><i class="fas fa-arrow-left"></i> Regresar</button>
                 <h3 class="subtitulo">Categorias</h3>
 
-                <a routerLink="/alfombras" data-categoria="alfombras">Alfombras<i class="fas fa-angle-right"></i></a>
-                <a routerLink="/producto/grama-sintetica/galeria-grama-sintetica" data-categoria="grama-sintetica">Grama
+                <a (click)="ocultar()" routerLink="/alfombras-galeria" data-categoria="alfombras">Alfombras<i
+                        class="fas fa-angle-right"></i></a>
+                <a (click)="ocultar()" routerLink="/producto/grama-sintetica/galeria-grama-sintetica"
+                    data-categoria="grama-sintetica">Grama
                     Sintética<i class="fas fa-angle-right"></i></a>
                 <!-- <a href="#" data-categoria="papel-tapiz">Papel Tapiz<i class="fas fa-angle-right"></i></a> -->
-                <a routerLink="/producto/piso-laminado/galeria-piso-laminado" data-categoria="piso-laminado">Piso
+                <a (click)="ocultar()" routerLink="/producto/piso-laminado/galeria-piso-laminado"
+                    data-categoria="piso-laminado">Piso
                     Laminado<i class="fas fa-angle-right"></i></a>
-                <a routerLink="/producto/cortinas/galeria-cortinas" data-categoria="cortinas">Cortinas<i
-                        class="fas fa-angle-right"></i></a>
-                <a routerLink="/producto/linoleo/linoleo" data-categoria="piso-linoleo">Piso Linóleo<i
-                        class="fas fa-angle-right"></i></a>
-                <a routerLink="/producto/atrapamugre/atrapamugre" data-categoria="alfombras-atrapamugre">Alfombras
+                <a (click)="ocultar()" routerLink="/producto/cortinas/galeria-cortinas"
+                    data-categoria="cortinas">Cortinas<i class="fas fa-angle-right"></i></a>
+                <a (click)="ocultar()" routerLink="/producto/linoleo/linoleo" data-categoria="piso-linoleo">Piso
+                    Linóleo<i class="fas fa-angle-right"></i></a>
+                <a (click)="ocultar()" routerLink="/producto/atrapamugre/atrapamugre"
+                    data-categoria="alfombras-atrapamugre">Alfombras
                     Atrapamugre<i class="fas fa-angle-right"></i></a>
 
             </div>
@@ -51,34 +55,35 @@
                     <div class="enlaces-subcategoria">
                         <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
                         <h3 class="subtitulo">Alfombras</h3>
-                        <a routerLink="/alfombras">Galería de alfombras</a>
-                        <a routerLink="/producto/alfombras/alto-trafico" routerLinkActive="router-link-active">Alto
+                        <a (click)="ocultar()" routerLink="/alfombras-galeria">Galería de alfombras</a>
+                        <a (click)="ocultar()" routerLink="/producto/alfombras/alto-trafico"
+                            routerLinkActive="router-link-active">Alto
                             trafico</a>
-                        <a routerLink="/producto/alfombras/hotelera">Hoteleras</a>
-                        <a routerLink="/producto/alfombras/pelo-alto">Pelo alto</a>
-                        <a routerLink="/producto/alfombras/salsa">Salsa</a>
-                        <a routerLink="/producto/alfombras/solo">Solo</a>
-                        <a routerLink="/producto/alfombras/de-diseño">De Diseño</a>
+                        <a (click)="ocultar()" routerLink="/producto/alfombras/hotelera">Hoteleras</a>
+                        <a (click)="ocultar()" routerLink="/producto/alfombras/pelo-alto">Pelo alto</a>
+                        <a (click)="ocultar()" routerLink="/producto/alfombras/salsa">Salsa</a>
+                        <a (click)="ocultar()" routerLink="/producto/alfombras/solo">Solo</a>
+                        <a (click)="ocultar()" routerLink="/producto/alfombras/de-diseño">De Diseño</a>
                         <!-- <a routerLink="/producto/alfombras/alto-trafico">African Queen</a> -->
                     </div>
                     <div class="banner-subcategoria">
-                        <a routerLink="/alfombras">
-                            <img src="assets/img/pruebas/nav/tecnologia-banner-1.png" alt="">
+                        <a (click)="ocultar()" routerLink="/alfombras">
+                            <img src="assets/img/pruebas/nav/alfombra_0.png" alt="">
                         </a>
                     </div>
 
-                    <div class="galeria-subcategoria">
-                        <a routerLink="/alfombras">
-                            <img src="assets/img/pruebas/nav/tecnologia-galeria-1.png" alt="">
+                    <div (click)="ocultar()" class="galeria-subcategoria">
+                        <a (click)="ocultar()" routerLink="/alfombras">
+                            <img src="assets/img/pruebas/nav/alfombra_1.png" alt="">
                         </a>
-                        <a routerLink="/alfombras">
-                            <img src="assets/img/pruebas/nav/tecnologia-galeria-2.png" alt="">
+                        <a (click)="ocultar()" routerLink="/alfombras">
+                            <img src="assets/img/pruebas/nav/alfombra_2.png" alt="">
                         </a>
-                        <a routerLink="/alfombras">
-                            <img src="assets/img/pruebas/nav/tecnologia-galeria-3.png" alt="">
+                        <a (click)="ocultar()" routerLink="/alfombras">
+                            <img src="assets/img/pruebas/nav/alfombra_3.png" alt="">
                         </a>
-                        <a routerLink="/alfombras">
-                            <img src="assets/img/pruebas/nav/tecnologia-galeria-4.png" alt="">
+                        <a (click)="ocultar()" routerLink="/alfombras">
+                            <img src="assets/img/pruebas/nav/alfombra_4.png" alt="">
                         </a>
                     </div>
 
@@ -88,29 +93,31 @@
                     <div class="enlaces-subcategoria">
                         <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
                         <h3 class="subtitulo">Grama Sintética</h3>
-                        <a routerLink="/producto/grama-sintetica/galeria-grama-sintetica">Galería grama sintética</a>
-                        <a routerLink="/producto/grama-sintetica/follaje">Follaje</a>
-                        <a routerLink="/producto/grama-sintetica/bolas-decorativas">Bolas decorativas</a>
-                        <a routerLink="/producto/grama-sintetica/jardineras">Jardineras</a>
+                        <a (click)="ocultar()" routerLink="/producto/grama-sintetica/galeria-grama-sintetica">Galería
+                            grama sintética</a>
+                        <a (click)="ocultar()" routerLink="/producto/grama-sintetica/follaje">Follaje</a>
+                        <a (click)="ocultar()" routerLink="/producto/grama-sintetica/bolas-decorativas">Bolas
+                            decorativas</a>
+                        <a (click)="ocultar()" routerLink="/producto/grama-sintetica/jardineras">Jardineras</a>
                     </div>
                     <div class="banner-subcategoria">
-                        <a routerLink="/producto/grama-sintetica/galeria-grama-sintetica">
-                            <img src="assets/img/pruebas/nav/tecnologia-banner-1.png" alt="">
+                        <a (click)="ocultar()" routerLink="/producto/grama-sintetica/galeria-grama-sintetica">
+                            <img src="assets/img/pruebas/nav/grama_0.jpg" alt="">
                         </a>
                     </div>
 
                     <div class="galeria-subcategoria">
-                        <a routerLink="/producto/grama-sintetica/galeria-grama-sintetica">
-                            <img src="assets/img/pruebas/nav/tecnologia-galeria-1.png" alt="">
+                        <a (click)="ocultar()" routerLink="/producto/grama-sintetica/galeria-grama-sintetica">
+                            <img src="assets/img/pruebas/nav/grama_1.jpg" alt="">
                         </a>
-                        <a routerLink="/producto/grama-sintetica/galeria-grama-sintetica">
-                            <img src="assets/img/pruebas/nav/tecnologia-galeria-2.png" alt="">
+                        <a (click)="ocultar()" routerLink="/producto/grama-sintetica/galeria-grama-sintetica">
+                            <img src="assets/img/pruebas/nav/grama_2.png" alt="">
                         </a>
-                        <a routerLink="/producto/grama-sintetica/galeria-grama-sintetica">
-                            <img src="assets/img/pruebas/nav/tecnologia-galeria-3.png" alt="">
+                        <a (click)="ocultar()" routerLink="/producto/grama-sintetica/galeria-grama-sintetica">
+                            <img src="assets/img/pruebas/nav/grama_3.jpg" alt="">
                         </a>
-                        <a routerLink="/producto/grama-sintetica/galeria-grama-sintetica">
-                            <img src="assets/img/pruebas/nav/tecnologia-galeria-4.png" alt="">
+                        <a (click)="ocultar()" routerLink="/producto/grama-sintetica/galeria-grama-sintetica">
+                            <img src="assets/img/pruebas/nav/grama_4.jpg" alt="">
                         </a>
                     </div>
 
@@ -150,29 +157,30 @@
                     <div class="enlaces-subcategoria">
                         <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
                         <h3 class="subtitulo">Piso Laminado</h3>
-                        <a routerLink="/producto/piso-laminado/galeria-piso-laminado">Galería piso laminado</a>
-                        <a routerLink="/producto/piso-laminado/ac3-7mm">Piso AC3 7mm</a>
-                        <a routerLink="/producto/piso-laminado/ac4-83mm">Piso AC4 8.3mm</a>
-                        <a routerLink="/producto/piso-laminado/ac5-12mm">Piso AC5 12mm</a>
+                        <a (click)="ocultar()" routerLink="/producto/piso-laminado/galeria-piso-laminado">Galería piso
+                            laminado</a>
+                        <a (click)="ocultar()" routerLink="/producto/piso-laminado/ac3-7mm">Piso AC3 7mm</a>
+                        <a (click)="ocultar()" routerLink="/producto/piso-laminado/ac4-83mm">Piso AC4 8.3mm</a>
+                        <a (click)="ocultar()" routerLink="/producto/piso-laminado/ac5-12mm">Piso AC5 12mm</a>
                     </div>
                     <div class="banner-subcategoria">
-                        <a href="#">
-                            <img src="assets/img/pruebas/nav/tecnologia-banner-1.png" alt="">
+                        <a (click)="ocultar()" routerLink="/producto/piso-laminado/galeria-piso-laminado">
+                            <img src="assets/img/pruebas/nav/piso_0.jpg" alt="">
                         </a>
                     </div>
 
                     <div class="galeria-subcategoria">
-                        <a href="#">
-                            <img src="assets/img/pruebas/nav/tecnologia-galeria-1.png" alt="">
+                        <a (click)="ocultar()" routerLink="/producto/piso-laminado/galeria-piso-laminado">
+                            <img src="assets/img/pruebas/nav/piso_1.png" alt="">
                         </a>
-                        <a href="#">
-                            <img src="assets/img/pruebas/nav/tecnologia-galeria-2.png" alt="">
+                        <a (click)="ocultar()" routerLink="/producto/piso-laminado/galeria-piso-laminado">
+                            <img src="assets/img/pruebas/nav/piso_2.png" alt="">
                         </a>
-                        <a href="#">
-                            <img src="assets/img/pruebas/nav/tecnologia-galeria-3.png" alt="">
+                        <a (click)="ocultar()" routerLink="/producto/piso-laminado/galeria-piso-laminado">
+                            <img src="assets/img/pruebas/nav/piso_3.png" alt="">
                         </a>
-                        <a href="#">
-                            <img src="assets/img/pruebas/nav/tecnologia-galeria-4.png" alt="">
+                        <a (click)="ocultar()" routerLink="/producto/piso-laminado/galeria-piso-laminado">
+                            <img src="assets/img/pruebas/nav/piso_4.png" alt="">
                         </a>
                     </div>
 
@@ -181,28 +189,28 @@
                     <div class="enlaces-subcategoria">
                         <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
                         <h3 class="subtitulo">Cortinas</h3>
-                        <a routerLink="/producto/cortinas/galeria-cortinas">Galería de cortinas</a>
-                        <a routerLink="/producto/cortinas/iglesias">Iglesias</a>
-                        <a routerLink="/producto/cortinas/residenciales">Recidenciales</a>
+                        <a (click)="ocultar()" routerLink="/producto/cortinas/galeria-cortinas">Galería de cortinas</a>
+                        <a (click)="ocultar()" routerLink="/producto/cortinas/iglesias">Iglesias</a>
+                        <a (click)="ocultar()" routerLink="/producto/cortinas/residenciales">Recidenciales</a>
                     </div>
                     <div class="banner-subcategoria">
-                        <a routerLink="/producto/cortinas/galeria-cortinas">
-                            <img src="assets/img/pruebas/nav/tecnologia-banner-1.png" alt="">
+                        <a (click)="ocultar()" routerLink="/producto/cortinas/galeria-cortinas">
+                            <img src="assets/img/pruebas/nav/cortina_0.jpg" alt="">
                         </a>
                     </div>
 
                     <div class="galeria-subcategoria">
-                        <a routerLink="/producto/cortinas/galeria-cortinas">
-                            <img src="assets/img/pruebas/nav/tecnologia-galeria-1.png" alt="">
+                        <a (click)="ocultar()" routerLink="/producto/cortinas/galeria-cortinas">
+                            <img src="assets/img/pruebas/nav/cortina_1.png" alt="">
                         </a>
-                        <a routerLink="/producto/cortinas/galeria-cortinas">
-                            <img src="assets/img/pruebas/nav/tecnologia-galeria-2.png" alt="">
+                        <a (click)="ocultar()" routerLink="/producto/cortinas/galeria-cortinas">
+                            <img src="assets/img/pruebas/nav/cortina_2.png" alt="">
                         </a>
-                        <a routerLink="/producto/cortinas/galeria-cortinas">
-                            <img src="assets/img/pruebas/nav/tecnologia-galeria-3.png" alt="">
+                        <a (click)="ocultar()" routerLink="/producto/cortinas/galeria-cortinas">
+                            <img src="assets/img/pruebas/nav/cortina_3.png" alt="">
                         </a>
-                        <a routerLink="/producto/cortinas/galeria-cortinas">
-                            <img src="assets/img/pruebas/nav/tecnologia-galeria-4.png" alt="">
+                        <a (click)="ocultar()" routerLink="/producto/cortinas/galeria-cortinas">
+                            <img src="assets/img/pruebas/nav/cortina_4.png" alt="">
                         </a>
                     </div>
 
@@ -211,26 +219,26 @@
                     <div class="enlaces-subcategoria">
                         <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
                         <h3 class="subtitulo">Linóleo</h3>
-                        <a routerLink="/producto/linoleo/linoleo">Piso linóleo</a>
+                        <a (click)="ocultar()" routerLink="/producto/linoleo/linoleo">Piso linóleo</a>
                     </div>
                     <div class="banner-subcategoria">
-                        <a routerLink="/producto/linoleo/linoleo">
-                            <img src="assets/img/pruebas/nav/tecnologia-banner-1.png" alt="">
+                        <a (click)="ocultar()" routerLink="/producto/linoleo/linoleo">
+                            <img src="assets/img/pruebas/nav/linoleo_0.png" alt="">
                         </a>
                     </div>
 
                     <div class="galeria-subcategoria">
-                        <a routerLink="/producto/linoleo/linoleo">
-                            <img src="assets/img/pruebas/nav/tecnologia-galeria-1.png" alt="">
+                        <a (click)="ocultar()" routerLink="/producto/linoleo/linoleo">
+                            <img src="assets/img/pruebas/nav/linoleo_1.png" alt="">
                         </a>
-                        <a routerLink="/producto/linoleo/linoleo">
-                            <img src="assets/img/pruebas/nav/tecnologia-galeria-2.png" alt="">
+                        <a (click)="ocultar()" routerLink="/producto/linoleo/linoleo">
+                            <img src="assets/img/pruebas/nav/linoleo_2.png" alt="">
                         </a>
-                        <a routerLink="/producto/linoleo/linoleo">
-                            <img src="assets/img/pruebas/nav/tecnologia-galeria-3.png" alt="">
+                        <a (click)="ocultar()" routerLink="/producto/linoleo/linoleo">
+                            <img src="assets/img/pruebas/nav/linoleo_4.png" alt="">
                         </a>
-                        <a routerLink="/producto/linoleo/linoleo">
-                            <img src="assets/img/pruebas/nav/tecnologia-galeria-4.png" alt="">
+                        <a (click)="ocultar()" routerLink="/producto/linoleo/linoleo">
+                            <img src="assets/img/pruebas/nav/linoleo_3.png" alt="">
                         </a>
                     </div>
 
@@ -239,26 +247,26 @@
                     <div class="enlaces-subcategoria">
                         <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
                         <h3 class="subtitulo">Atrapamugre</h3>
-                        <a routerLink="/producto/atrapamugre/atrapamugre">Alfombras Atrapamugre</a>
+                        <a (click)="ocultar()" routerLink="/producto/atrapamugre/atrapamugre">Alfombras Atrapamugre</a>
                     </div>
                     <div class="banner-subcategoria">
-                        <a routerLink="/producto/atrapamugre/atrapamugre">
-                            <img src="assets/img/pruebas/nav/tecnologia-banner-1.png" alt="">
+                        <a (click)="ocultar()" routerLink="/producto/atrapamugre/atrapamugre">
+                            <img src="assets/img/pruebas/nav/atrapamugre_0.jpg" alt="">
                         </a>
                     </div>
 
                     <div class="galeria-subcategoria">
-                        <a routerLink="/producto/atrapamugre/atrapamugre">
-                            <img src="assets/img/pruebas/nav/tecnologia-galeria-1.png" alt="">
+                        <a (click)="ocultar()" routerLink="/producto/atrapamugre/atrapamugre">
+                            <img src="assets/img/pruebas/nav/atrapamugre_1.png" alt="">
                         </a>
-                        <a routerLink="/producto/atrapamugre/atrapamugre">
-                            <img src="assets/img/pruebas/nav/tecnologia-galeria-2.png" alt="">
+                        <a (click)="ocultar()" routerLink="/producto/atrapamugre/atrapamugre">
+                            <img src="assets/img/pruebas/nav/atrapamugre_2.png" alt="">
                         </a>
-                        <a routerLink="/producto/atrapamugre/atrapamugre">
-                            <img src="assets/img/pruebas/nav/tecnologia-galeria-3.png" alt="">
+                        <a (click)="ocultar()" routerLink="/producto/atrapamugre/atrapamugre">
+                            <img src="assets/img/pruebas/nav/atrapamugre_3.png" alt="">
                         </a>
-                        <a routerLink="/producto/atrapamugre/atrapamugre">
-                            <img src="assets/img/pruebas/nav/tecnologia-galeria-4.png" alt="">
+                        <a (click)="ocultar()" routerLink="/producto/atrapamugre/atrapamugre">
+                            <img src="assets/img/pruebas/nav/atrapamugre_4.png" alt="">
                         </a>
                     </div>
 

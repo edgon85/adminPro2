@@ -41,14 +41,14 @@ export class SidebarService {
       icono: 'fa fa-caret-right',
       id: 'alfombras',
       submenu: [
-        { titulo: 'Galería de alfombras', url: '/alfombras' },
+        { titulo: 'Galería de alfombras', url: '/alfombras-galeria' },
         { titulo: 'Alto trafico', url: '/producto/alfombras/alto-trafico' },
         { titulo: 'African queen', url: '/producto/alfombras/african-queen' },
         { titulo: 'De diseño', url: '/producto/alfombras/de-diseño' },
         { titulo: 'Hotelera', url: '/producto/alfombras/hotelera' },
         { titulo: 'Pelo alto', url: '/producto/alfombras/pelo-alto' },
         { titulo: 'Salsa', url: '/producto/alfombras/salsa' },
-        { titulo: 'Solo', url: '/producto/alfombras/solo' },
+        { titulo: 'Solo', url: '/producto/alfombras/solo' }
       ]
     },
     {
@@ -57,9 +57,15 @@ export class SidebarService {
       id: 'gramasintetica',
       submenu: [
         // { titulo: 'Alfombras', url: './productos/alfombras' },
-        { titulo: 'Galería de grama sintética', url: '/producto/grama-sintetica/galeria-grama-sintetica' },
+        {
+          titulo: 'Galería de grama sintética',
+          url: '/producto/grama-sintetica/galeria-grama-sintetica'
+        },
         { titulo: 'Follaje', url: '/producto/grama-sintetica/follaje' },
-        { titulo: 'Bolas decorativas', url: '/producto/grama-sintetica/bolas-decorativas' },
+        {
+          titulo: 'Bolas decorativas',
+          url: '/producto/grama-sintetica/bolas-decorativas'
+        },
         { titulo: 'Jardineras', url: '/producto/grama-sintetica/jardineras' }
       ]
     },
@@ -69,28 +75,32 @@ export class SidebarService {
       id: 'pisolaminado',
       submenu: [
         // { titulo: 'Alfombras', url: './productos/alfombras' },
-        { titulo: 'Galería de piso laminado', url: '/producto/piso-laminado/galeria-piso-laminado' },
+        {
+          titulo: 'Galería de piso laminado',
+          url: '/producto/piso-laminado/galeria-piso-laminado'
+        },
         { titulo: 'AC3 7mm', url: '/producto/piso-laminado/ac3-7mm' },
         { titulo: 'AC4 8.3mm', url: '/producto/piso-laminado/ac4-83mm' },
-        { titulo: 'AC5 12mm', url: '/producto/piso-laminado/ac5-12mm' },
+        { titulo: 'AC5 12mm', url: '/producto/piso-laminado/ac5-12mm' }
       ]
     },
     {
       titulo: 'Piso linóleo',
       icono: 'fa fa-caret-right',
       id: 'pisolinoleo',
-      submenu: [
-        { titulo: 'Linóleo', url: '/producto/linoleo/linoleo' },
-      ]
+      submenu: [{ titulo: 'Linóleo', url: '/producto/linoleo/linoleo' }]
     },
     {
       titulo: 'Cortinas',
       icono: 'fa fa-caret-right',
       id: 'cortinas',
       submenu: [
-        { titulo: 'Galería de cortinas', url: '/producto/cortinas/galeria-cortinas' },
+        {
+          titulo: 'Galería de cortinas',
+          url: '/producto/cortinas/galeria-cortinas'
+        },
         { titulo: 'Iglesias', url: '/producto/cortinas/iglesias' },
-        { titulo: 'Residenciales', url: '/producto/cortinas/residenciales' },
+        { titulo: 'Residenciales', url: '/producto/cortinas/residenciales' }
       ]
     },
     {
@@ -98,8 +108,8 @@ export class SidebarService {
       icono: 'fa fa-caret-right',
       id: 'atrapamugre',
       submenu: [
-        { titulo: 'Atrapamugre', url: '/producto/atrapamugre/atrapamugre' },
+        { titulo: 'Atrapamugre', url: '/producto/atrapamugre/atrapamugre' }
       ]
-    },
+    }
   ];
 }
