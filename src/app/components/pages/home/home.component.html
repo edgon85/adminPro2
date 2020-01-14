@@ -4,20 +4,20 @@
       <a routerLink="/producto/cortinas/galeria-cortinas" class="item-product">
         <figure class="item-image">
 
-          <img src="assets/page/img/baner/cortina.png" alt="casa e imagen cortinas">
+          <img src="assets/page/img/baner/cortina.png" alt="casaeimagen cortinas">
         </figure>
         <span class="item-name">Cortinas</span>
       </a>
     </div>
     <div class="item item-2">
       <figure class="item-logo">
-        <img src="assets/page/img/baner/logo.svg" alt="">
+        <img src="assets/page/img/baner/logo.svg" alt="casaeimagen">
       </figure>
     </div>
     <div class="item item-3">
       <a routerLink="/producto/linoleo/linoleo" class="item-product">
         <figure class="item-image">
-          <img src="assets/page/img/baner/vinilo.png" alt="casa e imagen Linóleo">
+          <img src="assets/page/img/baner/vinilo.png" alt="casaeimagen Linóleo">
         </figure>
         <span class="item-name">Linóleo</span>
       </a>
@@ -27,7 +27,7 @@
 
       <a routerLink="/producto/grama-sintetica/galeria-grama-sintetica" class="item-product">
         <figure class="item-image">
-          <img src="assets/page/img/baner/grama.png" alt="casa e imagen grama sintética">
+          <img src="assets/page/img/baner/grama.png" alt="casaeimagen grama sintética">
         </figure>
         <span class="item-name">Grama Sintética</span>
       </a>
@@ -37,15 +37,15 @@
     <div class="item item-5">
       <a routerLink="/producto/piso-laminado/galeria-piso-laminado" class="item-product">
         <figure class="item-image">
-          <img src="assets/page/img/baner/laminado.png" alt="casa e imagen piso laminado">
+          <img src="assets/page/img/baner/laminado.png" alt="casaeimagen piso laminado">
         </figure>
         <span class="item-name">Piso Laminado</span>
       </a>
     </div>
     <div class="item item-6">
-      <a routerLink="/alfombras" class="item-product">
+      <a routerLink="/alfombras-galeria" class="item-product">
         <figure class="item-image">
-          <img src="assets/page/img/baner/alfombra.png" alt="casa e imagen alfombra">
+          <img src="assets/page/img/baner/alfombra.png" alt="casaeimagen alfombra">
         </figure>
         <span class="item-name">Alfombras</span>
       </a>
@@ -68,10 +68,10 @@
     <div class="col-1"></div>
     <div class="col-10">
       <div class="video">
-        <iframe
+        <!-- <iframe
           src="https://player.vimeo.com/video/333941974?autoplay=1&loop=1?title=1&amp;byline=0&amp;portrait=0&amp;color=ffffff"
           webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" frameborder="0">
-        </iframe>
+        </iframe> -->
       </div>
     </div>
     <div class="col-1"></div>
@@ -87,71 +87,72 @@
   <div class="row featuredProducts featuredProductsSlider margin-bottom">
     <div class="slide col-md-3">
       <div class="productImage clearfix">
-        <img src="assets/page/img/home/projects/alfombra_.jpg" alt="{{ altText }}">
+        <img (click)="urlProyecto('alfombras')" src="assets/page/img/home/projects/alfombra_.jpg" alt="{{ altText }}">
       </div>
       <div class="productCaption clearfix">
-        <a href="#">
+        <a routerLink="/proyectos/alfombras">
           <h4>Alfombras</h4>
         </a>
       </div>
     </div>
     <div class="slide col-md-3">
       <div class="productImage">
-        <img src="assets/page/img/home/projects/cancha.jpg" alt="{{ altText }}">
+        <img (click)="urlProyecto('canchas')" src="assets/page/img/home/projects/cancha.jpg" alt="{{ altText }}">
       </div>
       <div class="productCaption">
-        <a href="#">
+        <a routerLink="/proyectos/canchas">
           <h4>Canchas</h4>
         </a>
       </div>
     </div>
     <div class="slide col-md-3">
       <div class="productImage">
-        <img src="assets/page/img/home/projects/golfito.jpg" alt="{{ altText }}">
+        <img (click)="urlProyecto('golfitos')" src="assets/page/img/home/projects/golfito.jpg" alt="{{ altText }}">
       </div>
       <div class="productCaption">
-        <a href="#">
+        <a routerLink="/proyectos/golfitos">
           <h4>Golfitos</h4>
         </a>
       </div>
     </div>
     <div class="slide col-md-3">
       <div class="productImage">
-        <img src="assets/page/img/home/projects/grada.jpg" alt="{{ altText }}">
+        <img (click)="urlProyecto('gradas')" src="assets/page/img/home/projects/grada.jpg" alt="{{ altText }}">
       </div>
       <div class="productCaption">
-        <a href="#">
+        <a routerLink="/proyectos/gradas">
           <h4>Gradas</h4>
         </a>
       </div>
     </div>
     <div class="slide col-md-3">
       <div class="productImage">
-        <img src="assets/page/img/home/projects/grama.jpg" alt="{{ altText }}">
+        <img (click)="urlProyecto('canchas')" src="assets/page/img/home/projects/grama.jpg" alt="{{ altText }}">
       </div>
       <div class="productCaption">
-        <a href="#">
+        <a routerLink="/proyectos/canchas">
           <h4>Gramas</h4>
         </a>
       </div>
     </div>
     <div class="slide col-md-3">
       <div class="productImage">
-        <img src="assets/page/img/home/projects/iglesia.jpg" alt="{{ altText }}">
+        <img (click)="urlProyecto('iglesias')" src="assets/page/img/home/projects/iglesia.jpg" alt="{{ altText }}">
       </div>
       <div class="productCaption">
-        <a href="#">
+        <a routerLink="/proyectos/iglesias">
           <h4>Iglesias</h4>
         </a>
       </div>
     </div>
     <div class="slide col-md-3">
       <div class="productImage">
-        <img src="assets/page/img/home/projects/linoleo.jpg" alt="{{ altText }}">
+        <img (click)="urlProyecto('linoleo-y-vinilico')" src="assets/page/img/home/projects/linoleo.jpg"
+          alt="{{ altText }}">
       </div>
       <div class="productCaption">
-        <a href="#">
-          <h4>Linoleo</h4>
+        <a routerLink="/proyectos/linoleo-y-vinilico">
+          <h4>Linóleo</h4>
         </a>
       </div>
     </div>
@@ -160,17 +161,17 @@
         <img src="assets/page/img/home/projects/piscina.jpg" alt="{{ altText }}">
       </div>
       <div class="productCaption">
-        <a href="#">
+        <a routerLink="/proyectos/piscinas">
           <h4>Piscinas</h4>
         </a>
       </div>
     </div>
     <div class="slide col-md-3">
       <div class="productImage">
-        <img src="assets/page/img/home/projects/piso.jpg" alt="{{ altText }}">
+        <img (click)="urlProyecto('piso-laminado')" src="assets/page/img/home/projects/piso.jpg" alt="{{ altText }}">
       </div>
       <div class="productCaption">
-        <a href="#">
+        <a routerLink="/proyectos/piso-laminado">
           <h4>Piso laminado</h4>
         </a>
       </div>
