@@ -22,7 +22,7 @@ export class ContactoComponent implements OnInit {
   constructor(private afs: AngularFirestore) {}
 
   ngOnInit() {
-    // initMap();
+    initMap();
   }
 
   enviarMensaje(forma: NgForm) {

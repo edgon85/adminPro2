@@ -9,7 +9,7 @@ import { UsuarioService } from '../../../../services/usuario/usuario.service';
 @Component({
   selector: 'app-modal-upload',
   templateUrl: './modal-upload.component.html',
-  styleUrls: ['./modal-upload.component.css']
+  styleUrls: ['./modal-upload.component.css'],
 })
 export class ModalUploadComponent implements OnInit {
   imagenSubir: File;
@@ -42,7 +42,7 @@ export class ModalUploadComponent implements OnInit {
       Swal.fire({
         title: 'Sólo imágenes',
         text: 'El archivo seleccionado no es una imagen',
-        type: 'error'
+        type: 'error',
       });
       this.imagenSubir = null;
       return;
@@ -79,7 +79,7 @@ export class ModalUploadComponent implements OnInit {
       .snapshotChanges()
       .pipe(
         finalize(() => {
-          fileRef.getDownloadURL().subscribe(resp => {
+          fileRef.getDownloadURL().subscribe((resp) => {
             let imgData = this._modalUploadService.imgData;
             let _id = this._modalUploadService.id;
             let imgTipo = this._modalUploadService.tipo;
