@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/casa-e-imagen",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
